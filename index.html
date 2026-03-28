@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AB STOP India | Inbound Exhibition Logistics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+  --ink: #0A0F1E;
+  --ink-mid: #1a2340;
+  --navy: #0D2135;
+  --navy-mid: #183650;
+  --gold: #C9993A;
+  --gold-light: #E8B84B;
+  --gold-pale: #FBF3E0;
+  --crimson: #B22234;
+  --crimson-dark: #8B1A27;
+  --red: #C8191A;
+  --red-dark: #8B0000;
+  --teal: #1A7A8A;
+  --teal-light: #22A3B7;
+  --cyan: #00C2CB;
+  --cyan-dark: #007a82;
+  --white: #FDFCFA;
+  --off: #F5F2EC;
+  --muted: #6B7280;
+  --border: rgba(201,153,58,0.2);
+  --shadow: 0 4px 30px rgba(10,15,30,0.12);
+  --shadow-gold: 0 8px 32px rgba(201,153,58,0.25);
+  --radius: 4px;
+  --radius-lg: 12px;
+  --trans: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  --ease: cubic-bezier(0.25,0.46,0.45,0.94);
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;font-weight:300;color:var(--ink);background:var(--white);overflow-x:hidden;font-size:15px;line-height:1.7;}
+a{text-decoration:none;color:inherit;transition:var(--trans);}
+ul{list-style:none;}
+img{max-width:100%;height:auto;display:block;}
+
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--off);}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
+
+/* ── TOP BAR ── */
+.top-bar{background:var(--ink);color:rgba(255,255,255,0.6);padding:9px 0;font-size:0.78rem;letter-spacing:0.3px;}
+.top-bar .tb-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.top-bar a{color:var(--gold-light);}
+.top-bar .tb-right{display:flex;gap:22px;align-items:center;}
+.top-bar i{color:var(--gold);margin-right:5px;}
+
+/* ── HEADER — matching about.html style ── */
+header {
+  background-color: var(--white);
+  box-shadow: 0 2px 20px rgba(13,33,53,.08);
+  position: sticky; top: 0; z-index: 1000;
+}
+.nav-container {
+  display: flex; justify-content: space-between; align-items: center;
+  height: 90px; max-width: 1200px; margin: 0 auto; padding: 0 20px;
+  flex-direction: row-reverse;
+}
+.logo-area img { height: 91px; width: auto; object-fit: contain; margin-right: -20px; }
+.main-nav ul { display: flex; gap: 25px; }
+.main-nav a {
+  font-weight: 500; font-size: .85rem; text-transform: uppercase;
+  color: var(--navy); position: relative; letter-spacing: .5px;
+}
+.main-nav a::after {
+  content: ''; position: absolute; width: 0; height: 3px;
+  background: linear-gradient(90deg, var(--cyan), var(--cyan-dark));
+  bottom: -5px; left: 0; transition: all .3s var(--ease);
+}
+.main-nav a:hover::after, .main-nav a.active::after { width: 100%; }
+.hamburger { display: none; cursor: pointer; font-size: 1.4rem; color: var(--navy); }
+
+/* ── HERO ── */
+.hero{min-height:92vh;background:var(--ink);position:relative;display:flex;align-items:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;z-index:0;}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.4s ease;}
+.hero-slide.active{opacity:1;}
+.hero-slide::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,rgba(10,15,30,0.88) 0%,rgba(10,15,30,0.55) 55%,rgba(10,15,30,0.2) 100%);}
+.hs1{background-image:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop');}
+.hs2{background-image:url('https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=2070&auto=format&fit=crop');}
+.hs3{background-image:url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop');}
+.hs4{background-image:url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070&auto=format&fit=crop');}
+
+.hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 28px;width:100%;}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;background:rgba(201,153,58,0.15);border:1px solid rgba(201,153,58,0.4);color:var(--gold-light);font-size:0.72rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;padding:7px 18px;border-radius:50px;margin-bottom:28px;}
+.hero-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(0.8);}}
+
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:900;color:var(--white);line-height:1.05;margin-bottom:24px;letter-spacing:-1px;}
+.hero h1 em{color:var(--gold-light);font-style:italic;}
+.hero-sub{font-size:1.05rem;color:rgba(253,252,250,0.65);max-width:520px;line-height:1.85;margin-bottom:40px;font-weight:300;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-gold{display:inline-flex;align-items:center;gap:9px;background:var(--gold);color:var(--ink);font-weight:700;font-size:0.8rem;letter-spacing:1.5px;text-transform:uppercase;padding:14px 32px;border-radius:var(--radius);border:2px solid var(--gold);transition:var(--trans);}
+.btn-gold:hover{background:transparent;color:var(--gold);box-shadow:var(--shadow-gold);}
+.btn-ghost-light{display:inline-flex;align-items:center;gap:9px;background:transparent;color:rgba(253,252,250,0.8);font-weight:500;font-size:0.8rem;letter-spacing:1.5px;text-transform:uppercase;padding:14px 28px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.25);transition:var(--trans);}
+.btn-ghost-light:hover{border-color:var(--gold);color:var(--gold);}
+
+.hero-strip{background:var(--gold);padding:0;}
+.hero-strip-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);}
+.strip-item{padding:18px 20px;border-right:1px solid rgba(10,15,30,0.12);text-align:center;transition:var(--trans);cursor:default;}
+.strip-item:last-child{border-right:none;}
+.strip-item:hover{background:var(--gold-light);}
+.strip-item i{font-size:1.3rem;color:var(--ink);margin-bottom:7px;display:block;}
+.strip-item h5{font-size:0.72rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--ink);line-height:1.4;}
+
+/* ── UTIL ── */
+.container{max-width:1200px;margin:0 auto;padding:0 28px;}
+section.pad{padding:100px 0;}
+.sec-label{display:inline-flex;align-items:center;gap:8px;font-size:0.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+.sec-label::before{content:'';width:20px;height:1px;background:var(--gold);}
+.sec-h{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:700;color:var(--ink);line-height:1.15;letter-spacing:-0.5px;}
+.sec-h span{color:var(--gold);}
+.sec-center{text-align:center;margin-bottom:64px;}
+.sec-center .sec-label{justify-content:center;}
+.sec-center .sec-h::after{content:'';display:block;width:50px;height:2px;background:var(--gold);margin:16px auto 0;}
+.sec-p{color:var(--muted);font-size:0.92rem;max-width:580px;margin:16px auto 0;line-height:1.9;font-weight:300;}
+
+/* ── ABOUT ── */
+.about-section{background:var(--off);padding:100px 0;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.about-img{position:relative;}
+.about-img img{width:100%;height:500px;object-fit:cover;border-radius:var(--radius-lg);box-shadow:var(--shadow);}
+.about-badge{position:absolute;bottom:-24px;left:-24px;background:var(--gold);color:var(--ink);padding:22px 28px;border-radius:var(--radius);box-shadow:var(--shadow-gold);}
+.about-badge .num{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:900;line-height:1;}
+.about-badge .lbl{font-size:0.62rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;}
+.about-text .sec-h{margin-bottom:12px;}
+.about-intro{font-size:1.05rem;color:var(--ink-mid);font-weight:400;margin-bottom:18px;line-height:1.8;}
+.about-body{color:var(--muted);font-size:0.92rem;line-height:1.9;margin-bottom:24px;font-weight:300;}
+.about-pills{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 32px;}
+.pill{background:var(--white);border:1px solid var(--border);color:var(--ink-mid);font-size:0.76rem;font-weight:600;letter-spacing:0.5px;padding:7px 16px;border-radius:50px;display:inline-flex;align-items:center;gap:7px;}
+.pill i{color:var(--gold);}
+
+/* ── WHY US ── */
+.why-section{background:var(--ink);padding:100px 0;}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:60px;}
+.why-card{background:rgba(255,255,255,0.03);border:1px solid rgba(201,153,58,0.1);padding:44px 36px;transition:var(--trans);}
+.why-card:hover{background:rgba(201,153,58,0.06);border-color:rgba(201,153,58,0.35);transform:translateY(-4px);}
+.why-card .icon{width:52px;height:52px;border-radius:var(--radius);background:rgba(201,153,58,0.1);border:1px solid rgba(201,153,58,0.2);display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:var(--gold);margin-bottom:22px;}
+.why-card h4{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--white);margin-bottom:12px;}
+.why-card p{color:rgba(253,252,250,0.5);font-size:0.88rem;line-height:1.85;font-weight:300;}
+.why-section .sec-center .sec-h{color:var(--white);}
+.why-section .sec-center .sec-label{color:var(--gold);}
+.why-section .sec-center .sec-p{color:rgba(253,252,250,0.5);}
+
+/* ── SERVICES ── */
+.services-preview{background:var(--white);padding:100px 0;}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.svc-card{border:1px solid rgba(10,15,30,0.08);border-radius:var(--radius-lg);overflow:hidden;transition:var(--trans);cursor:pointer;background:var(--white);}
+.svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--gold);}
+.svc-card-img{height:200px;overflow:hidden;position:relative;}
+.svc-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;}
+.svc-card:hover .svc-card-img img{transform:scale(1.06);}
+.svc-card-img .svc-tag{position:absolute;top:14px;left:14px;background:var(--gold);color:var(--ink);font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:2px;}
+.svc-card-body{padding:24px 26px 28px;}
+.svc-card-body h4{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--ink);margin-bottom:9px;}
+.svc-card-body p{font-size:0.85rem;color:var(--muted);line-height:1.75;font-weight:300;}
+.svc-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:0.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold);}
+.svc-link i{font-size:0.65rem;transition:var(--trans);}
+.svc-card:hover .svc-link i{transform:translateX(4px);}
+
+/* ── EXHIBITIONS ── */
+.exh-section{background:var(--off);padding:100px 0;}
+.exh-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.exh-card{background:var(--white);border:1px solid rgba(10,15,30,0.07);border-radius:var(--radius-lg);overflow:hidden;transition:var(--trans);}
+.exh-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:var(--teal);}
+.exh-card-img{height:140px;overflow:hidden;}
+.exh-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;filter:saturate(0.8);}
+.exh-card:hover .exh-card-img img{transform:scale(1.07);filter:saturate(1);}
+.exh-card-body{padding:16px 18px 20px;}
+.exh-city{font-size:0.64rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:4px;}
+.exh-name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:5px;line-height:1.25;}
+.exh-desc{font-size:0.78rem;color:var(--muted);line-height:1.65;font-weight:300;}
+
+/* ── STATS ── */
+.stats-section{background:linear-gradient(135deg,var(--crimson-dark),var(--crimson));padding:80px 0;}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.1);}
+.stat-cell{background:transparent;padding:50px 30px;text-align:center;transition:var(--trans);}
+.stat-cell:hover{background:rgba(255,255,255,0.07);}
+.stat-cell .num{font-family:'Playfair Display',serif;font-size:4rem;font-weight:900;color:var(--white);line-height:1;display:block;margin-bottom:6px;}
+.stat-cell .lbl{font-size:0.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.55);}
+
+/* ── VENUES — MAJOR EXHIBITION CENTERS IN INDIA ── */
+.venues-section{background:var(--ink);padding:100px 0;}
+.venues-section .sec-center .sec-h{color:var(--white);}
+.venues-section .sec-center .sec-p{color:rgba(253,252,250,0.45);}
+
+/* City filter tabs */
+.venue-filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:48px;}
+.vf-btn{font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:8px 20px;border-radius:50px;border:1px solid rgba(201,153,58,0.3);color:rgba(253,252,250,0.5);background:transparent;cursor:pointer;transition:var(--trans);}
+.vf-btn:hover,.vf-btn.active{background:var(--gold);border-color:var(--gold);color:var(--ink);}
+
+/* Venue cards grid */
+.venues-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.venue-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:var(--radius-lg);overflow:hidden;transition:var(--trans);display:none;}
+.venue-card.visible{display:block;animation:fadeUp 0.4s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+.venue-card:hover{border-color:rgba(201,153,58,0.35);transform:translateY(-4px);}
+.venue-card-img{height:170px;overflow:hidden;position:relative;}
+.venue-card-img img{width:100%;height:100%;object-fit:cover;filter:brightness(0.6) saturate(0.7);transition:var(--trans);}
+.venue-card:hover .venue-card-img img{filter:brightness(0.8) saturate(1);}
+.venue-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,15,30,0.92) 0%,transparent 60%);display:flex;align-items:flex-end;padding:16px;gap:10px;flex-direction:column;align-items:flex-start;}
+.venue-city-badge{font-size:0.62rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--white);background:var(--gold);padding:4px 11px;border-radius:3px;display:inline-block;}
+.venue-state-badge{font-size:0.6rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.65);}
+.venue-card-body{padding:18px 20px 22px;}
+.venue-name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:6px;line-height:1.3;}
+.venue-abbr{font-size:0.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.venue-info{font-size:0.78rem;color:rgba(253,252,250,0.42);font-weight:300;line-height:1.6;}
+.venue-meta{display:flex;gap:14px;margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.07);}
+.venue-meta-item{display:flex;align-items:center;gap:5px;font-size:0.68rem;color:rgba(253,252,250,0.4);}
+.venue-meta-item i{color:var(--gold);font-size:0.65rem;}
+
+/* Show-all row */
+.venues-show-all{text-align:center;margin-top:40px;}
+
+/* ── TESTIMONIALS ── */
+.testi-section{background:var(--off);padding:100px 0;}
+.testi-wrap{max-width:800px;margin:0 auto;}
+.testi-card{display:none;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:52px 48px;text-align:center;box-shadow:var(--shadow);}
+.testi-card.active{display:block;animation:fadeUp 0.5s ease both;}
+.testi-q{font-size:2rem;color:var(--gold);opacity:0.3;margin-bottom:20px;}
+.testi-stars{color:var(--gold);font-size:0.85rem;margin-bottom:18px;}
+.testi-text{font-family:'Playfair Display',serif;font-size:1.25rem;font-style:italic;color:var(--ink-mid);line-height:1.85;margin-bottom:30px;font-weight:400;}
+.testi-name{font-weight:700;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px;color:var(--ink);}
+.testi-role{font-size:0.8rem;color:var(--teal);margin-top:3px;}
+.testi-flag{font-size:0.75rem;color:var(--muted);margin-top:2px;}
+.testi-dots{display:flex;justify-content:center;gap:10px;margin-top:36px;}
+.testi-dot{width:9px;height:9px;border-radius:50%;background:rgba(10,15,30,0.12);cursor:pointer;transition:var(--trans);}
+.testi-dot.active{background:var(--gold);transform:scale(1.3);}
+
+/* ── CTA ── */
+.cta-band{background:var(--ink);padding:90px 0;}
+.cta-band-inner{display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;}
+.cta-band h2{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:var(--white);line-height:1.15;}
+.cta-band h2 em{color:var(--gold);font-style:italic;}
+.cta-band p{color:rgba(253,252,250,0.5);font-size:0.95rem;margin-top:14px;max-width:480px;line-height:1.8;}
+.cta-band-btns{display:flex;flex-direction:column;gap:12px;min-width:220px;}
+.btn-crim{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--crimson);color:var(--white);font-weight:700;font-size:0.8rem;letter-spacing:1.5px;text-transform:uppercase;padding:15px 34px;border-radius:var(--radius);border:2px solid var(--crimson);transition:var(--trans);}
+.btn-crim:hover{background:transparent;color:var(--crimson);border-color:var(--crimson);}
+
+/* ── FOOTER ── */
+footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,250,0.55);padding-top:80px;}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:50px;margin-bottom:60px;}
+.foot-brand p{font-size:0.88rem;line-height:1.8;margin-top:16px;font-weight:300;}
+.foot-brand-logo{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;color:var(--white);letter-spacing:1px;}
+.foot-brand-logo span{color:var(--gold);}
+.foot-brand-sub{font-size:0.62rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--teal-light);margin-top:2px;}
+.foot-col h5{font-size:0.82rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;padding-bottom:8px;border-bottom:1px solid rgba(201,153,58,0.2);}
+.foot-col ul li{margin-bottom:9px;}
+.foot-col ul li a{font-size:0.85rem;font-weight:300;color:rgba(253,252,250,0.5);transition:var(--trans);}
+.foot-col ul li a:hover{color:var(--gold);padding-left:5px;}
+.foot-contact li{display:flex;gap:10px;margin-bottom:12px;font-size:0.85rem;font-weight:300;align-items:flex-start;}
+.foot-contact i{color:var(--gold);margin-top:3px;flex-shrink:0;}
+.foot-bottom{border-top:1px solid rgba(255,255,255,0.06);padding:22px 0;display:flex;justify-content:space-between;align-items:center;font-size:0.78rem;flex-wrap:wrap;gap:10px;}
+.foot-bottom a{color:var(--gold);font-weight:500;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){.exh-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:992px){
+  .about-grid{grid-template-columns:1fr;gap:40px;}
+  .about-img{order:-1;}
+  .why-grid{grid-template-columns:1fr 1fr;}
+  .services-grid{grid-template-columns:1fr 1fr;}
+  .venues-grid{grid-template-columns:1fr 1fr;}
+  .cta-band-inner{grid-template-columns:1fr;}
+  .cta-band-btns{flex-direction:row;min-width:auto;}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:36px;}
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:768px){
+  .hamburger{display:block;}
+  .main-nav{position:absolute;top:90px;left:-100%;width:100%;background:var(--white);padding:20px;box-shadow:0 5px 10px rgba(13,33,53,.1);transition:.4s;}
+  .main-nav.active{left:0;}
+  .main-nav ul{flex-direction:column;text-align:center;gap:15px;}
+  .hero-strip-grid{grid-template-columns:repeat(3,1fr);}
+  .exh-grid{grid-template-columns:repeat(2,1fr);}
+  .services-grid{grid-template-columns:1fr;}
+  .why-grid{grid-template-columns:1fr;}
+  .venues-grid{grid-template-columns:1fr;}
+  .testi-card{padding:36px 28px;}
+  .top-bar .tb-right{display:none;}
+  .nav-container{flex-direction:row;justify-content:space-between;}
+}
+@media(max-width:560px){
+  .exh-grid{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:1fr;}
+  .hero h1{font-size:2.6rem;}
+  .about-badge{left:12px;bottom:-12px;}
+  .hero-strip-grid{grid-template-columns:repeat(2,1fr);}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="tb-inner">
+    <span><i class="fas fa-map-marker-alt"></i> Serving All Major Exhibition Venues Across India</span>
+    <div class="tb-right">
+      <span><i class="fas fa-envelope"></i> ies@stopindia.com</span>
+      <span><i class="fas fa-phone"></i> +91 9212133251</span>
+    </div>
+  </div>
+</div>
+
+<!-- ====== HEADER — same style as about.html ====== -->
+<header>
+  <div class="nav-container">
+    <div class="logo-area">
+      <a href="index.html">
+        <img src="https://stopindia.com/wp-content/uploads/2020/09/new.png" alt="STOP India Logo">
+      </a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+      
+        
+        <li><a href="support.html">Support</a></li>
+        
+      </ul>
+    </nav>
+    <div class="hamburger"><i class="fas fa-bars"></i></div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-slide hs1 active"></div>
+    <div class="hero-slide hs2"></div>
+    <div class="hero-slide hs3"></div>
+    <div class="hero-slide hs4"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-tag"><span class="dot"></span> India's Premier Inbound Exhibition Logistics</div>
+    <h1>Your Cargo.<br>India's Biggest<br><em>Exhibition Halls.</em></h1>
+    <p class="hero-sub">From customs clearance to your exhibition stand — AB STOP India is your single-point logistics partner for every show in India.</p>
+    <div class="hero-btns">
+      <a href="support.html" class="btn-gold"><i class="fas fa-arrow-right"></i> Get a Quote</a>
+      <a href="services.html" class="btn-ghost-light"><i class="fas fa-list-ul"></i> Our Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="hero-strip">
+  <div class="hero-strip-grid">
+    <div class="strip-item"><i class="fas fa-file-shield"></i><h5>Customs &amp; ATA Carnet</h5></div>
+    <div class="strip-item"><i class="fas fa-plane-arrival"></i><h5>Air &amp; Sea Freight</h5></div>
+    <div class="strip-item"><i class="fas fa-truck-moving"></i><h5>Door-to-Stand Delivery</h5></div>
+    <div class="strip-item"><i class="fas fa-forklift"></i><h5>On-Site Handling</h5></div>
+    <div class="strip-item"><i class="fas fa-rotate-left"></i><h5>Return &amp; Re-Export</h5></div>
+  </div>
+</div>
+
+<!-- ABOUT PREVIEW -->
+<section class="about-section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=1400&auto=format&fit=crop" alt="Exhibition Logistics India">
+        <div class="about-badge">
+          <div class="num">25+</div>
+          <div class="lbl">Years of Excellence</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="sec-label">Who We Are</div>
+        <h2 class="sec-h">One Stop<br>For Every<br><span>India Exhibition</span></h2>
+        <p class="about-intro">AB STOP India is a team of professionals specialising in exhibition logistics — bringing your cargo from anywhere in the world to any exhibition hall in India.</p>
+        <p class="about-body">We provide quality, full-range cargo services for shows across India. Whether it's temporary importation under ATA Carnet, customs clearance for giveaways, or on-site forklift handling — we handle every step with precision so you can focus entirely on your exhibitors and customers.</p>
+        <div class="about-pills">
+          <span class="pill"><i class="fas fa-check"></i> ATA Carnet Specialists</span>
+          <span class="pill"><i class="fas fa-check"></i> Temporary Import / Re-Export</span>
+          <span class="pill"><i class="fas fa-check"></i> On-Site Labour & Forklifts</span>
+          <span class="pill"><i class="fas fa-check"></i> Zero Delays Guaranteed</span>
+          <span class="pill"><i class="fas fa-check"></i> All India Coverage</span>
+        </div>
+        <a href="about.html" class="btn-gold"><i class="fas fa-info-circle"></i> Read More About Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-section">
+  <div class="container">
+    <div class="sec-center">
+      <div class="sec-label" style="color:var(--gold);justify-content:center;">Why AB STOP India</div>
+      <h2 class="sec-h" style="color:var(--white);">3 Reasons to Feel<br><span>Safe &amp; Calm</span></h2>
+      <p class="sec-p">We manage every complexity so you arrive at your stand stress-free.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="icon"><i class="fas fa-file-contract"></i></div>
+        <h4>Customs &amp; Documents Clear</h4>
+        <p>All customs procedures, deadlines and documentation are handled by our team. Temporary importation, ATA Carnet, re-export — we manage it all compliantly and on time.</p>
+      </div>
+      <div class="why-card">
+        <div class="icon"><i class="fas fa-headset"></i></div>
+        <h4>All On-Site Issues Solved</h4>
+        <p>Our team is physically present at the venue with forklifts, labour, and experienced project managers. Any cargo issue on-site is solved before it becomes your problem.</p>
+      </div>
+      <div class="why-card">
+        <div class="icon"><i class="fas fa-clock"></i></div>
+        <h4>Exhibits Delivered In Time</h4>
+        <p>Time-critical shipments are our speciality. From exhibitions to concerts to sports events, we understand deadlines are absolute. Zero delays is not a slogan — it's our standard.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES PREVIEW -->
+<section class="services-preview">
+  <div class="container">
+    <div class="sec-center">
+      <div class="sec-label">What We Do</div>
+      <h2 class="sec-h">Full-Range<br><span>Logistics Services</span></h2>
+      <p class="sec-p">Every service your exhibition shipment needs — under one roof.</p>
+    </div>
+    <div class="services-grid">
+      <a href="services.html#customs">
+        <div class="svc-card">
+          <div class="svc-card-img">
+            <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=800&auto=format&fit=crop" alt="Customs">
+            <span class="svc-tag">Priority Service</span>
+          </div>
+          <div class="svc-card-body">
+            <h4>Customs &amp; ATA Carnet</h4>
+            <p>Temporary importation for exhibits with re-export after the show, plus final importation for giveaways, catalogues and souvenirs.</p>
+            <span class="svc-link">Learn More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+      <a href="services.html#freight">
+        <div class="svc-card">
+          <div class="svc-card-img">
+            <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=800&auto=format&fit=crop" alt="Air Sea Freight">
+          </div>
+          <div class="svc-card-body">
+            <h4>Air, Sea &amp; Land Freight</h4>
+            <p>Optimized international freight from your country to India's exhibition venues — by air, ocean or road with real-time tracking.</p>
+            <span class="svc-link">Learn More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+      <a href="services.html#onsite">
+        <div class="svc-card">
+          <div class="svc-card-img">
+            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop" alt="On-Site">
+          </div>
+          <div class="svc-card-body">
+            <h4>On-Site Handling</h4>
+            <p>Forklift trucks, professional labour, unloading, delivery to your stand, empty case storage, unpacking and packing — all at the venue.</p>
+            <span class="svc-link">Learn More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+      <a href="services.html#delivery">
+        <div class="svc-card">
+          <div class="svc-card-img">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop" alt="Delivery">
+          </div>
+          <div class="svc-card-body">
+            <h4>Door-to-Stand Delivery</h4>
+            <p>Complete door-to-exhibition-stand service. We collect from your origin, manage international transit, and deliver to your exact stand location.</p>
+            <span class="svc-link">Learn More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+      <a href="services.html#return">
+        <div class="svc-card">
+          <div class="svc-card-img">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop" alt="Return">
+          </div>
+          <div class="svc-card-body">
+            <h4>Return &amp; Re-Export</h4>
+            <p>After the show, we repack, re-label and manage return shipments or forward movement to your next destination or back home.</p>
+            <span class="svc-link">Learn More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+      <a href="services.html#events">
+        <div class="svc-card">
+          <div class="svc-card-img">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=800&auto=format&fit=crop" alt="Events">
+          </div>
+          <div class="svc-card-body">
+            <h4>Events, Concerts &amp; Sports</h4>
+            <p>Time-critical cargo for concerts, theatre, sports events, film &amp; TV productions. Any time-sensitive consignment, anywhere in India.</p>
+            <span class="svc-link">Learn More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:50px;">
+      <a href="services.html" class="btn-gold">View All Services <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- EXHIBITIONS WE SERVICE -->
+<section class="exh-section">
+  <div class="container">
+    <div class="sec-center">
+      <div class="sec-label">Sectors &amp; Exhibitions</div>
+      <h2 class="sec-h">Major Exhibitions<br><span>We Service In India</span></h2>
+      <p class="sec-p">From world-class trade fairs to international conferences — we know every venue, every deadline, every regulation.</p>
+    </div>
+    <div class="exh-grid">
+      <div class="exh-card">
+        <div class="exh-card-img"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=600&auto=format&fit=crop" alt="Auto Expo"></div>
+        <div class="exh-card-body"><div class="exh-city">New Delhi / Greater Noida</div><div class="exh-name">Auto Expo</div><div class="exh-desc">Asia's largest automotive show at Bharat Mandapam & India Expo Mart.</div></div>
+      </div>
+      <div class="exh-card">
+        <div class="exh-card-img"><img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=600&auto=format&fit=crop" alt="Plastindia"></div>
+        <div class="exh-card-body"><div class="exh-city">Gandhinagar</div><div class="exh-name">Plastindia</div><div class="exh-desc">Leading plastics & rubber international trade exhibition at Mahatma Mandir.</div></div>
+      </div>
+      <div class="exh-card">
+        <div class="exh-card-img"><img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=600&auto=format&fit=crop" alt="Aero India"></div>
+        <div class="exh-card-body"><div class="exh-city">Bengaluru</div><div class="exh-name">Aero India</div><div class="exh-desc">Asia's premier aerospace exhibition at Yelahanka Air Force Station.</div></div>
+      </div>
+      <div class="exh-card">
+        <div class="exh-card-img"><img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=600&auto=format&fit=crop" alt="India ITME"></div>
+        <div class="exh-card-body"><div class="exh-city">Mumbai</div><div class="exh-name">India ITME</div><div class="exh-desc">Textile machinery exhibition at Bombay Exhibition Centre, Goregaon.</div></div>
+      </div>
+      <div class="exh-card">
+        <div class="exh-card-img"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600&auto=format&fit=crop" alt="IMTEX"></div>
+        <div class="exh-card-body"><div class="exh-city">Bengaluru</div><div class="exh-name">IMTEX</div><div class="exh-desc">International machine tool & metalworking at BIEC, Bengaluru.</div></div>
+      </div>
+      <div class="exh-card">
+        <div class="exh-card-img"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600&auto=format&fit=crop" alt="Convergence India"></div>
+        <div class="exh-card-body"><div class="exh-city">New Delhi</div><div class="exh-name">Convergence India</div><div class="exh-desc">ICT & telecom exhibition at Bharat Mandapam, Pragati Maidan.</div></div>
+      </div>
+      <div class="exh-card">
+        <div class="exh-card-img"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=600&auto=format&fit=crop" alt="India Pharma"></div>
+        <div class="exh-card-body"><div class="exh-city">Hyderabad</div><div class="exh-name">CPhI &amp; P-MEC India</div><div class="exh-desc">Pharmaceutical ingredients & machinery at HITEX Exhibition Centre.</div></div>
+      </div>
+      <div class="exh-card">
+        <div class="exh-card-img"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600&auto=format&fit=crop" alt="FoodExpo"></div>
+        <div class="exh-card-body"><div class="exh-city">Mumbai</div><div class="exh-name">World Food India</div><div class="exh-desc">India's flagship food processing investment summit and exhibition.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-cell"><span class="num" data-target="25">0</span><span class="lbl">Years Experience</span></div>
+      <div class="stat-cell"><span class="num" data-target="500">0</span><span class="lbl">Events Handled</span></div>
+      <div class="stat-cell"><span class="num" data-target="80">0</span><span class="lbl">Countries Served</span></div>
+      <div class="stat-cell"><span class="num" data-target="100">0</span><span class="lbl">% On-Time Rate</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== MAJOR EXHIBITION CENTERS IN INDIA ====== -->
+<section class="venues-section">
+  <div class="container">
+    <div class="sec-center">
+      <div class="sec-label" style="color:var(--gold);justify-content:center;">Our Coverage</div>
+      <h2 class="sec-h" style="color:var(--white);">Major Exhibition Centers<br><span>Across India We Serve</span></h2>
+      <p class="sec-p" style="color:rgba(253,252,250,0.45);">We have official on-site presence and established partnerships at every major exhibition and convention centre in India.</p>
+    </div>
+
+    <!-- Filter tabs -->
+    <div class="venue-filters">
+      <button class="vf-btn active" data-filter="all">All Cities</button>
+      <button class="vf-btn" data-filter="delhi">New Delhi</button>
+      <button class="vf-btn" data-filter="mumbai">Mumbai</button>
+      <button class="vf-btn" data-filter="bengaluru">Bengaluru</button>
+      <button class="vf-btn" data-filter="hyderabad">Hyderabad</button>
+      <button class="vf-btn" data-filter="gandhinagar">Gandhinagar</button>
+      <button class="vf-btn" data-filter="chennai">Chennai</button>
+      <button class="vf-btn" data-filter="kolkata">Kolkata</button>
+      <button class="vf-btn" data-filter="pune">Pune</button>
+      <button class="vf-btn" data-filter="noida">Greater Noida</button>
+    </div>
+
+    <div class="venues-grid" id="venuesGrid">
+
+      <!-- NEW DELHI -->
+      <div class="venue-card visible" data-city="delhi">
+        <div class="venue-card-img">
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=700&auto=format&fit=crop" alt="Bharat Mandapam">
+          <div class="venue-overlay">
+            <span class="venue-city-badge">New Delhi</span>
+            <span class="venue-state-badge">Delhi</span>
+          </div>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-abbr">Bharat Mandapam — ITPO</div>
+          <div class="venue-name">Bharat Mandapam Convention Centre</div>
+          <div class="venue-info">Pragati Maidan, New Delhi — India's largest MICE venue with 1,23,000 sq m of exhibition space. Home to India International Trade Fair (IITF).</div>
+          <div class="venue-meta">
+            <span class="venue-meta-item"><i class="fas fa-expand"></i> 1,23,000 sq m</span>
+            <span class="venue-meta-item"><i class="fas fa-map-pin"></i> Pragati Maidan</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="venue-card visible" data-city="delhi">
+        <div class="venue-card-img">
+          <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=700&auto=format&fit=crop" alt="Yashobhoomi">
+          <div class="venue-overlay">
+            <span class="venue-city-badge">New Delhi</span>
+            <span class="venue-state-badge">Delhi</span>
+          </div>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-abbr">YASHOBHOOMI — IICC</div>
+          <div class="venue-name">India International Convention & Expo Centre</div>
+          <div class="venue-info">Dwarka, New Delhi — Newly inaugurated world-class MICE venue with 1,12,000 sq m, one of Asia's largest convention complexes.</div>
+          <div class="venue-meta">
+            <span class="venue-meta-item"><i class="fas fa-expand"></i> 1,12,000 sq m</span>
+            <span class="venue-meta-item"><i class="fas fa-map-pin"></i> Dwarka, Delhi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- GREATER NOIDA -->
+      <div class="venue-card visible" data-city="noida">
+        <div class="venue-card-img">
+          <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=700&auto=format&fit=crop" alt="India Expo Mart">
+          <div class="venue-overlay">
+            <span class="venue-city-badge">Greater Noida</span>
+            <span class="venue-state-badge">Uttar Pradesh</span>
+          </div>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-abbr">IEM — India Expo Mart</div>
+          <div class="venue-name">India Expo Mart</div>
+          <div class="venue-info">Greater Noida, Uttar Pradesh — Premier global marketplace for trade shows, handling Auto Expo, INDUSMACH, and 100+ international events annually.</div>
+          <div class="venue-meta">
+            <span class="venue-meta-item"><i class="fas fa-expand"></i> 65,000 sq m</span>
+            <span class="venue-meta-item"><i class="fas fa-map-pin"></i> Greater Noida</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MUMBAI -->
+      <div class="venue-card visible" data-city="mumbai">
+        <div class="venue-card-img">
+          <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=700&auto=format&fit=crop" alt="BEC Mumbai">
+          <div class="venue-overlay">
+            <span class="venue-city-badge">Mumbai</span>
+            <span class="venue-state-badge">Maharashtra</span>
+          </div>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-abbr">BEC — Bombay Exhibition Centre</div>
+          <div class="venue-name">Bombay Exhibition Centre</div>
+          <div class="venue-info">Goregaon, Mumbai — Western India's largest purpose-built trade fair venue hosting India ITME, INTERPACK, DefExpo and 80+ major shows every year.</div>
+          <div class="venue-meta">
+            <span class="venue-meta-item"><i class="fas fa-expand"></i> 45,000 sq m</span>
+            <span class="venue-meta-item"><i class="fas fa-map-pin"></i> Goregaon, Mumbai</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="venue-card visible" data-city="mumbai">
+        <div class="venue-card-img">
+          <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=700&auto=format&fit=crop" alt="Jio World Convention Centre">
+          <div class="venue-overlay">
+            <span class="venue-city-badge">Mumbai</span>
+            <span class="venue-state-badge">Maharashtra</span>
+          </div>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-abbr">JWCC — Jio World Convention</div>
+          <div class="venue-name">Jio World Convention Centre</div>
+          <div class="venue-info">BKC, Mumbai — India's most modern luxury convention and exhibition space, ideal for premium international trade events and high-end product launches.</div>
+          <div class="venue-meta">
+            <span class="venue-meta-item"><i class="fas fa-expand"></i> 50,000 sq m</span>
+            <span class="venue-meta-item"><i class="fas fa-map-pin"></i> BKC, Mumbai</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="venue-card visible" data-city="mumbai">
+        <div class="venue-card-img">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=700&auto=format&fit=crop" alt="MMRDA">
+          <div class="venue-overlay">
+            <span class="venue-city-badge">Mumbai</span>
+            <span class="venue-state-badge">Maharashtra</span>
+          </div>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-abbr">MMRDA Grounds, BKC</div>
+          <div class="venue-name">MMRDA Exhibition Grounds</div>
+          <div class="venue-info">Bandra Kurla Complex — Large open ground venue in Mumbai's financial hub frequently used for India's biggest lifestyle, auto, and consumer expos.</div>
+          <div class="venue-meta">
+            <span class="venue-meta-item"><i class="fas fa-expand"></i> Open Grounds</span>
+            <span class="venue-meta-item"><i class="fas fa-map-pin"></i> BKC, Mumbai</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BENGALURU -->
+      <div class="venue-card visible" data-city="bengaluru">
+        <div class="venue-card-img">
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=700&auto=format&fit=crop" alt="BIEC Bengaluru">
+          <div class="venue-overlay">
+            <span class="venue-city-badge">Bengaluru</span>
+            <span class="venue-state-badge">Karnataka</span>
+          </div>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-abbr">BIEC — Bengaluru Int'l</div>
+          <div class="venue-name">Bengaluru International Exhibition Centre</div>
+          <div class="venue-info">Tumkur Road, Bengaluru — South India's premier venue for IMTEX, ENGIMACH, MachAuto, and major engineering & technology exhibitions.</div>
+          <div class="venue-meta">
+            <span class="venue-meta-item"><i class="fas fa-expand"></i> 50,000 sq m</span>
+            <span class="venue-meta-item"><i class="fas fa-map-pin"></i> Tumkur Road</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="venue-card visible" data-city="bengaluru">
+        <div class="venue-card-img">
+          <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=700&auto=format&fit=crop" alt="Aero India Yelahanka">
+          <div class="venue-overlay">
+            <span class="venue-city-badge">Bengaluru</span>
+            <span class="venue-state-badge">Karnataka</span>
+          </div>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-abbr">YAF — Yelahanka Air Force Station</div>
+          <div class="venue-name">Yelahanka Air Force Station</div>
+          <div class="venue-info">Bengaluru — Exclusive home of Aero India, Asia's premier aerospace and defence exhibition held biennially with global OEM participation.</div>
+          <div class="venue-meta">
+            <span class="venue-meta-item"><i class="fas fa-expand"></i> Open Airfield</span>
+            <span class="venue-meta-item"><i class="fas fa-map-pin"></i> Yelahanka</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- HYDERABAD -->
+      <div class="venue-card visible" data-city="hyderabad">
+        <div class="venue-card-img">
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=700&auto=format&fit=crop" alt="HITEX Hyderabad">
+          <div class="venue-overlay">
+            <span class="venue-city-badge">Hyderabad</span>
+            <span class="venue-state-badge">Telangana</span>
+          </div>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-abbr">HITEX — Hyderabad Int'l Trade Expo</div>
+          <div class="venue-name">HITEX Exhibition Centre</div>
+          <div class="venue-info">Madhapur, Hyderabad — Premier Telangana venue for CPhI India, TEXWORLD, FOODEX, and pharma & technology international expos.</div>
+          <div class="venue-meta">
+            <span class="venue-meta-item"><i class="fas fa-expand"></i> 30,000 sq m</span>
+            <span class="venue-meta-item"><i class="fas fa-map-pin"></i> Madhapur, HITEC City</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="venue-card visible" data-city="hyderabad">
+        <div class="venue-card-img">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=700&auto=format&fit=crop" alt="HICC Hyderabad">
+          <div class="venue-overlay">
+            <span class="venue-city-badge">Hyderabad</span>
+            <span class="venue-state-badge">Telangana</span>
+          </div>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-abbr">HICC — Novotel Hyderabad</div>
+          <div class="venue-name">Hyderabad International Convention Centre</div>
+          <div class="venue-info">HICC, Hyderabad — Integrated convention and exhibition complex in HITEC City, used for international conferences, product launches, and trade meets.</div>
+          <div class="venue-meta">
+            <span class="venue-meta-item"><i class="fas fa-expand"></i> 6,500 sq m</span>
+            <span class="venue-meta-item"><i class="fas fa-map-pin"></i> HITEC City</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- GANDHINAGAR -->
+      <div class="venue-card visible" data-city="gandhinagar">
+        <div class="venue-card-img">
+          <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=700&auto=format&fit=crop" alt="Mahatma Mandir">
+          <div class="venue-overlay">
+            <span class="venue-city-badge">Gandhinagar</span>
+            <span class="venue-state-badge">Gujarat</span>
+          </div>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-abbr">MGICEC — Mahatma Mandir</div>
+          <div class="venue-name">Mahatma Mandir Convention & Exhibition Centre</div>
+          <div class="venue-info">Gandhinagar, Gujarat — World-class venue hosting Vibrant Gujarat, Plastindia, INTEX South Asia, and major state-level international summits.</div>
+          <div class="venue-meta">
+            <span class="venue-meta-item"><i class="fas fa-expand"></i> 33,000 sq m</span>
+            <span class="venue-meta-item"><i class="fas fa-map-pin"></i> Gandhinagar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="venue-card visible" data-city="gandhinagar">
+        <div class="venue-card-img">
+          <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=700&auto=format&fit=crop" alt="Helipad Grounds">
+          <div class="venue-overlay">
+            <span class="venue-city-badge">Gandhinagar</span>
+            <span class="venue-state-badge">Gujarat</span>
+          </div>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-abbr">Helipad Exhibition Grounds</div>
+          <div class="venue-name">Helipad Exhibition Grounds</div>
+          <div class="venue-info">Gandhinagar — Large open exhibition grounds adjacent to Mahatma Mandir, frequently used for overflow and outdoor exhibitions during Vibrant Gujarat.</div>
+          <div class="venue-meta">
+            <span class="venue-meta-item"><i class="fas fa-expand"></i> Open Grounds</span>
+            <span class="venue-meta-item"><i class="fas fa-map-pin"></i> Gandhinagar</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHENNAI -->
+      <div class="venue-card visible" data-city="chennai">
+        <div class="venue-card-img">
+          <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=700&auto=format&fit=crop" alt="ITPO Chennai">
+          <div class="venue-overlay">
+            <span class="venue-city-badge">Chennai</span>
+            <span class="venue-state-badge">Tamil Nadu</span>
+          </div>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-abbr">ITPO — Trade Fair Complex</div>
+          <div class="venue-name">ITPO Trade Fair Complex, Chennai</div>
+          <div class="venue-info">Nandanam, Chennai — India Trade Promotion Organisation's southern hub hosting PLASTIVISION, INDIAwood, and major regional trade events.</div>
+          <div class="venue-meta">
+            <span class="venue-meta-item"><i class="fas fa-expand"></i> 16,000 sq m</span>
+            <span class="venue-meta-item"><i class="fas fa-map-pin"></i> Nandanam</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="venue-card visible" data-city="chennai">
+        <div class="venue-card-img">
+          <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=700&auto=format&fit=crop" alt="Chennai Trade Centre">
+          <div class="venue-overlay">
+            <span class="venue-city-badge">Chennai</span>
+            <span class="venue-state-badge">Tamil Nadu</span>
+          </div>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-abbr">CTC — Chennai Trade Centre</div>
+          <div class="venue-name">Chennai Trade Centre</div>
+          <div class="venue-info">Nandanam, Chennai — South India's established trade centre for textile, auto components, pharma, and consumer goods international exhibitions.</div>
+          <div class="venue-meta">
+            <span class="venue-meta-item"><i class="fas fa-expand"></i> 25,000 sq m</span>
+            <span class="venue-meta-item"><i class="fas fa-map-pin"></i> Nandanam</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- KOLKATA -->
+      <div class="venue-card visible" data-city="kolkata">
+        <div class="venue-card-img">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=700&auto=format&fit=crop" alt="BICC Kolkata">
+          <div class="venue-overlay">
+            <span class="venue-city-badge">Kolkata</span>
+            <span class="venue-state-badge">West Bengal</span>
+          </div>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-abbr">BICC — Biswa Bangla Convention</div>
+          <div class="venue-name">Biswa Bangla Convention Centre</div>
+          <div class="venue-info">New Town, Kolkata — Eastern India's largest and most modern MICE facility, hosting Kolkata International Trade Fair and major industry summits.</div>
+          <div class="venue-meta">
+            <span class="venue-meta-item"><i class="fas fa-expand"></i> 30,000 sq m</span>
+            <span class="venue-meta-item"><i class="fas fa-map-pin"></i> New Town</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="venue-card visible" data-city="kolkata">
+        <div class="venue-card-img">
+          <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=700&auto=format&fit=crop" alt="Milan Mela Grounds">
+          <div class="venue-overlay">
+            <span class="venue-city-badge">Kolkata</span>
+            <span class="venue-state-badge">West Bengal</span>
+          </div>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-abbr">Milan Mela — ITPO Kolkata</div>
+          <div class="venue-name">Milan Mela Grounds (ITPO)</div>
+          <div class="venue-info">Pragati Maidan (Kolkata), Eastern India — Traditional trade fair grounds and ITPO eastern complex hosting Kolkata Trade Fair and regional exhibitions.</div>
+          <div class="venue-meta">
+            <span class="venue-meta-item"><i class="fas fa-expand"></i> 20,000 sq m</span>
+            <span class="venue-meta-item"><i class="fas fa-map-pin"></i> E.M. Bypass</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PUNE -->
+      <div class="venue-card visible" data-city="pune">
+        <div class="venue-card-img">
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=700&auto=format&fit=crop" alt="AutoCluster Pune">
+          <div class="venue-overlay">
+            <span class="venue-city-badge">Pune</span>
+            <span class="venue-state-badge">Maharashtra</span>
+          </div>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-abbr">ACEC — Auto Cluster Exhibition</div>
+          <div class="venue-name">Auto Cluster Exhibition Centre</div>
+          <div class="venue-info">Chinchwad, Pune — India's auto component and manufacturing industry hub venue for ACMA Automechanika, ENGIMACH, and engineering trade shows.</div>
+          <div class="venue-meta">
+            <span class="venue-meta-item"><i class="fas fa-expand"></i> 40,000 sq m</span>
+            <span class="venue-meta-item"><i class="fas fa-map-pin"></i> Chinchwad, Pune</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="venue-card visible" data-city="pune">
+        <div class="venue-card-img">
+          <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=700&auto=format&fit=crop" alt="CIDCO Navi Mumbai">
+          <div class="venue-overlay">
+            <span class="venue-city-badge">Navi Mumbai</span>
+            <span class="venue-state-badge">Maharashtra</span>
+          </div>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-abbr">CIDCO — Exhibition & Convention</div>
+          <div class="venue-name">CIDCO Exhibition Centre</div>
+          <div class="venue-info">Navi Mumbai — State-of-the-art venue used for EXCON, mining, construction, and heavy equipment trade exhibitions for Western Maharashtra.</div>
+          <div class="venue-meta">
+            <span class="venue-meta-item"><i class="fas fa-expand"></i> 35,000 sq m</span>
+            <span class="venue-meta-item"><i class="fas fa-map-pin"></i> Navi Mumbai</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="venues-show-all">
+      <a href="support.html" class="btn-gold" style="margin-top:10px;"><i class="fas fa-paper-plane"></i> Enquire About Your Venue</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-section">
+  <div class="container">
+    <div class="sec-center">
+      <div class="sec-label">Client Voices</div>
+      <h2 class="sec-h">What Exhibitors<br><span>Say About Us</span></h2>
+    </div>
+    <div class="testi-wrap">
+      <div class="testi-card active">
+        <div class="testi-q"><i class="fas fa-quote-left"></i></div>
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testi-text">"AB STOP India managed our entire shipment for Auto Expo from Germany — customs, temporary import, on-site delivery and return. Seamless from start to finish. Truly a one-stop solution."</p>
+        <div class="testi-name">Klaus Müller</div>
+        <div class="testi-role">Exhibition Manager, Bosch Germany</div>
+        <div class="testi-flag">🇩🇪 Germany → Auto Expo, New Delhi</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-q"><i class="fas fa-quote-left"></i></div>
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testi-text">"The ATA Carnet and temporary import process was completely handled. We just had to show up at the stand. Their on-site team at BEC Mumbai was absolutely professional."</p>
+        <div class="testi-name">Sophie Laurent</div>
+        <div class="testi-role">Trade Show Director, Lyon Cosmetics</div>
+        <div class="testi-flag">🇫🇷 France → Beauty India, Mumbai</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-q"><i class="fas fa-quote-left"></i></div>
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testi-text">"Heavy machinery exhibit for IMTEX — we were worried about forklift capacity and timing. AB STOP India's team handled 4+ tonne equipment with zero issues. Highly recommended."</p>
+        <div class="testi-name">Hiroshi Tanaka</div>
+        <div class="testi-role">Logistics Head, Yamazaki Mazak</div>
+        <div class="testi-flag">🇯🇵 Japan → IMTEX, Bengaluru</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-q"><i class="fas fa-quote-left"></i></div>
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testi-text">"Once you try their service, you become a regular customer — that's exactly what happened with us. We've worked with AB STOP India for 6 consecutive years across 3 different venues."</p>
+        <div class="testi-name">Amelia Brooks</div>
+        <div class="testi-role">Global Events Lead, Siemens UK</div>
+        <div class="testi-flag">🇬🇧 UK → Multiple India Shows</div>
+      </div>
+      <div class="testi-dots">
+        <span class="testi-dot active" data-i="0"></span>
+        <span class="testi-dot" data-i="1"></span>
+        <span class="testi-dot" data-i="2"></span>
+        <span class="testi-dot" data-i="3"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-band-inner">
+      <div>
+        <h2>Ready to Exhibit<br>in <em>India?</em></h2>
+        <p>Tell us your exhibition, your cargo, your deadline — and we'll handle everything from there. Professional, cost-effective, and guaranteed on time.</p>
+      </div>
+      <div class="cta-band-btns">
+        <a href="support.html" class="btn-crim"><i class="fas fa-paper-plane"></i> Send an Enquiry</a>
+        <a href="tel:+919212133251" class="btn-gold"><i class="fas fa-phone"></i> Call Us Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="foot-brand-logo">AB<span>STOP</span>India</div>
+        <div class="foot-brand-sub">Inbound Exhibition Logistics</div>
+        <p>Your trusted one-stop logistics partner for exhibitions, conferences, concerts, sports events, and all time-critical cargo in India. Customs to stand delivery — we do it all.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="sectors.html">Sectors</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="carrer.html">Career</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Our Services</h5>
+        <ul>
+          <li><a href="services.html#customs">Customs &amp; ATA Carnet</a></li>
+          <li><a href="services.html#freight">International Freight</a></li>
+          <li><a href="services.html#onsite">On-Site Handling</a></li>
+          <li><a href="services.html#delivery">Stand Delivery</a></li>
+          <li><a href="services.html#return">Return &amp; Re-Export</a></li>
+          <li><a href="services.html#events">Events &amp; Concerts</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <ul class="foot-contact">
+          <li><i class="fas fa-envelope"></i><span>ies@stopindia.com</span></li>
+          <li><i class="fas fa-phone"></i><span>+91 9212133251</span></li>
+          <li><i class="fas fa-map-marker-alt"></i><span>Gurgaon, Haryana, India</span></li>
+          <li><i class="fas fa-clock"></i><span>Mon–Sat: 9 AM – 6 PM IST<br>Emergency: 24/7</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2025 AB STOP India. All Rights Reserved.</span>
+      <span>Designed for International Exhibitors | <a href="mailto:ies@stopindia.com">ies@stopindia.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── Hamburger (matches about.html pattern)
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.main-nav');
+hamburger.addEventListener('click', () => navMenu.classList.toggle('active'));
+document.querySelectorAll('.main-nav a').forEach(l => l.addEventListener('click', () => navMenu.classList.remove('active')));
+
+// ── Hero slideshow
+const slides = document.querySelectorAll('.hero-slide');
+let ci = 0;
+setInterval(() => {
+  slides[ci].classList.remove('active');
+  ci = (ci + 1) % slides.length;
+  slides[ci].classList.add('active');
+}, 5500);
+
+// ── Venue city filter
+const filterBtns = document.querySelectorAll('.vf-btn');
+const venueCards = document.querySelectorAll('.venue-card');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    venueCards.forEach((card, i) => {
+      const show = filter === 'all' || card.dataset.city === filter;
+      card.classList.remove('visible');
+      if (show) {
+        setTimeout(() => card.classList.add('visible'), i * 40);
+      }
+    });
+  });
+});
+
+// ── Testimonials
+const cards = document.querySelectorAll('.testi-card');
+const dots = document.querySelectorAll('.testi-dot');
+let ct = 0, ti;
+function showT(i) {
+  cards.forEach((c, j) => c.classList.toggle('active', j === i));
+  dots.forEach((d, j) => d.classList.toggle('active', j === i));
+  ct = i;
+}
+function startT() { ti = setInterval(() => showT((ct + 1) % cards.length), 6000); }
+dots.forEach(d => d.addEventListener('click', () => { clearInterval(ti); showT(+d.dataset.i); startT(); }));
+startT();
+
+// ── Counters
+const counters = document.querySelectorAll('.num[data-target]');
+let counted = false;
+const runCounters = () => {
+  if (counted) return; counted = true;
+  counters.forEach(el => {
+    const target = +el.dataset.target;
+    const start = performance.now();
+    const dur = 2000;
+    const tick = (now) => {
+      const p = Math.min((now - start) / dur, 1);
+      const e = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.floor(e * target);
+      if (p < 1) requestAnimationFrame(tick);
+      else el.textContent = target + (target === 100 ? '%' : '+');
+    };
+    requestAnimationFrame(tick);
+  });
+};
+const statSec = document.querySelector('.stats-section');
+new IntersectionObserver(([e]) => { if (e.isIntersecting) runCounters(); }, { threshold: 0.4 }).observe(statSec);
+
+// ── Scroll reveal
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }
+  });
+}, { threshold: .08 });
+document.querySelectorAll('.why-card,.svc-card,.exh-card,.testi-card').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity .5s ease, transform .5s ease';
+  ro.observe(el);
+});
+</script>
+</body>
+</html>

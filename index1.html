@@ -1,0 +1,2007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AB STOP India | Exhibition Logistics for International Exhibitors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* =======================================
+   DESIGN TOKENS
+   ======================================= */
+:root {
+  --navy:       #0D2137;
+  --navy-mid:   #163352;
+  --navy-light: #1e4568;
+  --red:        #C41E3A;
+  --red-dark:   #9B1629;
+  --red-light:  #fdecea;
+  --teal:       #00B8D4;
+  --teal-dark:  #0091A8;
+  --teal-light: #E0F7FA;
+  --gold:       #D4A017;
+  --gold-light: #FFF8E1;
+  --white:      #ffffff;
+  --off-white:  #F5F7FA;
+  --text:       #1a2a3a;
+  --text-muted: #607080;
+  --border:     rgba(13,33,55,.09);
+
+  --r-sm: 8px; --r-md: 14px; --r-lg: 22px; --r-xl: 34px;
+  --sh-sm: 0 2px 12px rgba(13,33,55,.08);
+  --sh-md: 0 8px 32px rgba(13,33,55,.12);
+  --sh-lg: 0 20px 60px rgba(13,33,55,.16);
+  --sh-red:  0 8px 28px rgba(196,30,58,.28);
+  --sh-teal: 0 8px 28px rgba(0,184,212,.22);
+  --t: all .3s cubic-bezier(.4,0,.2,1);
+  --gap: 100px 0;
+}
+
+/* =======================================
+   RESET & BASE
+   ======================================= */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Plus Jakarta Sans',sans-serif;font-weight:300;color:var(--text);line-height:1.7;background:var(--white);overflow-x:hidden;font-size:15px;}
+a{text-decoration:none;color:inherit;transition:var(--t);}
+ul{list-style:none;}
+img{max-width:100%;height:auto;display:block;}
+
+/* =======================================
+   UTILITY
+   ======================================= */
+.container{max-width:1220px;margin:0 auto;padding:0 24px;}
+.page{display:none;}
+.page.active{display:block;}
+
+.sec-header{text-align:center;margin-bottom:60px;}
+.sec-header h2{
+  font-family:'DM Serif Display',serif;
+  font-size:2.6rem;font-weight:400;color:var(--navy);
+  margin-bottom:14px;letter-spacing:-.3px;
+  position:relative;display:inline-block;
+}
+.sec-header h2::after{
+  content:'';position:absolute;bottom:-10px;left:50%;
+  transform:translateX(-50%);
+  width:56px;height:3px;
+  background:linear-gradient(90deg,var(--red),var(--teal));
+  border-radius:2px;
+}
+.sec-header p{color:var(--text-muted);font-size:.93rem;max-width:620px;margin:24px auto 0;font-weight:300;line-height:1.85;}
+
+.sec-label{display:inline-flex;align-items:center;gap:8px;font-size:.7rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);margin-bottom:14px;}
+.sec-label::before{content:'';display:inline-block;width:22px;height:2px;background:var(--red);border-radius:1px;}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;background:linear-gradient(135deg,var(--red),var(--red-dark));color:var(--white);font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:1px;border-radius:50px;border:2px solid transparent;cursor:pointer;transition:var(--t);font-family:'Plus Jakarta Sans',sans-serif;}
+.btn:hover{background:transparent;border-color:var(--red);color:var(--red);transform:translateY(-2px);box-shadow:var(--sh-red);}
+.btn-outline{background:transparent;border-color:rgba(255,255,255,.6);color:var(--white);}
+.btn-outline:hover{background:var(--white);color:var(--red);border-color:var(--white);}
+.btn-teal{background:linear-gradient(135deg,var(--teal),var(--teal-dark));border-color:var(--teal);}
+.btn-teal:hover{background:transparent;border-color:var(--teal);color:var(--teal);box-shadow:var(--sh-teal);}
+
+/* =======================================
+   TOP BAR
+   ======================================= */
+.top-bar{background:linear-gradient(90deg,var(--red-dark),var(--red));color:var(--white);padding:9px 0;font-size:.78rem;}
+.top-bar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;}
+.top-bar-left span,.top-bar-right span{margin-right:18px;font-weight:300;}
+.top-bar i{color:rgba(255,255,255,.55);margin-right:5px;}
+.top-bar a{color:var(--white);opacity:.8;}
+.top-bar a:hover{opacity:1;}
+
+/* =======================================
+   HEADER / NAV
+   ======================================= */
+header{background:var(--white);box-shadow:0 2px 20px rgba(13,33,55,.1);position:sticky;top:0;z-index:1000;}
+.nav-wrap{display:flex;justify-content:space-between;align-items:center;height:88px;max-width:1220px;margin:0 auto;padding:0 24px;}
+.logo-area{display:flex;align-items:center;gap:12px;}
+.logo-mark{width:46px;height:46px;background:linear-gradient(135deg,var(--red),var(--red-dark));border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--white);font-weight:400;flex-shrink:0;box-shadow:var(--sh-red);}
+.logo-text{line-height:1.15;}
+.logo-text .brand{font-family:'DM Serif Display',serif;font-size:1.35rem;color:var(--navy);letter-spacing:-.2px;}
+.logo-text .brand span{color:var(--red);}
+.logo-text .tagline{font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--teal-dark);}
+
+.main-nav ul{display:flex;gap:30px;}
+.main-nav a{font-weight:600;font-size:.82rem;text-transform:uppercase;color:var(--navy);position:relative;letter-spacing:.8px;cursor:pointer;}
+.main-nav a::after{content:'';position:absolute;width:0;height:2px;background:linear-gradient(90deg,var(--teal),var(--teal-dark));bottom:-4px;left:0;transition:var(--t);border-radius:1px;}
+.main-nav a:hover::after,.main-nav a.active-link::after{width:100%;}
+.main-nav a.active-link{color:var(--red);}
+.hamburger{display:none;cursor:pointer;font-size:1.4rem;color:var(--navy);}
+
+/* =======================================
+   HERO
+   ======================================= */
+.hero{position:relative;height:640px;overflow:hidden;display:flex;align-items:center;color:var(--white);}
+.slide{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;transition:opacity 1.2s ease-in-out;background-size:cover;background-position:center;z-index:1;}
+.slide::before{content:'';position:absolute;inset:0;background:linear-gradient(110deg,rgba(13,33,55,.88) 0%,rgba(13,33,55,.5) 55%,transparent 100%);}
+.slide.active{opacity:1;}
+.sl-1{background-image:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop');}
+.sl-2{background-image:url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2070&auto=format&fit=crop');}
+.sl-3{background-image:url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop');}
+.sl-4{background-image:url('https://images.unsplash.com/photo-1524592714635-d77511a4834d?q=80&w=2070&auto=format&fit=crop');}
+.sl-5{background-image:url('https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2070&auto=format&fit=crop');}
+
+.hero-content{position:relative;z-index:5;padding:0 24px;margin-left:70px;max-width:580px;animation:heroIn .9s cubic-bezier(.4,0,.2,1) both;}
+@keyframes heroIn{from{opacity:0;transform:translateY(36px);}to{opacity:1;transform:translateY(0);}}
+
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;background:rgba(0,184,212,.16);border:1px solid rgba(0,184,212,.4);color:#67E8F9;font-size:.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:7px 18px;border-radius:50px;margin-bottom:22px;}
+.hero-content h1{font-family:'DM Serif Display',serif;font-size:3.5rem;font-weight:400;line-height:1.1;margin-bottom:18px;}
+.hero-content h1 em{font-style:italic;color:var(--teal);}
+.hero-content p{font-size:.96rem;font-weight:300;color:rgba(255,255,255,.78);margin-bottom:32px;line-height:1.85;max-width:460px;}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+
+/* Hero badge */
+.hero-badge{position:absolute;bottom:30px;right:50px;z-index:6;background:rgba(255,255,255,.95);border-radius:14px;padding:16px 22px;box-shadow:var(--sh-lg);display:flex;gap:14px;align-items:center;border-top:3px solid var(--red);}
+.hb-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--red),var(--red-dark));border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:1.1rem;}
+.hb-text .hb-num{font-family:'DM Serif Display',serif;font-size:1.6rem;color:var(--navy);line-height:1;}
+.hb-text .hb-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--text-muted);}
+
+/* Service Strip */
+.svc-strip{background:var(--white);border-top:4px solid var(--red);box-shadow:0 4px 24px rgba(13,33,55,.1);}
+.svc-strip-grid{display:grid;grid-template-columns:repeat(5,1fr);max-width:1220px;margin:0 auto;padding:0 24px;}
+.svc-strip-item{text-align:center;padding:20px 14px;border-right:1px solid var(--border);transition:var(--t);cursor:default;}
+.svc-strip-item:last-child{border-right:none;}
+.svc-strip-item:hover{background:var(--teal-light);}
+.svc-strip-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--navy),var(--navy-mid));border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:var(--teal);font-size:1.1rem;}
+.svc-strip-item h4{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--navy);line-height:1.4;}
+
+/* =======================================
+   ABOUT SECTION
+   ======================================= */
+.about-sec{padding:var(--gap);background:var(--off-white);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+.about-text h2{font-family:'DM Serif Display',serif;font-size:2.5rem;color:var(--navy);line-height:1.15;margin-bottom:10px;letter-spacing:-.2px;}
+.about-text h3{font-size:.95rem;font-weight:600;color:var(--teal-dark);margin-bottom:24px;text-transform:uppercase;letter-spacing:1px;}
+.about-text p{font-size:.92rem;color:var(--text-muted);line-height:1.9;margin-bottom:16px;font-weight:300;}
+.about-hl{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:26px 0 30px;}
+.hl-item{display:flex;align-items:center;gap:10px;padding:11px 14px;background:var(--white);border-radius:var(--r-sm);border:1px solid rgba(0,184,212,.15);box-shadow:var(--sh-sm);transition:var(--t);}
+.hl-item:hover{border-color:var(--teal);transform:translateY(-2px);}
+.hl-item i{color:var(--teal);font-size:1rem;}
+.hl-item span{font-weight:600;font-size:.82rem;color:var(--navy);}
+.about-img img{border-radius:var(--r-lg);box-shadow:var(--sh-lg);width:100%;height:480px;object-fit:cover;}
+.about-img{position:relative;}
+.about-img-badge{position:absolute;bottom:-20px;left:-20px;background:var(--navy);color:var(--white);padding:22px 24px;border-radius:var(--r-md);box-shadow:var(--sh-md);text-align:center;border-left:4px solid var(--teal);}
+.aib-num{font-family:'DM Serif Display',serif;font-size:2.4rem;line-height:1;color:var(--teal);}
+.aib-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:rgba(255,255,255,.6);margin-top:3px;}
+
+/* =======================================
+   SERVICES SECTION
+   ======================================= */
+.services-sec{padding:var(--gap);background:var(--white);}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.svc-card{background:var(--white);border-radius:var(--r-md);overflow:hidden;border:1px solid var(--border);box-shadow:var(--sh-sm);transition:var(--t);cursor:pointer;}
+.svc-card:hover{transform:translateY(-8px);box-shadow:var(--sh-md);border-color:var(--red);}
+.svc-img{overflow:hidden;height:175px;background:var(--off-white);position:relative;}
+.svc-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+.svc-card:hover .svc-img img{transform:scale(1.07);}
+.svc-img-icon{position:absolute;top:14px;left:14px;width:38px;height:38px;background:linear-gradient(135deg,var(--red),var(--red-dark));border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:.9rem;box-shadow:var(--sh-red);}
+.svc-body{padding:20px 22px 24px;}
+.svc-body h4{font-family:'DM Serif Display',serif;font-size:1.12rem;color:var(--navy);margin-bottom:8px;}
+.svc-body p{font-size:.86rem;color:var(--text-muted);line-height:1.7;font-weight:300;}
+.svc-tag{display:inline-flex;align-items:center;gap:5px;margin-top:14px;font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red);}
+.svc-tag i{font-size:.65rem;transition:var(--t);}
+.svc-card:hover .svc-tag i{transform:translateX(4px);}
+
+/* =======================================
+   VENUES SECTION
+   ======================================= */
+.venues-sec{padding:var(--gap);background:var(--off-white);}
+.venues-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.venue-card{background:var(--white);border-radius:var(--r-md);overflow:hidden;border:1px solid var(--border);box-shadow:var(--sh-sm);transition:var(--t);}
+.venue-card:hover{transform:translateY(-6px);box-shadow:var(--sh-md);border-color:var(--teal);}
+.venue-img{height:140px;overflow:hidden;position:relative;}
+.venue-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+.venue-card:hover .venue-img img{transform:scale(1.06);}
+.venue-city-badge{position:absolute;top:10px;right:10px;background:var(--red);color:var(--white);font-size:.62rem;font-weight:700;padding:3px 9px;border-radius:50px;text-transform:uppercase;letter-spacing:.8px;}
+.venue-body{padding:16px 18px 20px;}
+.venue-name{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--navy);margin-bottom:5px;}
+.venue-city{font-size:.75rem;color:var(--teal-dark);font-weight:600;text-transform:uppercase;letter-spacing:.8px;display:flex;align-items:center;gap:5px;margin-bottom:6px;}
+.venue-city i{font-size:.7rem;}
+.venue-desc{font-size:.78rem;color:var(--text-muted);line-height:1.6;font-weight:300;}
+
+/* =======================================
+   EXHIBITIONS SECTION
+   ======================================= */
+.exh-sec{padding:var(--gap);background:var(--navy);position:relative;overflow:hidden;}
+.exh-sec::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(0,184,212,.08),transparent);pointer-events:none;}
+.exh-sec .sec-header h2{color:var(--white);}
+.exh-sec .sec-header p{color:rgba(255,255,255,.5);}
+.exh-sec .sec-header h2::after{background:linear-gradient(90deg,var(--red),var(--teal));}
+.exh-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.exh-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-md);padding:22px;display:flex;gap:16px;transition:var(--t);cursor:default;}
+.exh-card:hover{background:rgba(0,184,212,.08);border-color:rgba(0,184,212,.3);transform:translateY(-4px);}
+.exh-card.featured{grid-column:span 2;background:rgba(196,30,58,.07);border-color:rgba(196,30,58,.2);}
+.exh-card.featured:hover{background:rgba(196,30,58,.12);border-color:rgba(196,30,58,.4);}
+.exh-icon{width:48px;height:48px;min-width:48px;border-radius:12px;background:rgba(0,184,212,.12);border:1px solid rgba(0,184,212,.2);display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--teal);transition:var(--t);}
+.exh-card.featured .exh-icon{background:rgba(196,30,58,.15);border-color:rgba(196,30,58,.3);color:#FCA5A5;width:54px;height:54px;min-width:54px;font-size:1.4rem;}
+.exh-card:hover .exh-icon{transform:scale(1.1);}
+.exh-body h4{font-family:'DM Serif Display',serif;font-size:.95rem;color:var(--white);margin-bottom:6px;line-height:1.3;}
+.exh-card.featured .exh-body h4{font-size:1.05rem;}
+.exh-body p{font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.6;font-weight:300;}
+.exh-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.exh-tag{font-size:.65rem;font-weight:600;padding:3px 9px;border-radius:50px;background:rgba(255,255,255,.07);color:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.1);}
+.exh-tag.teal{background:rgba(0,184,212,.12);color:#67E8F9;border-color:rgba(0,184,212,.25);}
+.exh-tag.red{background:rgba(196,30,58,.12);color:#FCA5A5;border-color:rgba(196,30,58,.25);}
+
+/* =======================================
+   SECTORS SECTION
+   ======================================= */
+.sectors-sec{padding:var(--gap);background:var(--off-white);}
+.sectors-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.sector-card{background:var(--white);border-radius:var(--r-md);overflow:hidden;border:1px solid var(--border);box-shadow:var(--sh-sm);transition:var(--t);cursor:pointer;}
+.sector-card:hover{transform:translateY(-6px);box-shadow:var(--sh-md);border-color:var(--teal);}
+.sector-img{height:140px;overflow:hidden;}
+.sector-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+.sector-card:hover .sector-img img{transform:scale(1.06);}
+.sector-body{padding:16px 18px 20px;}
+.sector-title{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--navy);margin-bottom:5px;}
+.sector-desc{font-size:.78rem;color:var(--text-muted);line-height:1.6;font-weight:300;}
+
+/* =======================================
+   ACHIEVEMENTS / STATS
+   ======================================= */
+.stats-sec{padding:100px 0;background:linear-gradient(rgba(13,33,55,.9),rgba(100,10,10,.8)),url('https://images.unsplash.com/photo-1524592714635-d77511a4834d?q=80&w=2070&auto=format&fit=crop') center/cover;background-attachment:fixed;color:var(--white);text-align:center;}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
+.stat-item{padding:36px 22px;border:1px solid rgba(255,255,255,.1);border-radius:var(--r-md);background:rgba(255,255,255,.05);backdrop-filter:blur(6px);transition:var(--t);}
+.stat-item:hover{background:rgba(0,184,212,.12);border-color:rgba(0,184,212,.3);transform:translateY(-4px);}
+.stat-item i{font-size:2rem;color:var(--teal);margin-bottom:16px;display:block;}
+.counter{font-family:'DM Serif Display',serif;font-size:3.4rem;display:block;line-height:1;margin-bottom:8px;color:var(--white);}
+.stat-text{font-size:.78rem;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.5);font-weight:600;}
+
+/* =======================================
+   PROCESS / SUPPORT STEPS
+   ======================================= */
+.process-sec{padding:var(--gap);background:var(--white);}
+.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.process-step{background:var(--white);border-radius:var(--r-md);overflow:hidden;border:1px solid var(--border);box-shadow:var(--sh-sm);transition:var(--t);}
+.process-step:hover{transform:translateY(-6px);box-shadow:var(--sh-md);border-color:rgba(196,30,58,.25);}
+.step-img{height:155px;overflow:hidden;}
+.step-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+.process-step:hover .step-img img{transform:scale(1.06);}
+.step-body{padding:20px 22px 24px;position:relative;}
+.step-num{position:absolute;top:-18px;right:20px;width:36px;height:36px;background:linear-gradient(135deg,var(--red),var(--red-dark));color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:1rem;box-shadow:var(--sh-red);}
+.step-body h4{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--navy);margin-bottom:8px;}
+.step-body p{font-size:.86rem;color:var(--text-muted);line-height:1.7;font-weight:300;}
+
+/* =======================================
+   TESTIMONIALS
+   ======================================= */
+.testi-sec{padding:var(--gap);background:linear-gradient(135deg,var(--navy),var(--navy-mid));}
+.testi-sec .sec-header h2{color:var(--white);}
+.testi-sec .sec-header p{color:rgba(255,255,255,.5);}
+.testi-sec .sec-header h2::after{background:linear-gradient(90deg,var(--teal),var(--red));}
+.testi-wrap{max-width:780px;margin:0 auto;}
+.testi-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:46px 42px;text-align:center;display:none;backdrop-filter:blur(10px);}
+.testi-card.active{display:block;animation:fadeSlide .5s ease both;}
+@keyframes fadeSlide{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+.testi-card .q-icon{font-size:2rem;color:var(--teal);opacity:.3;margin-bottom:18px;}
+.testi-stars{color:#F59E0B;font-size:.82rem;margin-bottom:14px;}
+.testi-text{font-size:1.04rem;font-style:italic;color:rgba(255,255,255,.72);line-height:1.9;margin-bottom:26px;font-weight:300;}
+.client-name{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--white);margin-bottom:4px;}
+.client-role{font-size:.8rem;color:var(--teal);font-weight:500;}
+.client-country{font-size:.72rem;color:rgba(255,255,255,.4);margin-top:3px;font-weight:500;}
+.testi-dots{display:flex;justify-content:center;gap:10px;margin-top:28px;}
+.testi-dot{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:var(--t);}
+.testi-dot.active{background:var(--teal);transform:scale(1.3);}
+
+/* =======================================
+   CTA SECTION
+   ======================================= */
+.cta-sec{padding:90px 0 0;background:linear-gradient(135deg,var(--navy),var(--navy-mid));position:relative;overflow:hidden;}
+.cta-sec::before{content:'';position:absolute;top:-50%;right:-60px;width:400px;height:400px;background:radial-gradient(circle,rgba(0,184,212,.1),transparent);border-radius:50%;z-index:0;}
+.cta-inner{position:relative;z-index:1;text-align:center;max-width:660px;margin:0 auto;padding-bottom:60px;}
+.cta-inner h2{font-family:'DM Serif Display',serif;font-size:2.8rem;color:var(--white);margin-bottom:16px;letter-spacing:-.3px;}
+.cta-inner p{font-size:.96rem;color:rgba(255,255,255,.58);margin-bottom:36px;line-height:1.85;font-weight:300;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+/* =======================================
+   CONTACT SECTION
+   ======================================= */
+.contact-sec{background:var(--off-white);padding:80px 0 100px;}
+.contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:start;}
+.form-wrap{background:var(--navy);padding:46px;border-radius:var(--r-lg);box-shadow:var(--sh-lg);position:relative;overflow:hidden;}
+.form-wrap::before{content:'';position:absolute;top:-80px;right:-80px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(196,30,58,.14),transparent);}
+.form-wrap h3{font-family:'DM Serif Display',serif;font-size:1.8rem;color:var(--white);margin-bottom:6px;position:relative;z-index:1;}
+.form-wrap > p{color:rgba(255,255,255,.42);font-size:.86rem;margin-bottom:30px;position:relative;z-index:1;}
+.form-group{margin-bottom:18px;position:relative;z-index:1;}
+.form-group label{display:block;margin-bottom:6px;font-weight:600;color:rgba(255,255,255,.65);font-size:.73rem;letter-spacing:.8px;text-transform:uppercase;}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:12px 15px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-sm);font-family:'Plus Jakarta Sans',sans-serif;font-size:.88rem;color:var(--white);transition:var(--t);}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.22);}
+.form-group select{color:rgba(255,255,255,.6);}
+.form-group select option{background:var(--navy);color:var(--white);}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--teal);background:rgba(0,184,212,.07);box-shadow:0 0 0 3px rgba(0,184,212,.14);}
+.form-group textarea{resize:vertical;min-height:105px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.form-submit{width:100%;background:linear-gradient(135deg,var(--red),var(--red-dark));color:var(--white);border:none;padding:14px 28px;border-radius:50px;font-weight:700;text-transform:uppercase;letter-spacing:1px;cursor:pointer;font-size:.82rem;display:flex;align-items:center;justify-content:center;gap:10px;transition:var(--t);position:relative;z-index:1;font-family:'Plus Jakarta Sans',sans-serif;}
+.form-submit:hover{transform:translateY(-3px);box-shadow:var(--sh-red);}
+
+.contact-cards{display:flex;flex-direction:column;gap:14px;}
+.contact-card{background:var(--white);border:1px solid var(--border);padding:22px;border-radius:var(--r-md);box-shadow:var(--sh-sm);transition:var(--t);display:flex;gap:16px;align-items:flex-start;}
+.contact-card:hover{transform:translateX(5px);border-color:rgba(196,30,58,.2);box-shadow:var(--sh-md);}
+.cc-icon{width:44px;height:44px;min-width:44px;background:linear-gradient(135deg,var(--red),var(--red-dark));border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:.95rem;box-shadow:var(--sh-red);flex-shrink:0;}
+.cc-body h4{font-size:.86rem;color:var(--navy);font-weight:700;margin-bottom:4px;}
+.cc-body p{color:var(--text-muted);font-size:.83rem;margin-bottom:2px;line-height:1.6;}
+.cc-body small{color:var(--text-muted);font-size:.72rem;}
+
+/* =======================================
+   FOOTER
+   ======================================= */
+footer{background:linear-gradient(135deg,var(--navy),#071826);color:rgba(255,255,255,.7);padding-top:70px;}
+.footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:50px;}
+.footer-col h4{color:var(--white);font-family:'DM Serif Display',serif;font-size:1.05rem;margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid rgba(0,184,212,.25);}
+.footer-about p{font-size:.86rem;line-height:1.8;font-weight:300;margin-bottom:14px;}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:18px;}
+.footer-brand .logo-mark-sm{width:38px;height:38px;background:linear-gradient(135deg,var(--red),var(--red-dark));border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:1rem;color:var(--white);}
+.footer-brand .brand-text{font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--white);}
+.footer-links li{margin-bottom:9px;}
+.footer-links a{color:rgba(255,255,255,.6);font-size:.86rem;font-weight:300;transition:var(--t);cursor:pointer;}
+.footer-links a:hover{color:var(--teal);padding-left:5px;}
+.footer-contact li{display:flex;gap:11px;margin-bottom:12px;align-items:flex-start;font-size:.86rem;font-weight:300;}
+.footer-contact i{color:var(--teal);margin-top:3px;flex-shrink:0;}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.07);padding:20px 0;text-align:center;font-size:.8rem;color:rgba(255,255,255,.35);font-weight:300;}
+.foot-bottom span{color:var(--teal);}
+
+/* ============================================
+   ABOUT PAGE
+   ============================================ */
+.page-hero{background:linear-gradient(135deg,var(--navy),var(--navy-mid));padding:80px 0 70px;color:var(--white);text-align:center;position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--red),var(--teal));}
+.page-hero h1{font-family:'DM Serif Display',serif;font-size:3rem;font-weight:400;margin-bottom:14px;letter-spacing:-.3px;}
+.page-hero p{color:rgba(255,255,255,.6);font-size:1rem;max-width:580px;margin:0 auto;font-weight:300;line-height:1.8;}
+.breadcrumb{display:flex;align-items:center;justify-content:center;gap:8px;font-size:.75rem;color:rgba(255,255,255,.5);margin-bottom:16px;text-transform:uppercase;letter-spacing:1px;}
+.breadcrumb span{color:var(--teal);}
+
+.about-story{padding:var(--gap);background:var(--off-white);}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+.story-img img{width:100%;height:400px;object-fit:cover;border-radius:var(--r-lg);box-shadow:var(--sh-lg);}
+.story-text h2{font-family:'DM Serif Display',serif;font-size:2.4rem;color:var(--navy);margin-bottom:10px;line-height:1.15;}
+.story-text p{font-size:.92rem;color:var(--text-muted);line-height:1.9;font-weight:300;margin-bottom:14px;}
+
+.why-choose{padding:var(--gap);background:var(--white);}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.why-card{padding:32px 28px;border-radius:var(--r-md);border:1px solid var(--border);box-shadow:var(--sh-sm);transition:var(--t);background:var(--white);}
+.why-card:hover{transform:translateY(-6px);box-shadow:var(--sh-md);border-color:var(--teal);}
+.why-icon{width:52px;height:52px;background:linear-gradient(135deg,var(--navy),var(--navy-mid));border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:1.2rem;margin-bottom:20px;box-shadow:var(--sh-md);}
+.why-card h4{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--navy);margin-bottom:10px;}
+.why-card p{font-size:.86rem;color:var(--text-muted);line-height:1.7;font-weight:300;}
+
+.network-sec{padding:var(--gap);background:var(--navy);position:relative;overflow:hidden;}
+.network-sec::before{content:'INDIA';position:absolute;bottom:-40px;right:-40px;font-family:'DM Serif Display',serif;font-size:18rem;font-weight:400;color:rgba(255,255,255,.02);line-height:1;pointer-events:none;}
+.network-sec .sec-header h2{color:var(--white);}
+.network-sec .sec-header p{color:rgba(255,255,255,.5);}
+.network-sec .sec-header h2::after{background:linear-gradient(90deg,var(--teal),var(--red));}
+.network-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.network-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-md);padding:24px;text-align:center;transition:var(--t);}
+.network-item:hover{background:rgba(0,184,212,.1);border-color:rgba(0,184,212,.3);transform:translateY(-4px);}
+.network-item i{font-size:1.8rem;color:var(--teal);margin-bottom:12px;display:block;}
+.network-item h4{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--white);margin-bottom:6px;}
+.network-item p{font-size:.78rem;color:rgba(255,255,255,.45);line-height:1.6;font-weight:300;}
+
+.certif-sec{padding:var(--gap);background:var(--off-white);}
+.certif-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.certif-card{background:var(--white);border-radius:var(--r-md);padding:28px 22px;text-align:center;border:1px solid var(--border);box-shadow:var(--sh-sm);transition:var(--t);}
+.certif-card:hover{transform:translateY(-4px);box-shadow:var(--sh-md);border-color:var(--red);}
+.certif-card i{font-size:2rem;color:var(--gold);margin-bottom:12px;}
+.certif-card h4{font-size:.88rem;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.certif-card p{font-size:.78rem;color:var(--text-muted);line-height:1.6;font-weight:300;}
+
+/* ============================================
+   SERVICES PAGE
+   ============================================ */
+.svc-detail-sec{padding:var(--gap);background:var(--off-white);}
+.svc-detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+.svc-detail-card{background:var(--white);border-radius:var(--r-md);overflow:hidden;border:1px solid var(--border);box-shadow:var(--sh-sm);transition:var(--t);display:flex;gap:0;}
+.svc-detail-card:hover{transform:translateY(-6px);box-shadow:var(--sh-md);border-color:var(--red);}
+.sdc-icon-col{width:80px;min-width:80px;background:linear-gradient(180deg,var(--navy),var(--navy-mid));display:flex;align-items:flex-start;justify-content:center;padding:24px 0;}
+.sdc-icon-col i{font-size:1.5rem;color:var(--teal);}
+.sdc-body{padding:22px 22px 24px;}
+.sdc-body h4{font-family:'DM Serif Display',serif;font-size:1.08rem;color:var(--navy);margin-bottom:8px;}
+.sdc-body p{font-size:.86rem;color:var(--text-muted);line-height:1.7;font-weight:300;}
+.sdc-body ul{margin-top:12px;display:flex;flex-direction:column;gap:5px;}
+.sdc-body ul li{font-size:.8rem;color:var(--text-muted);display:flex;align-items:flex-start;gap:8px;font-weight:300;}
+.sdc-body ul li::before{content:'\f00c';font-family:'Font Awesome 6 Free';font-weight:900;font-size:.65rem;color:var(--teal);margin-top:3px;flex-shrink:0;}
+
+.all-exh-sec{padding:var(--gap);background:var(--white);}
+.all-exh-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.all-exh-card{background:var(--off-white);border:1px solid var(--border);border-radius:var(--r-md);padding:22px;transition:var(--t);cursor:default;}
+.all-exh-card:hover{background:var(--white);border-color:var(--teal);transform:translateY(-4px);box-shadow:var(--sh-md);}
+.aec-header{display:flex;align-items:flex-start;gap:14px;margin-bottom:12px;}
+.aec-icon{width:44px;height:44px;min-width:44px;border-radius:10px;background:linear-gradient(135deg,var(--navy),var(--navy-mid));display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--teal);}
+.aec-header h4{font-family:'DM Serif Display',serif;font-size:.98rem;color:var(--navy);line-height:1.3;}
+.aec-header span{font-size:.7rem;color:var(--text-muted);display:block;margin-top:2px;}
+.aec-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.aec-tag{font-size:.65rem;font-weight:600;padding:3px 9px;border-radius:50px;background:var(--teal-light);color:var(--teal-dark);border:1px solid rgba(0,184,212,.2);}
+
+.sectors-all-sec{padding:var(--gap);background:var(--off-white);}
+.sectors-all-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.sector-all-item{background:var(--white);border-radius:var(--r-md);padding:20px 18px;border:1px solid var(--border);box-shadow:var(--sh-sm);transition:var(--t);display:flex;align-items:flex-start;gap:14px;}
+.sector-all-item:hover{border-color:var(--red);transform:translateY(-3px);box-shadow:var(--sh-md);}
+.sai-icon{width:40px;height:40px;min-width:40px;background:linear-gradient(135deg,var(--red),var(--red-dark));border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:.9rem;flex-shrink:0;}
+.sai-body h4{font-size:.86rem;font-weight:700;color:var(--navy);margin-bottom:3px;}
+.sai-body p{font-size:.75rem;color:var(--text-muted);font-weight:300;line-height:1.5;}
+
+/* ============================================
+   SUPPORT PAGE
+   ============================================ */
+.faq-sec{padding:var(--gap);background:var(--off-white);}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.faq-item{background:var(--white);border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--sh-sm);transition:var(--t);}
+.faq-item:hover{border-color:var(--teal);box-shadow:var(--sh-md);}
+.faq-q{padding:18px 22px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.faq-q h4{font-size:.9rem;font-weight:600;color:var(--navy);}
+.faq-q i{color:var(--teal);transition:var(--t);flex-shrink:0;}
+.faq-item.open .faq-q i{transform:rotate(180deg);}
+.faq-a{padding:0 22px 18px;font-size:.85rem;color:var(--text-muted);line-height:1.8;font-weight:300;display:none;}
+.faq-item.open .faq-a{display:block;}
+
+.emergency-sec{padding:80px 0;background:linear-gradient(135deg,var(--red-dark),var(--red));color:var(--white);text-align:center;}
+.emergency-sec h2{font-family:'DM Serif Display',serif;font-size:2.4rem;margin-bottom:14px;}
+.emergency-sec p{font-size:.96rem;opacity:.8;margin-bottom:28px;font-weight:300;max-width:540px;margin-left:auto;margin-right:auto;}
+.emergency-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-white{background:var(--white);color:var(--red);border-color:var(--white);}
+.btn-white:hover{background:transparent;color:var(--white);border-color:var(--white);}
+.btn-white-outline{background:transparent;border-color:rgba(255,255,255,.6);color:var(--white);}
+.btn-white-outline:hover{background:var(--white);color:var(--red);border-color:var(--white);}
+
+/* =======================================
+   RESPONSIVE
+   ======================================= */
+@media(max-width:1100px){.sectors-grid,.sectors-all-grid,.network-grid,.certif-grid{grid-template-columns:repeat(3,1fr);}.venues-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:992px){
+  .about-grid,.story-grid,.contact-grid{grid-template-columns:1fr;}
+  .svc-grid{grid-template-columns:repeat(2,1fr);}
+  .process-grid,.why-grid{grid-template-columns:repeat(2,1fr);}
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:repeat(2,1fr);}
+  .svc-strip-grid{grid-template-columns:repeat(3,1fr);}
+  .exh-grid{grid-template-columns:1fr 1fr;}
+  .exh-card.featured{grid-column:span 2;}
+  .svc-detail-grid{grid-template-columns:1fr;}
+  .all-exh-grid{grid-template-columns:repeat(2,1fr);}
+  .hero-badge{display:none;}
+  .faq-grid{grid-template-columns:1fr;}
+}
+@media(max-width:768px){
+  .hamburger{display:block;}
+  .nav-wrap{flex-direction:row;justify-content:space-between;}
+  .main-nav{position:absolute;top:88px;left:-100%;width:100%;background:var(--white);padding:20px;box-shadow:var(--sh-md);transition:.4s;z-index:999;}
+  .main-nav.open{left:0;}
+  .main-nav ul{flex-direction:column;text-align:center;gap:15px;}
+  .hero{height:540px;}
+  .hero-content{margin-left:24px;}
+  .hero-content h1{font-size:2.6rem;}
+  .svc-grid{grid-template-columns:1fr;}
+  .venues-grid{grid-template-columns:repeat(2,1fr);}
+  .sectors-grid,.sectors-all-grid{grid-template-columns:repeat(2,1fr);}
+  .network-grid,.certif-grid{grid-template-columns:repeat(2,1fr);}
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:1fr;}
+  .sec-header h2{font-size:2rem;}
+  .svc-strip-grid{grid-template-columns:repeat(2,1fr);}
+  .exh-grid{grid-template-columns:1fr;}
+  .exh-card.featured{grid-column:span 1;}
+  .why-grid,.process-grid{grid-template-columns:1fr;}
+  .all-exh-grid{grid-template-columns:1fr;}
+  .sectors-all-grid{grid-template-columns:repeat(2,1fr);}
+  .about-img-badge{left:10px;bottom:-10px;}
+  .page-hero h1{font-size:2.2rem;}
+}
+@media(max-width:560px){
+  .hero-content h1{font-size:2rem;}
+  .venues-grid,.sectors-grid,.sectors-all-grid{grid-template-columns:1fr;}
+  .network-grid,.certif-grid{grid-template-columns:repeat(2,1fr);}
+  .stats-grid{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .top-bar .container{flex-direction:column;gap:4px;}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <span><i class="fas fa-phone"></i>+91 98110 00000</span>
+      <span><i class="fas fa-envelope"></i>info@abstopindia.com</span>
+    </div>
+    <div class="top-bar-right">
+      <span><i class="fas fa-clock"></i>Mon–Fri: 9AM–6PM IST</span>
+      <a href="tel:+919811000000"><i class="fas fa-headset"></i>24/7 Emergency</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="nav-wrap">
+    <div class="logo-area">
+      <div class="logo-mark">AB</div>
+      <div class="logo-text">
+        <div class="brand"><span>AB</span> STOP India</div>
+        <div class="tagline">Indian Exhibition Logistics</div>
+      </div>
+    </div>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a onclick="showPage('home')" class="active-link" id="nav-home">Home</a></li>
+        <li><a onclick="showPage('about')" id="nav-about">About Us</a></li>
+        <li><a onclick="showPage('services')" id="nav-services">Services</a></li>
+        <li><a onclick="showPage('support')" id="nav-support">Support</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+  </div>
+</header>
+
+<!-- =====================================================================
+     HOME PAGE
+     ===================================================================== -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="slide sl-1 active"></div>
+    <div class="slide sl-2"></div>
+    <div class="slide sl-3"></div>
+    <div class="slide sl-4"></div>
+    <div class="slide sl-5"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow"><i class="fas fa-map-marker-alt"></i>India's Inbound Exhibition Logistics Experts</div>
+      <h1>Your Cargo.<br><em>India's Biggest</em><br>Exhibition Stages.</h1>
+      <p>From customs clearance at Indian airports and ports to your exhibition stand — seamless, stress-free, and always on time. Serving international exhibitors at all major Indian venues.</p>
+      <div class="hero-cta">
+        <a class="btn" onclick="showPage('support')"><i class="fas fa-paper-plane"></i> Get a Quote</a>
+        <a class="btn btn-outline" onclick="showPage('services')">Our Services</a>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <div class="hb-icon"><i class="fas fa-trophy"></i></div>
+      <div class="hb-text">
+        <div class="hb-num">25+</div>
+        <div class="hb-label">Years Serving<br>Global Exhibitors</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE STRIP -->
+  <div class="svc-strip">
+    <div class="svc-strip-grid">
+      <div class="svc-strip-item">
+        <div class="svc-strip-icon"><i class="fas fa-file-shield"></i></div>
+        <h4>Customs<br>Clearance</h4>
+      </div>
+      <div class="svc-strip-item">
+        <div class="svc-strip-icon"><i class="fas fa-plane-arrival"></i></div>
+        <h4>Airport / Port<br>Transfer</h4>
+      </div>
+      <div class="svc-strip-item">
+        <div class="svc-strip-icon"><i class="fas fa-store"></i></div>
+        <h4>Stand<br>Delivery</h4>
+      </div>
+      <div class="svc-strip-item">
+        <div class="svc-strip-icon"><i class="fas fa-warehouse"></i></div>
+        <h4>Warehousing<br>& Storage</h4>
+      </div>
+      <div class="svc-strip-item">
+        <div class="svc-strip-icon"><i class="fas fa-rotate-left"></i></div>
+        <h4>Return<br>Logistics</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about-sec" id="about-home">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="sec-label">Who We Are</div>
+          <h2>India's Trusted Inbound<br>Exhibition Logistics Partner</h2>
+          <h3>Since 1999 — Serving International Exhibitors in India</h3>
+          <p>AB STOP India is a specialist in inbound exhibition logistics — exclusively serving international companies and brands that exhibit at trade fairs, conferences, and mega-events across India. We handle everything from the moment your shipment lands in India until it is safely placed at your exhibition stand.</p>
+          <p>With over two decades of experience working across Bharat Mandapam, Yashobhoomi, BEC Mumbai, BIEC Bangalore, HITEX Hyderabad, Chennai Trade Centre and all major Indian venues, our team knows every regulation, every deadline, and every requirement — so you don't have to.</p>
+          <div class="about-hl">
+            <div class="hl-item"><i class="fas fa-check-circle"></i><span>Zero Customs Hassles</span></div>
+            <div class="hl-item"><i class="fas fa-shield-alt"></i><span>ATA Carnet Experts</span></div>
+            <div class="hl-item"><i class="fas fa-building"></i><span>All Indian Venues</span></div>
+            <div class="hl-item"><i class="fas fa-headset"></i><span>On-Site Support</span></div>
+          </div>
+          <a class="btn" onclick="showPage('about')"><i class="fas fa-arrow-right"></i> Learn More About Us</a>
+        </div>
+        <div class="about-img">
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop" alt="Exhibition Logistics India">
+          <div class="about-img-badge">
+            <div class="aib-num">130+</div>
+            <div class="aib-label">Countries Served</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES OVERVIEW -->
+  <section class="services-sec" id="services-home">
+    <div class="container">
+      <div class="sec-header">
+        <h2>Our Core Services</h2>
+        <p>End-to-end exhibition logistics covering every requirement for international exhibitors operating in India.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-card" onclick="showPage('services')">
+          <div class="svc-img">
+            <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=800&auto=format&fit=crop" alt="Customs">
+            <div class="svc-img-icon"><i class="fas fa-file-shield"></i></div>
+          </div>
+          <div class="svc-body">
+            <h4>Customs Clearance & Documentation</h4>
+            <p>Expert handling of all Indian customs formalities — temporary import (TI), ATA Carnet, bond clearance, and duty exemptions for exhibition goods.</p>
+            <span class="svc-tag">Learn More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+        <div class="svc-card" onclick="showPage('services')">
+          <div class="svc-img">
+            <img src="https://images.unsplash.com/photo-1504222490345-c075b7906046?q=80&w=800&auto=format&fit=crop" alt="Airport Transfer">
+            <div class="svc-img-icon"><i class="fas fa-plane-arrival"></i></div>
+          </div>
+          <div class="svc-body">
+            <h4>Airport & Port to Venue Transfer</h4>
+            <p>Dedicated cargo collection from IGI Delhi, CSIA Mumbai, Kempegowda Bengaluru, and all major Indian airports and seaports.</p>
+            <span class="svc-tag">Learn More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+        <div class="svc-card" onclick="showPage('services')">
+          <div class="svc-img">
+            <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=800&auto=format&fit=crop" alt="Stand Delivery">
+            <div class="svc-img-icon"><i class="fas fa-store"></i></div>
+          </div>
+          <div class="svc-body">
+            <h4>Exhibition Stand Delivery</h4>
+            <p>Precision delivery to your stand location at the venue, coordinated with official on-site handling agents and organiser schedules.</p>
+            <span class="svc-tag">Learn More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+        <div class="svc-card" onclick="showPage('services')">
+          <div class="svc-img">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop" alt="Warehousing">
+            <div class="svc-img-icon"><i class="fas fa-warehouse"></i></div>
+          </div>
+          <div class="svc-body">
+            <h4>Warehousing & Temporary Storage</h4>
+            <p>Secure bonded warehouse facilities near all major Indian exhibition venues for pre-show storage and empty case management during the event.</p>
+            <span class="svc-tag">Learn More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+        <div class="svc-card" onclick="showPage('services')">
+          <div class="svc-img">
+            <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?q=80&w=800&auto=format&fit=crop" alt="On-Site">
+            <div class="svc-img-icon"><i class="fas fa-user-tie"></i></div>
+          </div>
+          <div class="svc-body">
+            <h4>On-Site Supervision</h4>
+            <p>Dedicated AB STOP India staff present at the venue to manage deliveries, supervise unpacking, and handle any last-minute logistics challenges.</p>
+            <span class="svc-tag">Learn More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+        <div class="svc-card" onclick="showPage('services')">
+          <div class="svc-img">
+            <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=800&auto=format&fit=crop" alt="Return">
+            <div class="svc-img-icon"><i class="fas fa-rotate-left"></i></div>
+          </div>
+          <div class="svc-body">
+            <h4>Return & Re-export Logistics</h4>
+            <p>Complete management of re-export customs, repacking, and onward shipment — ensuring your exhibits leave India smoothly after the show.</p>
+            <span class="svc-tag">Learn More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VENUES -->
+  <section class="venues-sec">
+    <div class="container">
+      <div class="sec-header">
+        <h2>Major Exhibition Venues We Cover</h2>
+        <p>AB STOP India operates across all premier exhibition halls and convention centres in India.</p>
+      </div>
+      <div class="venues-grid">
+        <div class="venue-card">
+          <div class="venue-img">
+            <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?q=80&w=800&auto=format&fit=crop" alt="Bharat Mandapam">
+            <div class="venue-city-badge">New Delhi</div>
+          </div>
+          <div class="venue-body">
+            <div class="venue-name">Bharat Mandapam (ITPO)</div>
+            <div class="venue-city"><i class="fas fa-map-marker-alt"></i>Pragati Maidan, New Delhi</div>
+            <div class="venue-desc">India's largest exhibition complex hosting IITF, Auto Expo, and 100+ major events. 123,000 sq.m. covered space.</div>
+          </div>
+        </div>
+        <div class="venue-card">
+          <div class="venue-img">
+            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=800&auto=format&fit=crop" alt="Yashobhoomi">
+            <div class="venue-city-badge">New Delhi</div>
+          </div>
+          <div class="venue-body">
+            <div class="venue-name">Yashobhoomi (IICC)</div>
+            <div class="venue-city"><i class="fas fa-map-marker-alt"></i>Dwarka, New Delhi</div>
+            <div class="venue-desc">India's newest world-class convention and exhibition centre with 1.07 lakh sq.m. of convention and exhibition space.</div>
+          </div>
+        </div>
+        <div class="venue-card">
+          <div class="venue-img">
+            <img src="https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?q=80&w=800&auto=format&fit=crop" alt="BEC Mumbai">
+            <div class="venue-city-badge">Mumbai</div>
+          </div>
+          <div class="venue-body">
+            <div class="venue-name">Bombay Exhibition Centre</div>
+            <div class="venue-city"><i class="fas fa-map-marker-alt"></i>Goregaon, Mumbai</div>
+            <div class="venue-desc">Western India's premier exhibition venue hosting Plastivision, IIJS, and major trade shows. 45,000 sq.m. of space.</div>
+          </div>
+        </div>
+        <div class="venue-card">
+          <div class="venue-img">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" alt="Jio World">
+            <div class="venue-city-badge">Mumbai</div>
+          </div>
+          <div class="venue-body">
+            <div class="venue-name">Jio World Convention Centre</div>
+            <div class="venue-city"><i class="fas fa-map-marker-alt"></i>BKC, Mumbai</div>
+            <div class="venue-desc">Ultra-modern convention facility at Bandra Kurla Complex. State-of-the-art infrastructure for premium events.</div>
+          </div>
+        </div>
+        <div class="venue-card">
+          <div class="venue-img">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800&auto=format&fit=crop" alt="BIEC Bangalore">
+            <div class="venue-city-badge">Bengaluru</div>
+          </div>
+          <div class="venue-body">
+            <div class="venue-name">BIEC – Bangalore International Exhibition Centre</div>
+            <div class="venue-city"><i class="fas fa-map-marker-alt"></i>Tumkur Road, Bengaluru</div>
+            <div class="venue-desc">South India's largest exhibition centre. Host to Aero India, Electronica, IMTEX, and major tech expos.</div>
+          </div>
+        </div>
+        <div class="venue-card">
+          <div class="venue-img">
+            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop" alt="HITEX">
+            <div class="venue-city-badge">Hyderabad</div>
+          </div>
+          <div class="venue-body">
+            <div class="venue-name">HITEX Exhibition Centre</div>
+            <div class="venue-city"><i class="fas fa-map-marker-alt"></i>Hyderabad</div>
+            <div class="venue-desc">Hyderabad's premier expo facility. Hosts CONVERGENCE India, HYD Pharma Expo, and numerous tech fairs.</div>
+          </div>
+        </div>
+        <div class="venue-card">
+          <div class="venue-img">
+            <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=800&auto=format&fit=crop" alt="Chennai Trade">
+            <div class="venue-city-badge">Chennai</div>
+          </div>
+          <div class="venue-body">
+            <div class="venue-name">Chennai Trade Centre</div>
+            <div class="venue-city"><i class="fas fa-map-marker-alt"></i>Nandambakkam, Chennai</div>
+            <div class="venue-desc">South India's trade hub for rubber, engineering, and medical expos. 25,000+ sq.m. hall space.</div>
+          </div>
+        </div>
+        <div class="venue-card">
+          <div class="venue-img">
+            <img src="https://images.unsplash.com/photo-1596005554384-d293674c91d7?q=80&w=800&auto=format&fit=crop" alt="India Expo Centre">
+            <div class="venue-city-badge">Greater Noida</div>
+          </div>
+          <div class="venue-body">
+            <div class="venue-name">India Expo Centre & Mart</div>
+            <div class="venue-city"><i class="fas fa-map-marker-alt"></i>Greater Noida, UP</div>
+            <div class="venue-desc">Asia's largest mart and exhibition complex for home furnishings, textiles, and gifts. Over 1 million sq.ft.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXHIBITIONS -->
+  <section class="exh-sec">
+    <div class="container">
+      <div class="sec-header">
+        <h2>Major Indian Exhibitions We Serve</h2>
+        <p>AB STOP India has official logistics presence at India's most important trade fairs and conferences.</p>
+      </div>
+      <div class="exh-grid">
+        <div class="exh-card featured">
+          <div class="exh-icon"><i class="fas fa-award"></i></div>
+          <div class="exh-body">
+            <h4>India International Trade Fair (IITF)</h4>
+            <p>Asia's largest consumer trade fair held annually at Bharat Mandapam, New Delhi. 14,000+ exhibitors from 100+ countries. AB STOP India is a preferred logistics partner with on-site presence.</p>
+            <div class="exh-tags">
+              <span class="exh-tag red">Flagship Event</span>
+              <span class="exh-tag teal">Bharat Mandapam</span>
+              <span class="exh-tag">Nov Annually</span>
+              <span class="exh-tag">100+ Nations</span>
+            </div>
+          </div>
+        </div>
+        <div class="exh-card">
+          <div class="exh-icon"><i class="fas fa-car"></i></div>
+          <div class="exh-body">
+            <h4>Auto Expo</h4>
+            <p>World's 2nd largest motor show. Held at Bharat Mandapam & India Expo Centre, Greater Noida.</p>
+            <div class="exh-tags"><span class="exh-tag teal">Automotive</span><span class="exh-tag">Biennial</span></div>
+          </div>
+        </div>
+        <div class="exh-card">
+          <div class="exh-icon"><i class="fas fa-shield-halved"></i></div>
+          <div class="exh-body">
+            <h4>DefExpo India</h4>
+            <p>Asia's premier defence exhibition. Rotating between Lucknow, Gandhinagar & other cities.</p>
+            <div class="exh-tags"><span class="exh-tag teal">Defence</span><span class="exh-tag">Biennial</span></div>
+          </div>
+        </div>
+        <div class="exh-card">
+          <div class="exh-icon"><i class="fas fa-plane"></i></div>
+          <div class="exh-body">
+            <h4>Aero India</h4>
+            <p>Asia's premier aerospace show at BIEC Bengaluru. International aerospace and defence manufacturers.</p>
+            <div class="exh-tags"><span class="exh-tag teal">Aerospace</span><span class="exh-tag">Bengaluru</span></div>
+          </div>
+        </div>
+        <div class="exh-card">
+          <div class="exh-icon"><i class="fas fa-pills"></i></div>
+          <div class="exh-body">
+            <h4>CPHI India</h4>
+            <p>India's leading pharma exhibition at BEC Mumbai. Global pharma companies presenting at scale.</p>
+            <div class="exh-tags"><span class="exh-tag teal">Pharma</span><span class="exh-tag">Mumbai</span></div>
+          </div>
+        </div>
+        <div class="exh-card">
+          <div class="exh-icon"><i class="fas fa-microchip"></i></div>
+          <div class="exh-body">
+            <h4>Electronica & Productronica India</h4>
+            <p>India's largest electronics manufacturing trade fair at BIEC Bengaluru.</p>
+            <div class="exh-tags"><span class="exh-tag teal">Electronics</span><span class="exh-tag">Bengaluru</span></div>
+          </div>
+        </div>
+        <div class="exh-card">
+          <div class="exh-icon"><i class="fas fa-gem"></i></div>
+          <div class="exh-body">
+            <h4>India International Jewellery Show (IIJS)</h4>
+            <p>The world's 2nd largest jewellery show, held at BEC Mumbai and Bharat Mandapam.</p>
+            <div class="exh-tags"><span class="exh-tag teal">Jewellery</span><span class="exh-tag">Mumbai</span></div>
+          </div>
+        </div>
+        <div class="exh-card">
+          <div class="exh-icon"><i class="fas fa-recycle"></i></div>
+          <div class="exh-body">
+            <h4>Plastivision India</h4>
+            <p>Asia's 2nd largest plastics expo at BEC Mumbai. International machinery and materials exhibitors.</p>
+            <div class="exh-tags"><span class="exh-tag teal">Plastics</span><span class="exh-tag">Mumbai</span></div>
+          </div>
+        </div>
+        <div class="exh-card">
+          <div class="exh-icon"><i class="fas fa-gear"></i></div>
+          <div class="exh-body">
+            <h4>IMTEX / TOOLTECH</h4>
+            <p>India's largest machine tool and manufacturing technology exhibition at BIEC Bengaluru.</p>
+            <div class="exh-tags"><span class="exh-tag teal">Manufacturing</span><span class="exh-tag">Bengaluru</span></div>
+          </div>
+        </div>
+        <div class="exh-card">
+          <div class="exh-icon"><i class="fas fa-wifi"></i></div>
+          <div class="exh-body">
+            <h4>Convergence India</h4>
+            <p>India's leading ICT trade show at Bharat Mandapam, New Delhi. Telecom and tech sector.</p>
+            <div class="exh-tags"><span class="exh-tag teal">ICT</span><span class="exh-tag">Delhi</span></div>
+          </div>
+        </div>
+        <div class="exh-card">
+          <div class="exh-icon"><i class="fas fa-utensils"></i></div>
+          <div class="exh-body">
+            <h4>Annapoorna / World of Food India</h4>
+            <p>India's premier food & beverage trade show at BEC Mumbai. International F&B brands.</p>
+            <div class="exh-tags"><span class="exh-tag teal">Food & Bev</span><span class="exh-tag">Mumbai</span></div>
+          </div>
+        </div>
+        <div class="exh-card">
+          <div class="exh-icon"><i class="fas fa-bed"></i></div>
+          <div class="exh-body">
+            <h4>ACETECH / NDIS</h4>
+            <p>India's largest architecture, building materials and interiors expo across Delhi, Mumbai, Bengaluru.</p>
+            <div class="exh-tags"><span class="exh-tag teal">Architecture</span><span class="exh-tag">Multi-City</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-sec">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <i class="fas fa-calendar-check"></i>
+          <span class="counter" data-target="25">0</span>
+          <span class="stat-text">Years in India</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-globe"></i>
+          <span class="counter" data-target="130">0</span>
+          <span class="stat-text">Countries Served</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-building"></i>
+          <span class="counter" data-target="2000">0</span>
+          <span class="stat-text">Exhibitions Handled</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-smile"></i>
+          <span class="counter" data-target="100">0</span>
+          <span class="stat-text">Client Satisfaction</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process-sec" id="process-home">
+    <div class="container">
+      <div class="sec-header">
+        <h2>How We Support You in India</h2>
+        <p>From the moment your cargo lands in India until it's back home — every step managed by AB STOP India.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-img"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" alt="Pre-Planning"></div>
+          <div class="step-body">
+            <div class="step-num">1</div>
+            <h4>Pre-Arrival Planning</h4>
+            <p>We coordinate with you before shipment — reviewing packing lists, preparing documentation, and liaising with Indian customs and the exhibition organiser.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-img"><img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=800&auto=format&fit=crop" alt="Customs"></div>
+          <div class="step-body">
+            <div class="step-num">2</div>
+            <h4>Indian Customs Clearance</h4>
+            <p>Our licensed customs brokers handle all formalities at airports and ports — temporary import, ATA Carnet, bond, or duty exemption clearances.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-img"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop" alt="Warehouse"></div>
+          <div class="step-body">
+            <div class="step-num">3</div>
+            <h4>Bonded Warehousing</h4>
+            <p>Cargo is stored securely in our bonded facility near the venue, with full inventory management and 24/7 security until the official move-in window.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-img"><img src="https://images.unsplash.com/photo-1504222490345-c075b7906046?q=80&w=800&auto=format&fit=crop" alt="Delivery"></div>
+          <div class="step-body">
+            <div class="step-num">4</div>
+            <h4>Stand Delivery & Setup Support</h4>
+            <p>We deliver directly to your stand at the exhibition hall during the build-up period, coordinate with venue handling agents, and manage empty case storage.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-img"><img src="https://images.unsplash.com/photo-1560523160-754a9e25c68f?q=80&w=800&auto=format&fit=crop" alt="Onsite"></div>
+          <div class="step-body">
+            <div class="step-num">5</div>
+            <h4>On-Site Presence During Show</h4>
+            <p>Our dedicated team is at the venue throughout the exhibition days — managing empty cases, responding to any cargo needs, and ensuring peace of mind.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-img"><img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=800&auto=format&fit=crop" alt="Return"></div>
+          <div class="step-body">
+            <div class="step-num">6</div>
+            <h4>Re-export & Return Shipping</h4>
+            <p>After the show, we manage repacking, re-export documentation, Indian customs re-export clearance, and complete handover to your international forwarder.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testi-sec">
+    <div class="container">
+      <div class="sec-header">
+        <h2>What Our International Clients Say</h2>
+        <p>Trusted by exhibitors from over 130 countries exhibiting in India.</p>
+      </div>
+      <div class="testi-wrap">
+        <div class="testi-card active">
+          <div class="q-icon"><i class="fas fa-quote-left"></i></div>
+          <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testi-text">"AB STOP India handled our customs clearance and stand delivery at Bharat Mandapam flawlessly. As a German company unfamiliar with Indian regulations, their expertise was invaluable. Everything arrived at our stand on time."</p>
+          <h5 class="client-name">Klaus Hoffmann</h5>
+          <div class="client-role">Export Director, MechTech GmbH</div>
+          <div class="client-country"><i class="fas fa-flag"></i> Germany | IITF New Delhi</div>
+        </div>
+        <div class="testi-card">
+          <div class="q-icon"><i class="fas fa-quote-left"></i></div>
+          <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testi-text">"The ATA Carnet processing and temporary import clearance was handled seamlessly. We exhibited at BIEC Bangalore for Electronica India and our machinery arrived without a single issue. Exceptional service."</p>
+          <h5 class="client-name">Sophie Marchand</h5>
+          <div class="client-role">International Trade Manager, ElectroParts SAS</div>
+          <div class="client-country"><i class="fas fa-flag"></i> France | Electronica India, Bengaluru</div>
+        </div>
+        <div class="testi-card">
+          <div class="q-icon"><i class="fas fa-quote-left"></i></div>
+          <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testi-text">"Indian customs seemed daunting from the US. AB STOP India made it completely smooth. Their on-site team at BEC Mumbai for Plastivision was there every day. I could focus on business, not logistics."</p>
+          <h5 class="client-name">James Carter</h5>
+          <div class="client-role">VP Operations, PlastiTech Inc.</div>
+          <div class="client-country"><i class="fas fa-flag"></i> USA | Plastivision India, Mumbai</div>
+        </div>
+        <div class="testi-card">
+          <div class="q-icon"><i class="fas fa-quote-left"></i></div>
+          <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testi-text">"We have been using AB STOP India for our annual participation at Auto Expo for 6 years. The re-export process after the show is always perfectly managed. Truly the best logistics partner in India."</p>
+          <h5 class="client-name">Hiroshi Tanaka</h5>
+          <div class="client-role">India Representative, Tanaka Motors Corp.</div>
+          <div class="client-country"><i class="fas fa-flag"></i> Japan | Auto Expo, New Delhi</div>
+        </div>
+        <div class="testi-dots" id="testi-dots">
+          <span class="testi-dot active" data-i="0"></span>
+          <span class="testi-dot" data-i="1"></span>
+          <span class="testi-dot" data-i="2"></span>
+          <span class="testi-dot" data-i="3"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-sec">
+    <div class="container">
+      <div class="cta-inner">
+        <h2>Exhibiting in India?<br>Let Us Handle It.</h2>
+        <p>Planning to exhibit at any Indian trade fair or conference? From customs paperwork to stand delivery — AB STOP India manages everything so you can focus on your business.</p>
+        <div class="cta-btns">
+          <a class="btn" onclick="showPage('support')"><i class="fas fa-paper-plane"></i> Request a Quote</a>
+          <a class="btn btn-teal" href="tel:+919811000000"><i class="fas fa-phone"></i> Call Us Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- END HOME -->
+
+<!-- =====================================================================
+     ABOUT PAGE
+     ===================================================================== -->
+<div class="page" id="page-about">
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">Home <i class="fas fa-chevron-right"></i><span>About Us</span></div>
+      <h1>About AB STOP India</h1>
+      <p>India's specialist inbound exhibition logistics partner — built for international exhibitors, serving every major Indian venue since 1999.</p>
+    </div>
+  </div>
+
+  <!-- STORY -->
+  <section class="about-story">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-img">
+          <img src="https://images.unsplash.com/photo-1524592714635-d77511a4834d?q=80&w=1200&auto=format&fit=crop" alt="Our Story">
+        </div>
+        <div class="story-text">
+          <div class="sec-label">Our Story</div>
+          <h2>25 Years of Serving<br>International Exhibitors in India</h2>
+          <p>AB STOP India was founded in 1999 with a single mission: to make exhibiting in India as seamless and stress-free for international companies as exhibiting anywhere else in the world. We saw the challenges foreign exhibitors faced with India's complex customs regulations, vast geography, and diverse exhibition venues — and we built a company to solve exactly those problems.</p>
+          <p>Today, AB STOP India operates across all major exhibition centres in India — from Bharat Mandapam and Yashobhoomi in New Delhi to BEC Mumbai, BIEC Bengaluru, HITEX Hyderabad, Chennai Trade Centre, India Expo Centre Greater Noida, and beyond. We serve exhibitors from over 130 countries and have handled over 2,000 exhibitions.</p>
+          <p>Our team of licensed customs brokers, logistics coordinators, and on-site supervisors ensures that from the moment your cargo lands in India to the moment it leaves — every step is managed with precision, compliance, and care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-choose">
+    <div class="container">
+      <div class="sec-header">
+        <h2>Why Choose AB STOP India</h2>
+        <p>We are not a general freight company. We are specialists in inbound exhibition logistics for India — and that makes all the difference.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-file-shield"></i></div>
+          <h4>Indian Customs Expertise</h4>
+          <p>Our licensed customs brokers have deep expertise in temporary import, ATA Carnet, exhibition bond, and duty exemption processes specific to Indian trade fairs. No surprises, no delays.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-network-wired"></i></div>
+          <h4>Pan-India Presence</h4>
+          <p>We have permanent operations in New Delhi, Mumbai, Bengaluru, Hyderabad, Chennai, and Greater Noida — covering every major exhibition hub in India with local expertise.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-handshake"></i></div>
+          <h4>Official Venue Relationships</h4>
+          <p>We are recognised logistics partners at major Indian exhibition venues. Our established relationships with venue handling agents, organiser teams and ITPO ensure smooth operations.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-user-tie"></i></div>
+          <h4>Dedicated On-Site Teams</h4>
+          <p>Unlike general forwarders, we deploy dedicated AB STOP India staff at every exhibition we handle — present from the first day of build-up to the last day of breakdown.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-clock"></i></div>
+          <h4>Exhibition Timeline Specialists</h4>
+          <p>We understand the uncompromising deadlines of exhibitions. Our entire operation is optimised around the strict move-in and move-out schedules of Indian trade fairs.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-language"></i></div>
+          <h4>Multilingual Support</h4>
+          <p>Our team communicates fluently in English, German, French, Spanish, Mandarin, and Arabic — serving exhibitors from all over the world without language barriers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NETWORK -->
+  <section class="network-sec">
+    <div class="container">
+      <div class="sec-header">
+        <h2>Our Pan-India Network</h2>
+        <p>Permanent operations in every major Indian city hosting international trade fairs.</p>
+      </div>
+      <div class="network-grid">
+        <div class="network-item">
+          <i class="fas fa-building-columns"></i>
+          <h4>New Delhi / NCR</h4>
+          <p>Bharat Mandapam, Yashobhoomi (IICC), India Expo Centre Greater Noida</p>
+        </div>
+        <div class="network-item">
+          <i class="fas fa-water"></i>
+          <h4>Mumbai</h4>
+          <p>Bombay Exhibition Centre, Jio World Convention Centre, BKC venues, NSCI</p>
+        </div>
+        <div class="network-item">
+          <i class="fas fa-microchip"></i>
+          <h4>Bengaluru</h4>
+          <p>BIEC Bengaluru — Aero India, Electronica, IMTEX, and all major tech expos</p>
+        </div>
+        <div class="network-item">
+          <i class="fas fa-laptop"></i>
+          <h4>Hyderabad</h4>
+          <p>HITEX Exhibition Centre — pharma, ICT, and infrastructure exhibitions</p>
+        </div>
+        <div class="network-item">
+          <i class="fas fa-anchor"></i>
+          <h4>Chennai</h4>
+          <p>Chennai Trade Centre — rubber, medical, automotive, and engineering events</p>
+        </div>
+        <div class="network-item">
+          <i class="fas fa-seedling"></i>
+          <h4>Ahmedabad / Gujarat</h4>
+          <p>Mahatma Mandir Exhibition Centre — Vibrant Gujarat, Defence, textiles</p>
+        </div>
+        <div class="network-item">
+          <i class="fas fa-wheat-awn"></i>
+          <h4>Chandigarh / Punjab</h4>
+          <p>Agrotech India, Punjab Agri Expo — agricultural and farm machinery</p>
+        </div>
+        <div class="network-item">
+          <i class="fas fa-city"></i>
+          <h4>Other Cities</h4>
+          <p>Kolkata, Pune, Jaipur, Lucknow, Coimbatore — for specialised and regional events</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="certif-sec">
+    <div class="container">
+      <div class="sec-header">
+        <h2>Accreditations & Memberships</h2>
+        <p>Recognised by leading Indian and international industry bodies.</p>
+      </div>
+      <div class="certif-grid">
+        <div class="certif-card">
+          <i class="fas fa-certificate"></i>
+          <h4>IATA Accredited Agent</h4>
+          <p>International Air Transport Association accredited cargo and freight agent</p>
+        </div>
+        <div class="certif-card">
+          <i class="fas fa-award"></i>
+          <h4>FIATA Member</h4>
+          <p>International Federation of Freight Forwarders Associations full member</p>
+        </div>
+        <div class="certif-card">
+          <i class="fas fa-star"></i>
+          <h4>UFI Endorsed</h4>
+          <p>The Global Association of the Exhibition Industry — endorsed logistics partner</p>
+        </div>
+        <div class="certif-card">
+          <i class="fas fa-shield-alt"></i>
+          <h4>AEO Certified</h4>
+          <p>Authorised Economic Operator certification from Indian Customs — expedited clearances</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-sec">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <i class="fas fa-calendar-check"></i>
+          <span class="counter" data-target="25">0</span>
+          <span class="stat-text">Years of Expertise</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-globe"></i>
+          <span class="counter" data-target="130">0</span>
+          <span class="stat-text">Countries Served</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-building"></i>
+          <span class="counter" data-target="2000">0</span>
+          <span class="stat-text">Exhibitions Managed</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-users"></i>
+          <span class="counter" data-target="50">0</span>
+          <span class="stat-text">Expert Team Members</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-sec">
+    <div class="container">
+      <div class="cta-inner">
+        <h2>Ready to Exhibit in India?</h2>
+        <p>Contact our team today and let's start planning your exhibition logistics for India's biggest trade fairs.</p>
+        <div class="cta-btns">
+          <a class="btn" onclick="showPage('support')"><i class="fas fa-paper-plane"></i> Get a Quote</a>
+          <a class="btn btn-teal" onclick="showPage('services')">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- END ABOUT -->
+
+<!-- =====================================================================
+     SERVICES PAGE
+     ===================================================================== -->
+<div class="page" id="page-services">
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">Home <i class="fas fa-chevron-right"></i><span>Services</span></div>
+      <h1>Our Exhibition Logistics Services</h1>
+      <p>Comprehensive end-to-end inbound exhibition logistics covering every requirement for international exhibitors in India.</p>
+    </div>
+  </div>
+
+  <!-- CORE SERVICES DETAIL -->
+  <section class="svc-detail-sec">
+    <div class="container">
+      <div class="sec-header">
+        <h2>Core Logistics Services</h2>
+        <p>From customs clearance to stand delivery — every service you need to exhibit successfully in India.</p>
+      </div>
+      <div class="svc-detail-grid">
+        <div class="svc-detail-card">
+          <div class="sdc-icon-col"><i class="fas fa-file-shield"></i></div>
+          <div class="sdc-body">
+            <h4>Customs Clearance & Documentation</h4>
+            <p>India-specialist customs clearance for all types of exhibition cargo — from machinery to samples to stand materials.</p>
+            <ul>
+              <li>ATA Carnet processing and bond management</li>
+              <li>Temporary Import under customs bond</li>
+              <li>Duty exemption for exhibition goods</li>
+              <li>Compliance with CBIC and DGFT regulations</li>
+              <li>Re-export documentation and bond closure</li>
+              <li>Phytosanitary and FSSAI coordination for food products</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-detail-card">
+          <div class="sdc-icon-col"><i class="fas fa-plane-arrival"></i></div>
+          <div class="sdc-body">
+            <h4>Airport & Port Collection</h4>
+            <p>Dedicated cargo collection from all major Indian international airports and seaports.</p>
+            <ul>
+              <li>IGI Airport, New Delhi (DEL)</li>
+              <li>CSIA Chhatrapati Shivaji, Mumbai (BOM)</li>
+              <li>Kempegowda International Airport, Bengaluru (BLR)</li>
+              <li>Rajiv Gandhi Intl Airport, Hyderabad (HYD)</li>
+              <li>Chennai International Airport (MAA)</li>
+              <li>Nhava Sheva / JNPT and Mumbai Port for sea freight</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-detail-card">
+          <div class="sdc-icon-col"><i class="fas fa-warehouse"></i></div>
+          <div class="sdc-body">
+            <h4>Bonded Warehousing & Storage</h4>
+            <p>Secure, customs-bonded warehousing facilities near India's major exhibition venues.</p>
+            <ul>
+              <li>24/7 security and CCTV surveillance</li>
+              <li>Temperature-controlled options available</li>
+              <li>Full inventory management system</li>
+              <li>Empty case storage during the show</li>
+              <li>Dangerous goods (DG) storage capability</li>
+              <li>Flexible short and long-term storage terms</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-detail-card">
+          <div class="sdc-icon-col"><i class="fas fa-store"></i></div>
+          <div class="sdc-body">
+            <h4>Exhibition Stand Delivery</h4>
+            <p>Precision delivery coordinated with exhibition build-up schedules at all Indian venues.</p>
+            <ul>
+              <li>Coordination with official venue handling agents</li>
+              <li>Adherence to organiser move-in/move-out schedules</li>
+              <li>Delivery to specific stand location within the hall</li>
+              <li>Heavy machinery and oversize exhibit handling</li>
+              <li>Fragile and high-value item specialist handling</li>
+              <li>Blanket wrapping and crating services</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-detail-card">
+          <div class="sdc-icon-col"><i class="fas fa-user-tie"></i></div>
+          <div class="sdc-body">
+            <h4>On-Site Supervision & Support</h4>
+            <p>Dedicated AB STOP India representatives present at the venue throughout the exhibition period.</p>
+            <ul>
+              <li>Full-time presence during build-up days</li>
+              <li>Empty case collection and storage management</li>
+              <li>Emergency support during show days</li>
+              <li>Coordination with venue staff and organiser</li>
+              <li>Repacking supervision during breakdown</li>
+              <li>Daily status reports to your team</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-detail-card">
+          <div class="sdc-icon-col"><i class="fas fa-rotate-left"></i></div>
+          <div class="sdc-body">
+            <h4>Return & Re-export Logistics</h4>
+            <p>Complete management of the return journey — ensuring exhibits leave India legally and efficiently.</p>
+            <ul>
+              <li>Re-export customs clearance and bond closure</li>
+              <li>ATA Carnet re-exportation endorsement</li>
+              <li>Repacking and re-crating at the venue</li>
+              <li>Onward shipment to next exhibition worldwide</li>
+              <li>Excess sample / goods sale coordination</li>
+              <li>Handover to your international freight partner</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-detail-card">
+          <div class="sdc-icon-col"><i class="fas fa-box-open"></i></div>
+          <div class="sdc-body">
+            <h4>Packing & Crating</h4>
+            <p>Professional packing and custom crating for exhibits of all types and sizes.</p>
+            <ul>
+              <li>Custom wooden crating for machinery</li>
+              <li>Export-standard packing for all cargo types</li>
+              <li>Foam and cushioning for fragile items</li>
+              <li>ISPM-15 certified heat-treated timber</li>
+              <li>Specialist art and fine exhibit packing</li>
+              <li>Repacking at venue post-show</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-detail-card">
+          <div class="sdc-icon-col"><i class="fas fa-route"></i></div>
+          <div class="sdc-body">
+            <h4>Project & Conference Logistics</h4>
+            <p>End-to-end logistics for conferences, product launches, and corporate events in India.</p>
+            <ul>
+              <li>Event freight planning and coordination</li>
+              <li>AV equipment, stage, and technical logistics</li>
+              <li>Hotel-to-venue transfer management</li>
+              <li>Expedited clearances for time-critical deliveries</li>
+              <li>Government liaison for defence and aerospace events</li>
+              <li>Multi-city event logistics with full coordination</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALL EXHIBITIONS -->
+  <section class="all-exh-sec">
+    <div class="container">
+      <div class="sec-header">
+        <h2>Exhibitions & Trade Fairs We Serve</h2>
+        <p>AB STOP India has logistics presence — and deep expertise — at India's leading international exhibitions.</p>
+      </div>
+      <div class="all-exh-grid">
+        <div class="all-exh-card">
+          <div class="aec-header">
+            <div class="aec-icon"><i class="fas fa-award"></i></div>
+            <div><h4>India International Trade Fair (IITF)</h4><span>Bharat Mandapam, New Delhi • November</span></div>
+          </div>
+          <div class="aec-tags"><span class="aec-tag">Multi-Sector</span><span class="aec-tag">Flagship</span><span class="aec-tag">100+ Countries</span></div>
+        </div>
+        <div class="all-exh-card">
+          <div class="aec-header">
+            <div class="aec-icon"><i class="fas fa-car"></i></div>
+            <div><h4>Auto Expo</h4><span>Bharat Mandapam / India Expo Centre • January (Biennial)</span></div>
+          </div>
+          <div class="aec-tags"><span class="aec-tag">Automotive</span><span class="aec-tag">World's 2nd Largest</span></div>
+        </div>
+        <div class="all-exh-card">
+          <div class="aec-header">
+            <div class="aec-icon"><i class="fas fa-plane"></i></div>
+            <div><h4>Aero India</h4><span>BIEC Bengaluru • February (Biennial)</span></div>
+          </div>
+          <div class="aec-tags"><span class="aec-tag">Aerospace</span><span class="aec-tag">Defence</span><span class="aec-tag">Aviation</span></div>
+        </div>
+        <div class="all-exh-card">
+          <div class="aec-header">
+            <div class="aec-icon"><i class="fas fa-shield-halved"></i></div>
+            <div><h4>DefExpo India</h4><span>Rotating Cities • February (Biennial)</span></div>
+          </div>
+          <div class="aec-tags"><span class="aec-tag">Defence</span><span class="aec-tag">Government</span></div>
+        </div>
+        <div class="all-exh-card">
+          <div class="aec-header">
+            <div class="aec-icon"><i class="fas fa-capsules"></i></div>
+            <div><h4>CPHI India</h4><span>Bombay Exhibition Centre, Mumbai • December</span></div>
+          </div>
+          <div class="aec-tags"><span class="aec-tag">Pharma</span><span class="aec-tag">Healthcare</span></div>
+        </div>
+        <div class="all-exh-card">
+          <div class="aec-header">
+            <div class="aec-icon"><i class="fas fa-microchip"></i></div>
+            <div><h4>Electronica & Productronica India</h4><span>BIEC Bengaluru • September</span></div>
+          </div>
+          <div class="aec-tags"><span class="aec-tag">Electronics</span><span class="aec-tag">Manufacturing</span></div>
+        </div>
+        <div class="all-exh-card">
+          <div class="aec-header">
+            <div class="aec-icon"><i class="fas fa-gear"></i></div>
+            <div><h4>IMTEX / TOOLTECH</h4><span>BIEC Bengaluru • January (Biennial)</span></div>
+          </div>
+          <div class="aec-tags"><span class="aec-tag">Machine Tools</span><span class="aec-tag">Manufacturing</span></div>
+        </div>
+        <div class="all-exh-card">
+          <div class="aec-header">
+            <div class="aec-icon"><i class="fas fa-gem"></i></div>
+            <div><h4>India International Jewellery Show (IIJS)</h4><span>BEC Mumbai & Bharat Mandapam</span></div>
+          </div>
+          <div class="aec-tags"><span class="aec-tag">Jewellery</span><span class="aec-tag">Gems</span><span class="aec-tag">Luxury</span></div>
+        </div>
+        <div class="all-exh-card">
+          <div class="aec-header">
+            <div class="aec-icon"><i class="fas fa-recycle"></i></div>
+            <div><h4>Plastivision India</h4><span>Bombay Exhibition Centre, Mumbai</span></div>
+          </div>
+          <div class="aec-tags"><span class="aec-tag">Plastics</span><span class="aec-tag">Packaging</span><span class="aec-tag">Rubber</span></div>
+        </div>
+        <div class="all-exh-card">
+          <div class="aec-header">
+            <div class="aec-icon"><i class="fas fa-utensils"></i></div>
+            <div><h4>Annapoorna / World of Food India</h4><span>Bombay Exhibition Centre, Mumbai • October</span></div>
+          </div>
+          <div class="aec-tags"><span class="aec-tag">Food & Bev</span><span class="aec-tag">FMCG</span></div>
+        </div>
+        <div class="all-exh-card">
+          <div class="aec-header">
+            <div class="aec-icon"><i class="fas fa-wifi"></i></div>
+            <div><h4>Convergence India</h4><span>Bharat Mandapam, New Delhi • March</span></div>
+          </div>
+          <div class="aec-tags"><span class="aec-tag">Telecom</span><span class="aec-tag">ICT</span><span class="aec-tag">Broadband</span></div>
+        </div>
+        <div class="all-exh-card">
+          <div class="aec-header">
+            <div class="aec-icon"><i class="fas fa-hammer"></i></div>
+            <div><h4>ACETECH India</h4><span>Delhi, Mumbai, Bengaluru • Annual</span></div>
+          </div>
+          <div class="aec-tags"><span class="aec-tag">Architecture</span><span class="aec-tag">Construction</span></div>
+        </div>
+        <div class="all-exh-card">
+          <div class="aec-header">
+            <div class="aec-icon"><i class="fas fa-shirt"></i></div>
+            <div><h4>India International Garment Fair (IIGF)</h4><span>Pragati Maidan, New Delhi</span></div>
+          </div>
+          <div class="aec-tags"><span class="aec-tag">Textile</span><span class="aec-tag">Garments</span><span class="aec-tag">Fashion</span></div>
+        </div>
+        <div class="all-exh-card">
+          <div class="aec-header">
+            <div class="aec-icon"><i class="fas fa-seedling"></i></div>
+            <div><h4>Agrotech India</h4><span>Chandigarh • October (Biennial)</span></div>
+          </div>
+          <div class="aec-tags"><span class="aec-tag">Agriculture</span><span class="aec-tag">Farm Machinery</span></div>
+        </div>
+        <div class="all-exh-card">
+          <div class="aec-header">
+            <div class="aec-icon"><i class="fas fa-heartbeat"></i></div>
+            <div><h4>MEDICALL / Medical Fair India</h4><span>Chennai Trade Centre & Mumbai</span></div>
+          </div>
+          <div class="aec-tags"><span class="aec-tag">Medical</span><span class="aec-tag">Devices</span><span class="aec-tag">Healthcare</span></div>
+        </div>
+        <div class="all-exh-card">
+          <div class="aec-header">
+            <div class="aec-icon"><i class="fas fa-hotel"></i></div>
+            <div><h4>HotelEx India / FHW Mumbai</h4><span>Bombay Exhibition Centre, Mumbai</span></div>
+          </div>
+          <div class="aec-tags"><span class="aec-tag">Hospitality</span><span class="aec-tag">Food Service</span></div>
+        </div>
+        <div class="all-exh-card">
+          <div class="aec-header">
+            <div class="aec-icon"><i class="fas fa-solar-panel"></i></div>
+            <div><h4>REI Expo / Solar India</h4><span>Noida / Bengaluru • Annual</span></div>
+          </div>
+          <div class="aec-tags"><span class="aec-tag">Renewable Energy</span><span class="aec-tag">Solar</span></div>
+        </div>
+        <div class="all-exh-card">
+          <div class="aec-header">
+            <div class="aec-icon"><i class="fas fa-print"></i></div>
+            <div><h4>PrintPack India</h4><span>India Expo Centre, Greater Noida • February</span></div>
+          </div>
+          <div class="aec-tags"><span class="aec-tag">Print</span><span class="aec-tag">Packaging</span><span class="aec-tag">Paper</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTORS -->
+  <section class="sectors-all-sec">
+    <div class="container">
+      <div class="sec-header">
+        <h2>Industry Sectors We Specialise In</h2>
+        <p>Specialist knowledge across every major industry that exhibits at Indian trade fairs and conferences.</p>
+      </div>
+      <div class="sectors-all-grid">
+        <div class="sector-all-item">
+          <div class="sai-icon"><i class="fas fa-car"></i></div>
+          <div class="sai-body"><h4>Automotive & Mobility</h4><p>Cars, components, EV, mobility tech and accessories</p></div>
+        </div>
+        <div class="sector-all-item">
+          <div class="sai-icon"><i class="fas fa-microchip"></i></div>
+          <div class="sai-body"><h4>Electronics & Technology</h4><p>Consumer electronics, semiconductors, IT hardware</p></div>
+        </div>
+        <div class="sector-all-item">
+          <div class="sai-icon"><i class="fas fa-pills"></i></div>
+          <div class="sai-body"><h4>Pharma & Healthcare</h4><p>Medicines, medical devices, diagnostics, lab equipment</p></div>
+        </div>
+        <div class="sector-all-item">
+          <div class="sai-icon"><i class="fas fa-utensils"></i></div>
+          <div class="sai-body"><h4>Food & Beverages</h4><p>Packaged foods, beverages, FMCG, food processing equipment</p></div>
+        </div>
+        <div class="sector-all-item">
+          <div class="sai-icon"><i class="fas fa-shirt"></i></div>
+          <div class="sai-body"><h4>Textiles & Garments</h4><p>Fabrics, fashion, home textiles, machinery, trims</p></div>
+        </div>
+        <div class="sector-all-item">
+          <div class="sai-icon"><i class="fas fa-gear"></i></div>
+          <div class="sai-body"><h4>Engineering & Machinery</h4><p>Heavy plant, CNC, precision tools, industrial equipment</p></div>
+        </div>
+        <div class="sector-all-item">
+          <div class="sai-icon"><i class="fas fa-plane"></i></div>
+          <div class="sai-body"><h4>Aerospace & Defence</h4><p>Aircraft, components, defence systems, avionics, UAVs</p></div>
+        </div>
+        <div class="sector-all-item">
+          <div class="sai-icon"><i class="fas fa-hammer"></i></div>
+          <div class="sai-body"><h4>Construction & Architecture</h4><p>Building materials, design, infrastructure, smart buildings</p></div>
+        </div>
+        <div class="sector-all-item">
+          <div class="sai-icon"><i class="fas fa-recycle"></i></div>
+          <div class="sai-body"><h4>Plastics & Rubber</h4><p>Polymers, compounds, packaging materials, machinery</p></div>
+        </div>
+        <div class="sector-all-item">
+          <div class="sai-icon"><i class="fas fa-gem"></i></div>
+          <div class="sai-body"><h4>Jewellery & Luxury</h4><p>Fine jewellery, gems, precious metals, luxury accessories</p></div>
+        </div>
+        <div class="sector-all-item">
+          <div class="sai-icon"><i class="fas fa-seedling"></i></div>
+          <div class="sai-body"><h4>Agriculture & Agritech</h4><p>Farm machinery, seeds, agritech, irrigation, food processing</p></div>
+        </div>
+        <div class="sector-all-item">
+          <div class="sai-icon"><i class="fas fa-solar-panel"></i></div>
+          <div class="sai-body"><h4>Renewable Energy</h4><p>Solar panels, wind, EV charging, energy storage systems</p></div>
+        </div>
+        <div class="sector-all-item">
+          <div class="sai-icon"><i class="fas fa-wifi"></i></div>
+          <div class="sai-body"><h4>Telecom & ICT</h4><p>Telecom equipment, software, networks, AI, IoT solutions</p></div>
+        </div>
+        <div class="sector-all-item">
+          <div class="sai-icon"><i class="fas fa-print"></i></div>
+          <div class="sai-body"><h4>Print & Packaging</h4><p>Printing machinery, signage, labels, flexible packaging</p></div>
+        </div>
+        <div class="sector-all-item">
+          <div class="sai-icon"><i class="fas fa-hotel"></i></div>
+          <div class="sai-body"><h4>Hospitality & Food Service</h4><p>Hotel equipment, F&B machinery, kitchen appliances, POS</p></div>
+        </div>
+        <div class="sector-all-item">
+          <div class="sai-icon"><i class="fas fa-palette"></i></div>
+          <div class="sai-body"><h4>Fine Arts & Culture</h4><p>Artworks, sculptures, museum exhibits, cultural artefacts</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-sec">
+    <div class="container">
+      <div class="cta-inner">
+        <h2>Tell Us About Your Exhibition</h2>
+        <p>Share your exhibition details and we'll prepare a comprehensive logistics plan and quote within 24 hours.</p>
+        <div class="cta-btns">
+          <a class="btn" onclick="showPage('support')"><i class="fas fa-paper-plane"></i> Request a Quote</a>
+          <a class="btn btn-teal" href="tel:+919811000000"><i class="fas fa-phone"></i>+91 98110 00000</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- END SERVICES -->
+
+<!-- =====================================================================
+     SUPPORT PAGE
+     ===================================================================== -->
+<div class="page" id="page-support">
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">Home <i class="fas fa-chevron-right"></i><span>Support</span></div>
+      <h1>Support & Contact</h1>
+      <p>Get in touch with our team for a quote, exhibition logistics planning, or any assistance you need for exhibiting in India.</p>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="contact-sec">
+    <div class="container">
+      <div class="sec-header">
+        <h2>Get In Touch</h2>
+        <p>Fill out the form and our team will respond within 2 business hours on weekdays. Emergency support is available 24/7.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="form-wrap">
+          <h3>Send Us a Message</h3>
+          <p>We'll respond within 2 business hours on weekdays.</p>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" placeholder="Your full name" required>
+              </div>
+              <div class="form-group">
+                <label>Company *</label>
+                <input type="text" placeholder="Your company name" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" placeholder="your@email.com" required>
+              </div>
+              <div class="form-group">
+                <label>Phone / WhatsApp</label>
+                <input type="tel" placeholder="+1 555 000 0000">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Country of Origin *</label>
+                <select required>
+                  <option value="">— Select Country —</option>
+                  <option>Germany</option><option>USA</option><option>France</option><option>Japan</option><option>UK</option><option>China</option><option>Italy</option><option>South Korea</option><option>Netherlands</option><option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Exhibition / Venue in India *</label>
+                <select required>
+                  <option value="">— Select Exhibition —</option>
+                  <option>India International Trade Fair (IITF)</option>
+                  <option>Auto Expo</option>
+                  <option>Aero India</option>
+                  <option>DefExpo India</option>
+                  <option>CPHI India</option>
+                  <option>Electronica / Productronica India</option>
+                  <option>IMTEX / TOOLTECH</option>
+                  <option>Plastivision India</option>
+                  <option>Annapoorna / World of Food India</option>
+                  <option>IIJS Jewellery Show</option>
+                  <option>Convergence India</option>
+                  <option>ACETECH India</option>
+                  <option>PrintPack India</option>
+                  <option>Other Indian Exhibition</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Inquiry Type *</label>
+              <select required>
+                <option value="">— Select Inquiry Type —</option>
+                <option>Full Exhibition Logistics Quote</option>
+                <option>Customs Clearance Only</option>
+                <option>Warehousing & Storage</option>
+                <option>On-Site Supervision</option>
+                <option>Return / Re-export Logistics</option>
+                <option>Emergency Support</option>
+                <option>General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message / Requirements *</label>
+              <textarea placeholder="Please describe your cargo, exhibition dates, and any specific requirements…" required></textarea>
+            </div>
+            <button type="submit" class="form-submit" id="formBtn">
+              <i class="fas fa-paper-plane"></i> Send Inquiry
+            </button>
+          </form>
+        </div>
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="cc-icon"><i class="fas fa-phone"></i></div>
+            <div class="cc-body">
+              <h4>Call Us</h4>
+              <p>+91 98110 00000</p>
+              <p>+91 98110 00001</p>
+              <small>Mon–Fri: 9AM–6PM IST | Emergency: 24/7</small>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="cc-body">
+              <h4>WhatsApp</h4>
+              <p>+91 98110 00000</p>
+              <small>Quick responses for urgent queries</small>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-icon"><i class="fas fa-envelope"></i></div>
+            <div class="cc-body">
+              <h4>Email</h4>
+              <p>info@abstopindia.com</p>
+              <p>customs@abstopindia.com</p>
+              <small>Average response: 2 business hours</small>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="cc-body">
+              <h4>Head Office — New Delhi</h4>
+              <p>AB STOP India Pvt. Ltd.</p>
+              <p>Gurugram, Haryana 122018, India</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-icon"><i class="fas fa-building"></i></div>
+            <div class="cc-body">
+              <h4>Regional Offices</h4>
+              <p>Mumbai • Bengaluru • Hyderabad</p>
+              <p>Chennai • Greater Noida</p>
+              <small>Operations at all major Indian exhibition venues</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-sec">
+    <div class="container">
+      <div class="sec-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything international exhibitors need to know about bringing cargo to India for exhibitions.</p>
+      </div>
+      <div class="faq-grid" id="faqGrid">
+        <div class="faq-item">
+          <div class="faq-q"><h4>Can I use an ATA Carnet for my exhibition cargo to India?</h4><i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a">Yes. India is a member of the ATA Carnet system. AB STOP India has extensive experience processing ATA Carnets for exhibition goods at all Indian customs stations. We manage all endorsements, customs liaison, and ensure the Carnet is properly closed after re-export.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><h4>How far in advance should I contact AB STOP India?</h4><i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a">We recommend contacting us at least 4–6 weeks before your intended shipment date for air freight, and 8–10 weeks for sea freight. This allows sufficient time for documentation preparation, customs registration, and venue coordination. However, we also handle urgent and last-minute shipments.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><h4>What documents are required for exhibition cargo to India?</h4><i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a">Standard requirements include: Commercial Invoice, Packing List, Air Waybill / Bill of Lading, Exhibition Organiser participation confirmation, and a covering letter on company letterhead. For ATA Carnet shipments, the Carnet document replaces the commercial invoice. Additional documents may be required for regulated goods (food, medical devices, chemicals, etc.).</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><h4>Is temporary import available for exhibition goods in India?</h4><i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a">Yes. Exhibition goods can be imported into India on a temporary basis under a customs bond, with a guarantee that the goods will be re-exported after the exhibition. This avoids payment of import duties. AB STOP India manages all temporary import formalities and bond administration on your behalf.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><h4>Can I ship food and beverage samples for exhibition in India?</h4><i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a">Yes, but food and beverage products require additional clearances from FSSAI (Food Safety and Standards Authority of India) and phytosanitary clearances for certain products. Our team will guide you through the specific requirements for your product category, and manage all liaison with regulatory authorities.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><h4>What happens to my empty cases during the exhibition?</h4><i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a">AB STOP India collects all empty cases (crates, boxes, packaging) from your stand after unpacking and stores them in our dedicated empty case storage facility at or near the venue. At the end of the show, we return them to your stand for repacking before the move-out.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><h4>Can you handle very heavy or oversized machinery exhibits?</h4><i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a">Yes. We regularly handle heavy plant, industrial machinery, and oversized exhibits including vehicles for Auto Expo, aircraft components for Aero India, and heavy equipment for IMTEX. We arrange special transport, cranes, and heavy-lift capabilities as required.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><h4>Do you provide services across all Indian cities and venues?</h4><i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a">Yes. AB STOP India has permanent operations in New Delhi, Mumbai, Bengaluru, Hyderabad, Chennai, and Greater Noida. We also cover Ahmedabad, Chandigarh, Kolkata, Pune, Jaipur, and other cities where major Indian trade events are held.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMERGENCY -->
+  <section class="emergency-sec">
+    <div class="container">
+      <h2><i class="fas fa-headset"></i> 24/7 Emergency Support</h2>
+      <p>If your cargo is held at customs, delayed, or you have an urgent situation during an exhibition — our emergency team is available around the clock.</p>
+      <div class="emergency-btns">
+        <a href="tel:+919811000000" class="btn btn-white"><i class="fas fa-phone"></i> Call Emergency Line</a>
+        <a href="https://wa.me/919811000000" class="btn btn-white-outline"><i class="fab fa-whatsapp"></i> WhatsApp Us Now</a>
+      </div>
+    </div>
+  </section>
+</div><!-- END SUPPORT -->
+
+<!-- =====================================================================
+     FOOTER (all pages)
+     ===================================================================== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-about">
+        <div class="footer-brand">
+          <div class="logo-mark-sm">AB</div>
+          <div class="brand-text">AB STOP India</div>
+        </div>
+        <p>India's specialist inbound exhibition logistics partner for international exhibitors. Serving every major Indian trade venue since 1999 — seamlessly, reliably, and on time.</p>
+      </div>
+      <div class="footer-col footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a onclick="showPage('home')">Home</a></li>
+          <li><a onclick="showPage('about')">About Us</a></li>
+          <li><a onclick="showPage('services')">Services</a></li>
+          <li><a onclick="showPage('support')">Support & Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-links">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a onclick="showPage('services')">Customs Clearance</a></li>
+          <li><a onclick="showPage('services')">Airport & Port Transfer</a></li>
+          <li><a onclick="showPage('services')">Stand Delivery</a></li>
+          <li><a onclick="showPage('services')">Warehousing</a></li>
+          <li><a onclick="showPage('services')">On-Site Supervision</a></li>
+          <li><a onclick="showPage('services')">Return Logistics</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i><span>Gurugram, Haryana 122018, India</span></li>
+          <li><i class="fas fa-phone"></i><span>+91 98110 00000</span></li>
+          <li><i class="fas fa-envelope"></i><span>info@abstopindia.com</span></li>
+          <li><i class="fab fa-whatsapp"></i><span>WhatsApp: +91 98110 00000</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>&copy; 2024 <span>AB STOP India Pvt. Ltd.</span> All Rights Reserved. | Specialist Inbound Exhibition Logistics for International Exhibitors in India.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- =====================================================================
+     JAVASCRIPT
+     ===================================================================== -->
+<script>
+// ---- PAGE ROUTING ----
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  document.querySelectorAll('.main-nav a').forEach(a => a.classList.remove('active-link'));
+  const navEl = document.getElementById('nav-' + id);
+  if(navEl) navEl.classList.add('active-link');
+  window.scrollTo({top:0,behavior:'smooth'});
+  // close mobile menu
+  document.getElementById('mainNav').classList.remove('open');
+  // trigger counter if stats in view
+  setTimeout(initCounters, 400);
+}
+
+// ---- MOBILE MENU ----
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mainNav').classList.toggle('open');
+});
+
+// ---- HERO SLIDESHOW ----
+const slides = document.querySelectorAll('.slide');
+let curSlide = 0;
+function nextSlide() {
+  slides[curSlide].classList.remove('active');
+  curSlide = (curSlide + 1) % slides.length;
+  slides[curSlide].classList.add('active');
+}
+setInterval(nextSlide, 5000);
+
+// ---- TESTIMONIALS ----
+const testiCards = document.querySelectorAll('.testi-card');
+const testiDots  = document.querySelectorAll('.testi-dot');
+let curTesti = 0, testiTimer;
+function showTesti(i) {
+  testiCards.forEach((c,idx) => c.classList.toggle('active', idx === i));
+  testiDots.forEach((d,idx)  => d.classList.toggle('active', idx === i));
+  curTesti = i;
+}
+function startTesti() {
+  testiTimer = setInterval(() => showTesti((curTesti + 1) % testiCards.length), 6000);
+}
+testiDots.forEach(d => {
+  d.addEventListener('click', () => {
+    clearInterval(testiTimer);
+    showTesti(parseInt(d.dataset.i));
+    startTesti();
+  });
+});
+showTesti(0); startTesti();
+
+// ---- COUNTER ANIMATION ----
+let countersRun = new Set();
+function initCounters() {
+  const page = document.querySelector('.page.active');
+  if (!page) return;
+  const counters = page.querySelectorAll('.counter');
+  counters.forEach(counter => {
+    if (countersRun.has(counter)) return;
+    const rect = counter.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      countersRun.add(counter);
+      const target = +counter.dataset.target;
+      const duration = 1800;
+      const start = performance.now();
+      const update = (now) => {
+        const prog = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - prog, 3);
+        counter.innerText = Math.floor(eased * target);
+        if (prog < 1) requestAnimationFrame(update);
+        else counter.innerText = target + (target === 100 ? '%' : '+');
+      };
+      requestAnimationFrame(update);
+    }
+  });
+}
+window.addEventListener('scroll', initCounters);
+initCounters();
+
+// ---- FAQ ----
+document.getElementById('faqGrid').addEventListener('click', e => {
+  const q = e.target.closest('.faq-q');
+  if (!q) return;
+  const item = q.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+});
+
+// ---- CONTACT FORM ----
+document.getElementById('contactForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const btn = document.getElementById('formBtn');
+  btn.innerHTML = '<i class="fas fa-check-circle"></i> Message Sent! We\'ll reply within 2 hours.';
+  btn.style.background = 'linear-gradient(135deg,#10B981,#059669)';
+  setTimeout(() => {
+    btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Inquiry';
+    btn.style.background = '';
+    e.target.reset();
+  }, 5000);
+});
+
+// ---- SCROLL-BASED COUNTER TRIGGER ----
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) initCounters(); });
+}, { threshold: 0.3 });
+document.querySelectorAll('.stats-sec').forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>

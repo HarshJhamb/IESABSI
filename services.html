@@ -3,434 +3,1075 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | AB STOP India</title>
+<title>Services | AB STOP India — Inbound Exhibition Logistics</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Barlow+Condensed:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-:root{--ink:#0A0F1E;--ink-mid:#1a2340;--gold:#C9993A;--gold-light:#E8B84B;--gold-pale:#FBF3E0;--crimson:#B22234;--crimson-dark:#8B1A27;--teal:#1A7A8A;--teal-light:#22A3B7;--white:#FDFCFA;--off:#F5F2EC;--muted:#6B7280;--border:rgba(201,153,58,0.2);--shadow:0 4px 30px rgba(10,15,30,0.12);--shadow-gold:0 8px 32px rgba(201,153,58,0.25);--radius:4px;--radius-lg:12px;--trans:all 0.35s cubic-bezier(0.4,0,0.2,1);}
+/* ══════════════════════════════════════════
+   VARIABLES & RESET
+   ══════════════════════════════════════════ */
+:root{
+  --ink:#0A0F1E;--ink-mid:#1a2340;--navy:#0D2135;--navy-mid:#183650;
+  --gold:#C9993A;--gold-light:#E8B84B;--gold-pale:#FBF3E0;
+  --crimson:#B22234;--crimson-dark:#8B1A27;
+  --teal:#1A7A8A;--teal-light:#22A3B7;--cyan:#00C2CB;--cyan-dark:#007a82;
+  --white:#FDFCFA;--off:#F5F2EC;--muted:#6B7280;
+  --border:rgba(201,153,58,0.2);
+  --shadow:0 8px 40px rgba(10,15,30,0.12);
+  --shadow-gold:0 8px 32px rgba(201,153,58,0.28);
+  --shadow-card:0 20px 60px rgba(10,15,30,0.14);
+  --radius:4px;--radius-lg:12px;
+  --trans:all 0.35s cubic-bezier(0.4,0,0.2,1);
+  --ease:cubic-bezier(0.25,0.46,0.45,0.94);
+}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'DM Sans',sans-serif;font-weight:300;color:var(--ink);background:var(--white);overflow-x:hidden;font-size:15px;line-height:1.7;}
 a{text-decoration:none;color:inherit;transition:var(--trans);}
 ul{list-style:none;}
 img{max-width:100%;height:auto;display:block;}
-::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-thumb{background:var(--gold);}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--off);}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
 
-.top-bar{background:var(--ink);color:rgba(255,255,255,0.6);padding:9px 0;font-size:0.78rem;}
-.top-bar .tb-inner{max-width:1240px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;}
+/* ── TOP BAR ── */
+.top-bar{background:var(--ink);color:rgba(255,255,255,0.55);padding:9px 0;font-size:0.76rem;letter-spacing:0.3px;}
+.tb-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.top-bar a{color:var(--gold-light);transition:var(--trans);}
+.top-bar a:hover{color:var(--white);}
+.tb-right{display:flex;gap:22px;align-items:center;}
 .top-bar i{color:var(--gold);margin-right:5px;}
-.top-bar .tb-right{display:flex;gap:22px;}
-header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(10,15,30,0.07);}
-.nav-wrap{max-width:1240px;margin:0 auto;padding:0 28px;height:82px;display:flex;align-items:center;justify-content:space-between;}
-.logo{display:flex;flex-direction:column;gap:2px;}
-.logo-main{font-family:'Barlow Condensed',sans-serif;font-size:1.9rem;font-weight:900;letter-spacing:1px;color:var(--ink);line-height:1;}
-.logo-main span{color:var(--gold);}
-.logo-sub{font-size:0.65rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--teal);}
-nav ul{display:flex;gap:6px;align-items:center;}
-nav ul li a{font-weight:500;font-size:0.82rem;letter-spacing:0.8px;text-transform:uppercase;color:var(--ink-mid);padding:8px 16px;border-radius:var(--radius);position:relative;transition:var(--trans);}
-nav ul li a:hover,nav ul li a.active{color:var(--gold);}
-nav ul li a.active::after,nav ul li a:hover::after{content:'';position:absolute;bottom:0;left:16px;right:16px;height:2px;background:var(--gold);}
-.btn-nav{background:var(--crimson)!important;color:var(--white)!important;border-radius:3px;padding:9px 22px!important;}
-.btn-nav:hover{background:var(--crimson-dark)!important;}
-.btn-nav::after{display:none!important;}
-.hamburger{display:none;cursor:pointer;font-size:1.4rem;color:var(--ink);}
-.container{max-width:1240px;margin:0 auto;padding:0 28px;}
 
-.page-hero{background:var(--ink);padding:100px 0 80px;position:relative;overflow:hidden;}
-.page-hero::before{content:'';position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop');background-size:cover;background-position:center;opacity:0.08;}
-.page-hero-content{position:relative;z-index:2;}
-.ph-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(201,153,58,0.15);border:1px solid rgba(201,153,58,0.3);color:var(--gold-light);font-size:0.7rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;padding:6px 16px;border-radius:50px;margin-bottom:22px;}
-.page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:700;color:var(--white);line-height:1.1;margin-bottom:16px;letter-spacing:-1px;}
+/* ── HEADER ── */
+header{
+  background:var(--white);
+  box-shadow:0 2px 24px rgba(13,33,53,.07);
+  position:sticky;top:0;z-index:1000;
+  transition:var(--trans);
+}
+header.scrolled{box-shadow:0 4px 32px rgba(13,33,53,.13);}
+.nav-container{
+  display:flex;justify-content:space-between;align-items:center;
+  height:88px;max-width:1200px;margin:0 auto;padding:0 24px;
+  flex-direction:row-reverse;
+}
+.logo-area img{height:88px;width:auto;object-fit:contain;margin-right:-20px;}
+.main-nav ul{display:flex;gap:6px;align-items:center;}
+.main-nav>ul>li{position:relative;}
+.main-nav>ul>li>a{
+  font-weight:600;font-size:.8rem;text-transform:uppercase;
+  color:var(--navy);position:relative;letter-spacing:.7px;
+  padding:6px 12px;border-radius:var(--radius);
+  display:flex;align-items:center;gap:5px;
+}
+.main-nav>ul>li>a::after{
+  content:'';position:absolute;width:0;height:2px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-light));
+  bottom:0;left:12px;transition:width .3s var(--ease);
+}
+.main-nav>ul>li>a:hover{color:var(--gold);}
+.main-nav>ul>li>a:hover::after,.main-nav>ul>li>a.active::after{width:calc(100% - 24px);}
+.main-nav>ul>li>a .chevron{font-size:.55rem;transition:transform .3s ease;opacity:.6;}
+.main-nav>ul>li:hover>a .chevron{transform:rotate(180deg);}
+
+/* ── MEGA DROPDOWN ── */
+.mega-drop{
+  position:absolute;top:calc(100% + 10px);left:50%;
+  transform:translateX(-50%) translateY(8px);
+  width:680px;background:var(--white);
+  border:1px solid rgba(10,15,30,.07);border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-card);padding:28px;
+  opacity:0;visibility:hidden;pointer-events:none;
+  transition:opacity .3s ease,transform .3s ease,visibility .3s;
+  display:grid;grid-template-columns:1fr 1fr;gap:24px;
+}
+.main-nav>ul>li:hover .mega-drop{
+  opacity:1;visibility:visible;pointer-events:auto;
+  transform:translateX(-50%) translateY(0);
+}
+.mega-col-title{font-size:.65rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--border);}
+.mega-item{display:flex;align-items:flex-start;gap:12px;padding:9px 10px;border-radius:8px;transition:var(--trans);cursor:pointer;}
+.mega-item:hover{background:var(--off);}
+.mega-item:hover .mi-icon{background:var(--gold);color:var(--ink);}
+.mi-icon{width:36px;height:36px;border-radius:8px;flex-shrink:0;background:rgba(201,153,58,.1);border:1px solid rgba(201,153,58,.2);display:flex;align-items:center;justify-content:center;font-size:.85rem;color:var(--gold);transition:var(--trans);}
+.mi-text strong{display:block;font-size:.82rem;font-weight:600;color:var(--ink);margin-bottom:2px;}
+.mi-text span{font-size:.72rem;color:var(--muted);font-weight:300;}
+.mega-divider{border:none;border-top:1px solid rgba(10,15,30,.06);margin:6px 0;}
+.venue-mini-list{display:flex;flex-direction:column;gap:2px;}
+.venue-mini-item{display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:7px;transition:var(--trans);}
+.venue-mini-item:hover{background:var(--off);}
+.vmi-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+.vmi-info strong{display:block;font-size:.78rem;font-weight:600;color:var(--ink);}
+.vmi-info span{font-size:.68rem;color:var(--muted);}
+.hamburger{display:none;cursor:pointer;font-size:1.4rem;color:var(--navy);}
+
+/* ── CONTAINER / UTILS ── */
+.container{max-width:1200px;margin:0 auto;padding:0 28px;}
+.sec-label{display:inline-flex;align-items:center;gap:8px;font-size:0.66rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+.sec-label::before{content:'';width:20px;height:1px;background:var(--gold);}
+.sec-label.center{justify-content:center;}
+.sec-h{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:700;color:var(--ink);line-height:1.15;letter-spacing:-0.5px;}
+.sec-h span{color:var(--gold);}
+
+/* ══════════════════════════════════════════
+   PAGE HERO
+   ══════════════════════════════════════════ */
+.page-hero{
+  background:var(--ink);min-height:72vh;
+  position:relative;display:flex;align-items:center;overflow:hidden;
+}
+.ph-bg{position:absolute;inset:0;z-index:0;}
+.ph-bg img{width:100%;height:100%;object-fit:cover;opacity:.18;transition:transform 8s ease;}
+.page-hero:hover .ph-bg img{transform:scale(1.04);}
+.ph-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,rgba(10,15,30,.95) 0%,rgba(10,15,30,.65) 55%,rgba(10,15,30,.25) 100%);}
+.ph-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 28px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.ph-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(201,153,58,.12);border:1px solid rgba(201,153,58,.35);color:var(--gold-light);font-size:.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:7px 18px;border-radius:50px;margin-bottom:24px;}
+.ph-tag i{font-size:.65rem;}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,5.5vw,5rem);font-weight:900;color:var(--white);line-height:1.05;letter-spacing:-1px;margin-bottom:20px;}
 .page-hero h1 em{color:var(--gold-light);font-style:italic;}
-.page-hero p{color:rgba(253,252,250,0.6);font-size:1rem;max-width:560px;line-height:1.85;}
+.ph-desc{color:rgba(253,252,250,.55);font-size:.95rem;line-height:1.9;max-width:440px;margin-bottom:34px;}
+.ph-right{display:flex;flex-direction:column;gap:14px;}
 
+/* Hero stat cards */
+.ph-stat-card{
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+  border-radius:10px;padding:18px 22px;
+  display:flex;align-items:center;gap:16px;
+  transition:all .35s var(--ease);
+}
+.ph-stat-card:hover{background:rgba(201,153,58,.08);border-color:rgba(201,153,58,.3);transform:translateX(5px);}
+.ph-stat-icon{width:44px;height:44px;border-radius:9px;background:rgba(201,153,58,.12);border:1px solid rgba(201,153,58,.2);display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--gold);flex-shrink:0;transition:var(--trans);}
+.ph-stat-card:hover .ph-stat-icon{background:var(--gold);color:var(--ink);}
+.ph-stat-num{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:var(--white);line-height:1;}
+.ph-stat-label{font-size:.7rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:2px;}
+
+/* ── BREADCRUMB ── */
 .breadcrumb{background:var(--gold-pale);border-bottom:1px solid var(--border);padding:12px 0;}
-.bc-inner{max-width:1240px;margin:0 auto;padding:0 28px;font-size:0.78rem;color:var(--muted);display:flex;gap:8px;align-items:center;}
+.bc-inner{max-width:1200px;margin:0 auto;padding:0 28px;font-size:.78rem;color:var(--muted);display:flex;gap:8px;align-items:center;}
 .bc-inner a{color:var(--gold);font-weight:500;}
-.bc-inner i{font-size:0.65rem;}
+.bc-inner a:hover{color:var(--gold-light);}
+.bc-inner i{font-size:.62rem;}
 
-/* NAV PILLS */
-.svc-nav{background:var(--white);border-bottom:1px solid rgba(10,15,30,0.07);position:sticky;top:82px;z-index:900;padding:14px 0;}
-.svc-nav-inner{max-width:1240px;margin:0 auto;padding:0 28px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;}
+/* ── STICKY SERVICE NAV ── */
+.svc-nav{background:var(--white);border-bottom:1px solid rgba(10,15,30,.07);position:sticky;top:88px;z-index:900;padding:12px 0;box-shadow:0 2px 12px rgba(10,15,30,.05);}
+.svc-nav-inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;}
 .svc-nav-inner::-webkit-scrollbar{display:none;}
-.svc-pill{display:inline-flex;align-items:center;gap:7px;padding:9px 18px;border-radius:50px;border:1px solid rgba(10,15,30,0.12);font-size:0.77rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;color:var(--muted);white-space:nowrap;cursor:pointer;transition:var(--trans);}
-.svc-pill:hover,.svc-pill.active{background:var(--gold);border-color:var(--gold);color:var(--ink);}
+.svc-pill{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:8px 18px;border-radius:50px;
+  border:1px solid rgba(10,15,30,.1);
+  font-size:.74rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;
+  color:var(--muted);white-space:nowrap;cursor:pointer;
+  transition:all .3s var(--ease);
+}
+.svc-pill:hover,.svc-pill.active{background:var(--gold);border-color:var(--gold);color:var(--ink);transform:translateY(-1px);box-shadow:0 6px 20px rgba(201,153,58,.25);}
+.svc-pill i{font-size:.7rem;}
 
-/* SERVICE BLOCKS */
-.svc-block{padding:90px 0;scroll-margin-top:140px;}
+/* ══════════════════════════════════════════
+   SERVICE BLOCKS
+   ══════════════════════════════════════════ */
+.svc-block{padding:100px 0;scroll-margin-top:150px;}
 .svc-block:nth-child(even){background:var(--off);}
 .svc-block:nth-child(odd){background:var(--white);}
-.svc-inner{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;}
+.svc-inner{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;}
 .svc-inner.rev{direction:rtl;}
-.svc-inner.rev > *{direction:ltr;}
-.svc-img{position:relative;}
-.svc-img img{width:100%;height:420px;object-fit:cover;border-radius:var(--radius-lg);box-shadow:var(--shadow);}
-.svc-badge{position:absolute;bottom:-18px;right:-18px;background:var(--gold);color:var(--ink);padding:14px 20px;border-radius:var(--radius);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:1px;text-transform:uppercase;box-shadow:var(--shadow-gold);}
-.sec-label{display:inline-flex;align-items:center;gap:8px;font-size:0.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
-.sec-label::before{content:'';width:20px;height:1px;background:var(--gold);}
-.svc-h{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:var(--ink);line-height:1.15;text-transform:uppercase;margin-bottom:16px;}
+.svc-inner.rev>*{direction:ltr;}
+
+/* Image column */
+.svc-img-col{display:flex;flex-direction:column;gap:14px;}
+.svc-img-main{position:relative;overflow:hidden;border-radius:var(--radius-lg);}
+.svc-img-main img{
+  width:100%;height:380px;object-fit:cover;
+  transition:transform .7s ease,filter .5s ease;
+  display:block;
+}
+.svc-img-main::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,15,30,.4),transparent 60%);
+  opacity:0;transition:opacity .4s ease;pointer-events:none;
+}
+.svc-img-main:hover img{transform:scale(1.05);filter:brightness(.9);}
+.svc-img-main:hover::after{opacity:1;}
+.svc-img-badge{
+  position:absolute;bottom:16px;left:16px;z-index:2;
+  background:var(--gold);color:var(--ink);
+  padding:8px 16px;border-radius:var(--radius);
+  font-size:.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  box-shadow:var(--shadow-gold);
+  transform:translateY(4px);opacity:0;
+  transition:all .4s ease;
+}
+.svc-img-main:hover .svc-img-badge{transform:translateY(0);opacity:1;}
+
+/* Secondary image strip */
+.svc-img-strip{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.svc-img-thumb{
+  height:130px;overflow:hidden;border-radius:10px;position:relative;
+  cursor:pointer;
+}
+.svc-img-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease,filter .5s ease;filter:saturate(.8);}
+.svc-img-thumb::after{content:'';position:absolute;inset:0;background:rgba(10,15,30,.2);transition:background .3s ease;}
+.svc-img-thumb:hover img{transform:scale(1.08);filter:saturate(1.1);}
+.svc-img-thumb:hover::after{background:rgba(201,153,58,.15);}
+
+/* Text column */
+.svc-num{font-family:'Barlow Condensed',sans-serif;font-size:5rem;font-weight:900;color:rgba(201,153,58,.1);line-height:1;margin-bottom:-10px;letter-spacing:-2px;}
+.svc-h{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3vw,2.6rem);font-weight:700;color:var(--ink);line-height:1.12;margin-bottom:16px;letter-spacing:-0.5px;}
 .svc-h span{color:var(--gold);}
-.svc-lead{font-size:0.95rem;color:var(--ink-mid);font-weight:400;margin-bottom:14px;line-height:1.8;}
-.svc-body{color:var(--muted);font-size:0.9rem;line-height:1.9;font-weight:300;margin-bottom:24px;}
-.svc-bullets{display:flex;flex-direction:column;gap:10px;margin:20px 0 28px;}
-.svc-bullet{display:flex;align-items:flex-start;gap:12px;font-size:0.88rem;color:var(--ink-mid);font-weight:300;}
-.svc-bullet i{color:var(--gold);margin-top:3px;flex-shrink:0;}
-.svc-bullet strong{font-weight:600;color:var(--ink);}
-.svc-note{background:rgba(178,34,52,0.06);border:1px solid rgba(178,34,52,0.2);border-radius:var(--radius);padding:16px 18px;font-size:0.83rem;color:var(--crimson-dark);line-height:1.7;margin-bottom:20px;}
+.svc-lead{font-size:.97rem;color:var(--ink-mid);font-weight:400;margin-bottom:12px;line-height:1.82;}
+.svc-body{color:var(--muted);font-size:.88rem;line-height:1.92;font-weight:300;margin-bottom:22px;}
+
+/* Feature bullets */
+.svc-bullets{display:flex;flex-direction:column;gap:12px;margin:20px 0 28px;}
+.svc-bullet{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:12px 16px;border-radius:9px;
+  border:1px solid rgba(10,15,30,.06);
+  background:var(--white);
+  transition:all .35s var(--ease);
+  position:relative;overflow:hidden;
+}
+.svc-block:nth-child(even) .svc-bullet{background:var(--white);}
+.svc-bullet::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;
+  width:3px;background:var(--gold);
+  transform:scaleY(0);transform-origin:bottom;
+  transition:transform .35s ease;
+}
+.svc-bullet:hover::before{transform:scaleY(1);}
+.svc-bullet:hover{border-color:rgba(201,153,58,.3);background:var(--gold-pale);transform:translateX(4px);box-shadow:0 4px 20px rgba(201,153,58,.1);}
+.svc-bullet:hover .sb-icon{background:var(--gold);color:var(--ink);}
+.sb-icon{
+  width:36px;height:36px;border-radius:8px;flex-shrink:0;
+  background:rgba(201,153,58,.1);border:1px solid rgba(201,153,58,.18);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.85rem;color:var(--gold);
+  transition:all .3s ease;margin-top:1px;
+}
+.svc-bullet strong{font-weight:600;color:var(--ink);font-size:.88rem;display:block;margin-bottom:2px;}
+.svc-bullet p{color:var(--muted);font-size:.82rem;line-height:1.65;font-weight:300;margin:0;}
+
+/* Note box */
+.svc-note{
+  background:rgba(178,34,52,.05);border:1px solid rgba(178,34,52,.18);
+  border-left:3px solid var(--crimson);
+  border-radius:var(--radius);padding:14px 18px;
+  font-size:.82rem;color:var(--crimson-dark);line-height:1.75;margin-bottom:22px;
+}
 .svc-note i{margin-right:6px;}
 
-.btn-gold{display:inline-flex;align-items:center;gap:9px;background:var(--gold);color:var(--ink);font-weight:700;font-size:0.8rem;letter-spacing:1.5px;text-transform:uppercase;padding:13px 28px;border-radius:var(--radius);border:2px solid var(--gold);transition:var(--trans);}
-.btn-gold:hover{background:transparent;color:var(--gold);}
+/* Tags row */
+.svc-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;}
+.svc-tag-chip{
+  background:var(--white);border:1px solid var(--border);
+  color:var(--ink-mid);font-size:.7rem;font-weight:600;
+  letter-spacing:.5px;padding:5px 14px;border-radius:50px;
+  display:inline-flex;align-items:center;gap:6px;
+  transition:all .3s ease;
+}
+.svc-block:nth-child(even) .svc-tag-chip{background:var(--white);}
+.svc-tag-chip:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);transform:translateY(-2px);box-shadow:0 5px 16px rgba(201,153,58,.2);}
+.svc-tag-chip i{color:var(--gold);font-size:.65rem;transition:color .3s;}
+.svc-tag-chip:hover i{color:var(--ink);}
 
-/* MUST KNOW */
-.mustknow-section{background:var(--ink);padding:90px 0;}
-.mk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(201,153,58,0.08);margin-top:50px;}
-.mk-card{background:var(--ink);padding:32px 26px;border:1px solid rgba(255,255,255,0.05);transition:var(--trans);}
-.mk-card:hover{background:rgba(201,153,58,0.04);border-color:rgba(201,153,58,0.25);}
-.mk-card .mk-num{font-family:'Barlow Condensed',sans-serif;font-size:2.5rem;font-weight:900;color:rgba(201,153,58,0.2);line-height:1;margin-bottom:12px;}
-.mk-card p{font-size:0.83rem;color:rgba(253,252,250,0.5);line-height:1.85;font-weight:300;}
-.mk-head{text-align:center;}
-.mk-head h2{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:700;color:var(--white);text-transform:uppercase;margin-bottom:10px;}
-.mk-head h2 span{color:var(--gold);}
-.mk-head p{color:rgba(253,252,250,0.45);font-size:0.92rem;max-width:480px;margin:0 auto;line-height:1.85;}
+/* Buttons */
+.btn-gold{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--gold);color:var(--ink);
+  font-weight:700;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;
+  padding:13px 30px;border-radius:var(--radius);border:2px solid var(--gold);
+  transition:all .3s var(--ease);
+}
+.btn-gold:hover{background:transparent;color:var(--gold);transform:translateY(-2px);box-shadow:0 12px 36px rgba(201,153,58,.3);}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:9px;
+  background:transparent;color:var(--ink);
+  font-weight:600;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;
+  padding:12px 28px;border-radius:var(--radius);border:1.5px solid rgba(10,15,30,.15);
+  transition:all .3s var(--ease);
+}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
+.svc-block:nth-child(even) .btn-outline{border-color:rgba(10,15,30,.15);}
+.btn-row{display:flex;gap:12px;flex-wrap:wrap;}
 
-/* EXHIBITIONS GRID */
-.exh-all{padding:90px 0;background:var(--off);}
-.exh-sec-label{display:inline-flex;align-items:center;gap:8px;font-size:0.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
-.exh-sec-label::before{content:'';width:20px;height:1px;background:var(--gold);}
-.exh-head{text-align:center;margin-bottom:60px;}
-.exh-head h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:700;color:var(--ink);text-transform:uppercase;margin-bottom:12px;}
+/* ══════════════════════════════════════════
+   CREDENTIALS / TRUST SECTION
+   ══════════════════════════════════════════ */
+.cred-section{background:var(--ink);padding:100px 0;}
+.cred-intro{text-align:center;margin-bottom:64px;}
+.cred-intro .sec-h{color:var(--white);margin-bottom:14px;}
+.cred-intro .sec-p{color:rgba(253,252,250,.45);font-size:.9rem;max-width:540px;margin:0 auto;line-height:1.9;}
+
+/* Big numbers row */
+.cred-numbers{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(255,255,255,.06);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:60px;}
+.cred-num-cell{
+  background:transparent;padding:44px 28px;text-align:center;
+  position:relative;overflow:hidden;transition:var(--trans);
+}
+.cred-num-cell::before{
+  content:'';position:absolute;top:0;left:0;right:0;
+  height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  transform:scaleX(0);transform-origin:center;
+  transition:transform .4s ease;
+}
+.cred-num-cell:hover::before{transform:scaleX(1);}
+.cred-num-cell:hover{background:rgba(201,153,58,.06);}
+.cn-num{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:900;color:var(--white);line-height:1;display:block;margin-bottom:6px;}
+.cn-label{font-size:.68rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.4);}
+
+/* Trust pillar cards */
+.cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:60px;}
+.cred-card{
+  background:rgba(255,255,255,.02);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:var(--radius-lg);padding:36px 30px;
+  transition:all .4s var(--ease);position:relative;overflow:hidden;
+}
+.cred-card::after{
+  content:'';position:absolute;bottom:-30px;right:-30px;
+  width:120px;height:120px;border-radius:50%;
+  background:rgba(201,153,58,.05);
+  transition:all .5s ease;
+}
+.cred-card:hover::after{transform:scale(2);background:rgba(201,153,58,.08);}
+.cred-card:hover{background:rgba(201,153,58,.05);border-color:rgba(201,153,58,.28);transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.3);}
+.cred-card:hover .cc-icon{background:var(--gold);color:var(--ink);transform:scale(1.1) rotate(-5deg);}
+.cc-icon{
+  width:54px;height:54px;border-radius:var(--radius-lg);
+  background:rgba(201,153,58,.1);border:1px solid rgba(201,153,58,.2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;color:var(--gold);margin-bottom:20px;
+  transition:all .35s ease;
+}
+.cred-card h4{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--white);margin-bottom:10px;line-height:1.3;}
+.cred-card p{color:rgba(253,252,250,.42);font-size:.84rem;line-height:1.85;font-weight:300;position:relative;z-index:1;}
+
+/* Country flags row */
+.cred-countries{margin-top:60px;padding-top:48px;border-top:1px solid rgba(255,255,255,.07);}
+.cc-head{text-align:center;margin-bottom:32px;}
+.cc-head h4{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--white);}
+.cc-head p{color:rgba(255,255,255,.35);font-size:.82rem;margin-top:6px;}
+.country-flags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
+.cf-item{
+  display:flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);
+  border-radius:50px;padding:6px 16px;
+  font-size:.75rem;font-weight:500;color:rgba(255,255,255,.5);
+  transition:all .3s ease;cursor:default;
+}
+.cf-item:hover{background:rgba(201,153,58,.1);border-color:rgba(201,153,58,.25);color:var(--gold-light);}
+.cf-flag{font-size:1rem;}
+
+/* ══════════════════════════════════════════
+   MUST KNOW
+   ══════════════════════════════════════════ */
+.mustknow-section{background:linear-gradient(160deg,#060D1A,var(--ink));padding:100px 0;}
+.mk-header{text-align:center;margin-bottom:56px;}
+.mk-header .sec-h{color:var(--white);}
+.mk-header .sec-p{color:rgba(253,252,250,.4);font-size:.9rem;max-width:500px;margin:12px auto 0;line-height:1.9;}
+.mk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.mk-card{
+  background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);
+  border-radius:var(--radius-lg);padding:30px 26px;
+  transition:all .4s var(--ease);position:relative;overflow:hidden;
+}
+.mk-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--gold),transparent);
+  transform:scaleX(0);transform-origin:left;transition:transform .4s ease;
+}
+.mk-card:hover::before{transform:scaleX(1);}
+.mk-card:hover{background:rgba(201,153,58,.05);border-color:rgba(201,153,58,.25);transform:translateY(-4px);}
+.mk-num{
+  font-family:'Barlow Condensed',sans-serif;font-size:3rem;font-weight:900;
+  color:rgba(201,153,58,.18);line-height:1;margin-bottom:14px;letter-spacing:-1px;
+}
+.mk-card h5{font-size:.8rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-light);margin-bottom:8px;}
+.mk-card p{font-size:.82rem;color:rgba(253,252,250,.42);line-height:1.82;font-weight:300;}
+
+/* ══════════════════════════════════════════
+   EXHIBITIONS GRID
+   ══════════════════════════════════════════ */
+.exh-all{padding:100px 0;background:var(--off);}
+.exh-head{text-align:center;margin-bottom:52px;}
+.exh-head h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:700;color:var(--ink);margin-bottom:12px;letter-spacing:-.5px;}
 .exh-head h2 span{color:var(--gold);}
-.exh-head p{color:var(--muted);font-size:0.92rem;max-width:560px;margin:0 auto;line-height:1.9;}
-.exh-tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:40px;}
-.exh-tab{padding:8px 20px;border-radius:50px;border:1px solid rgba(10,15,30,0.12);font-size:0.76rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;color:var(--muted);cursor:pointer;transition:var(--trans);}
-.exh-tab.active,.exh-tab:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);}
-.exh-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-.exh-row{display:flex;align-items:flex-start;gap:16px;background:var(--white);border:1px solid rgba(10,15,30,0.07);border-radius:var(--radius-lg);padding:20px 22px;transition:var(--trans);}
+.exh-head p{color:var(--muted);font-size:.9rem;max-width:550px;margin:0 auto;line-height:1.9;}
+.exh-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.exh-row{
+  display:flex;align-items:flex-start;gap:16px;
+  background:var(--white);border:1px solid rgba(10,15,30,.07);
+  border-radius:var(--radius-lg);padding:20px 22px;
+  transition:all .35s var(--ease);position:relative;overflow:hidden;
+}
+.exh-row::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:var(--teal);transform:scaleY(0);transform-origin:bottom;
+  transition:transform .35s ease;
+}
+.exh-row:hover::before{transform:scaleY(1);}
 .exh-row:hover{border-color:var(--teal);transform:translateX(4px);box-shadow:var(--shadow);}
-.exh-icon{width:44px;height:44px;min-width:44px;background:rgba(26,122,138,0.1);border:1px solid rgba(26,122,138,0.2);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:1.1rem;}
-.exh-body .city{font-size:0.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);}
-.exh-body .name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:3px;}
-.exh-body .venue{font-size:0.78rem;color:var(--muted);font-weight:300;}
+.exh-row:hover .exh-icon{background:var(--teal);color:var(--white);border-color:var(--teal);}
+.exh-icon{
+  width:44px;height:44px;min-width:44px;
+  background:rgba(26,122,138,.1);border:1px solid rgba(26,122,138,.2);
+  border-radius:var(--radius);display:flex;align-items:center;justify-content:center;
+  color:var(--teal);font-size:1rem;transition:all .3s ease;
+}
+.exh-body .city{font-size:.62rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);}
+.exh-body .name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:3px;line-height:1.3;}
+.exh-body .venue{font-size:.76rem;color:var(--muted);font-weight:300;}
 
-/* SECTOR CARDS */
-.sectors-all{padding:90px 0;background:var(--white);}
-.sec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px;}
-.sector-card{background:var(--off);border:1px solid rgba(10,15,30,0.07);border-radius:var(--radius-lg);overflow:hidden;transition:var(--trans);}
-.sector-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:var(--gold);}
-.sector-card-img{height:160px;overflow:hidden;}
-.sector-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;}
-.sector-card:hover .sector-card-img img{transform:scale(1.06);}
-.sector-card-body{padding:20px 22px 24px;}
-.sector-card h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;text-transform:uppercase;color:var(--ink);margin-bottom:8px;}
-.sector-card p{font-size:0.82rem;color:var(--muted);line-height:1.7;font-weight:300;}
-.sector-tag{display:inline-flex;align-items:center;gap:5px;margin-top:10px;font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal);}
+/* ══════════════════════════════════════════
+   SECTORS
+   ══════════════════════════════════════════ */
+.sectors-all{padding:100px 0;background:var(--white);}
+.sec-head{text-align:center;margin-bottom:52px;}
+.sec-head h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:700;color:var(--ink);margin-bottom:12px;letter-spacing:-.5px;}
+.sec-head h2 span{color:var(--gold);}
+.sec-head p{color:var(--muted);font-size:.9rem;max-width:550px;margin:0 auto;line-height:1.9;}
+.sec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.sector-card{
+  background:var(--off);border:1px solid rgba(10,15,30,.07);
+  border-radius:var(--radius-lg);overflow:hidden;transition:all .4s var(--ease);
+  position:relative;
+}
+.sector-card::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,15,30,.6),transparent 50%);
+  opacity:0;transition:opacity .4s ease;pointer-events:none;
+}
+.sector-card:hover{transform:translateY(-7px);box-shadow:var(--shadow-card);border-color:var(--gold);}
+.sector-card:hover::after{opacity:1;}
+.sc-img{height:175px;overflow:hidden;}
+.sc-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease,filter .5s ease;filter:saturate(.8);}
+.sector-card:hover .sc-img img{transform:scale(1.08);filter:saturate(1.1);}
+.sc-body{padding:22px 22px 26px;}
+.sc-body h4{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:8px;}
+.sc-body p{font-size:.82rem;color:var(--muted);line-height:1.72;font-weight:300;}
+.sc-tag{display:inline-flex;align-items:center;gap:5px;margin-top:10px;font-size:.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal);transition:color .3s;}
+.sector-card:hover .sc-tag{color:var(--gold);}
+.sc-tag i{font-size:.6rem;transition:transform .3s;}
+.sector-card:hover .sc-tag i{transform:translateX(3px);}
 
-footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,250,0.55);padding-top:80px;}
-.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:50px;margin-bottom:60px;}
-.foot-col h5{font-family:'Barlow Condensed',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;padding-bottom:8px;border-bottom:1px solid rgba(201,153,58,0.2);}
-.foot-col ul li{margin-bottom:9px;}
-.foot-col ul li a{font-size:0.85rem;font-weight:300;color:rgba(253,252,250,0.5);transition:var(--trans);}
-.foot-col ul li a:hover{color:var(--gold);padding-left:5px;}
-.foot-contact li{display:flex;gap:10px;margin-bottom:12px;font-size:0.85rem;font-weight:300;align-items:flex-start;}
-.foot-contact i{color:var(--gold);margin-top:3px;}
-.foot-brand p{font-size:0.88rem;line-height:1.8;margin-top:16px;font-weight:300;}
-.foot-bottom{border-top:1px solid rgba(255,255,255,0.06);padding:22px 0;display:flex;justify-content:space-between;font-size:0.78rem;flex-wrap:wrap;gap:10px;}
-.foot-bottom a{color:var(--gold);}
-.cta-band{background:linear-gradient(135deg,var(--crimson-dark),var(--crimson));padding:80px 0;text-align:center;}
-.cta-band h2{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;color:var(--white);margin-bottom:16px;text-transform:uppercase;}
-.cta-band p{color:rgba(255,255,255,0.65);font-size:0.95rem;max-width:480px;margin:0 auto 36px;line-height:1.8;}
+/* ══════════════════════════════════════════
+   CTA BAND
+   ══════════════════════════════════════════ */
+.cta-band{background:linear-gradient(135deg,var(--crimson-dark),var(--crimson));padding:90px 0;text-align:center;position:relative;overflow:hidden;}
+.cta-band::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1800&auto=format&fit=crop') center/cover;opacity:.07;}
+.cta-inner{position:relative;z-index:1;}
+.cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:700;color:var(--white);margin-bottom:14px;letter-spacing:-.5px;}
+.cta-band h2 em{font-style:italic;color:rgba(255,255,255,.7);}
+.cta-band p{color:rgba(255,255,255,.6);font-size:.95rem;max-width:480px;margin:0 auto 36px;line-height:1.85;}
 .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-.btn-ghost-light{display:inline-flex;align-items:center;gap:9px;background:transparent;color:rgba(255,255,255,0.8);font-weight:500;font-size:0.8rem;letter-spacing:1.5px;text-transform:uppercase;padding:14px 28px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.3);transition:var(--trans);}
-.btn-ghost-light:hover{border-color:var(--gold);color:var(--gold);}
+.btn-ghost-light{display:inline-flex;align-items:center;gap:9px;background:transparent;color:rgba(255,255,255,.8);font-weight:600;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;padding:14px 28px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.3);transition:all .3s var(--ease);}
+.btn-ghost-light:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
 
+/* ══════════════════════════════════════════
+   FOOTER
+   ══════════════════════════════════════════ */
+footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,250,.5);padding-top:80px;}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:50px;margin-bottom:60px;}
+.foot-brand p{font-size:.86rem;line-height:1.85;margin-top:16px;font-weight:300;}
+.foot-brand-logo{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;color:var(--white);letter-spacing:1px;}
+.foot-brand-logo span{color:var(--gold);}
+.foot-brand-sub{font-size:.6rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--teal-light);margin-top:2px;}
+.foot-parent{margin-top:18px;padding:14px 16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:8px;display:inline-flex;align-items:center;gap:10px;transition:var(--trans);}
+.foot-parent:hover{border-color:rgba(201,153,58,.3);background:rgba(201,153,58,.05);}
+.fp-label{font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3);display:block;margin-bottom:2px;}
+.fp-link{font-size:.82rem;font-weight:600;color:var(--gold-light);display:flex;align-items:center;gap:6px;}
+.fp-link i{font-size:.65rem;opacity:.6;}
+.foot-col h5{font-size:.8rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;padding-bottom:8px;border-bottom:1px solid rgba(201,153,58,.2);}
+.foot-col ul li{margin-bottom:9px;}
+.foot-col ul li a{font-size:.84rem;font-weight:300;color:rgba(253,252,250,.45);transition:var(--trans);}
+.foot-col ul li a:hover{color:var(--gold);padding-left:5px;}
+.foot-contact li{display:flex;gap:10px;margin-bottom:12px;font-size:.84rem;font-weight:300;align-items:flex-start;}
+.foot-contact i{color:var(--gold);margin-top:3px;flex-shrink:0;}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.06);padding:22px 0;display:flex;justify-content:space-between;align-items:center;font-size:.76rem;flex-wrap:wrap;gap:10px;}
+.foot-bottom a{color:var(--gold);font-weight:500;}
+.foot-bottom a:hover{color:var(--gold-light);}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════════ */
+@media(max-width:1100px){.exh-grid{grid-template-columns:repeat(2,1fr);}.mk-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:992px){
-  .svc-inner{grid-template-columns:1fr;gap:36px;}
+  .ph-content{grid-template-columns:1fr;gap:40px;}
+  .ph-right{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .svc-inner{grid-template-columns:1fr;gap:40px;}
   .svc-inner.rev{direction:ltr;}
-  .mk-grid{grid-template-columns:repeat(2,1fr);}
-  .exh-grid{grid-template-columns:repeat(2,1fr);}
-  .sec-grid{grid-template-columns:repeat(2,1fr);}
+  .cred-numbers{grid-template-columns:repeat(2,1fr);}
+  .cred-grid{grid-template-columns:1fr 1fr;}
+  .sec-grid{grid-template-columns:1fr 1fr;}
   .foot-grid{grid-template-columns:1fr 1fr;gap:36px;}
+  .mega-drop{width:480px;}
 }
 @media(max-width:768px){
   .hamburger{display:block;}
-  nav{position:absolute;top:82px;left:-100%;width:100%;background:var(--white);padding:20px 28px;box-shadow:var(--shadow);transition:0.4s;}
-  nav.open{left:0;}
-  nav ul{flex-direction:column;gap:4px;}
-  nav ul li a{display:block;padding:12px 16px;}
+  .main-nav{position:absolute;top:88px;left:-100%;width:100%;background:var(--white);padding:20px;box-shadow:0 5px 20px rgba(13,33,53,.1);transition:.4s;}
+  .main-nav.active{left:0;}
+  .main-nav ul{flex-direction:column;text-align:center;gap:4px;}
+  .mega-drop{display:none;}
   .top-bar .tb-right{display:none;}
+  .nav-container{flex-direction:row;justify-content:space-between;}
+  .svc-img-strip{grid-template-columns:1fr;}
+  .exh-grid{grid-template-columns:1fr;}
+  .sec-grid{grid-template-columns:1fr;}
   .mk-grid{grid-template-columns:1fr;}
+  .cred-grid{grid-template-columns:1fr;}
 }
-@media(max-width:560px){.exh-grid{grid-template-columns:1fr;}.sec-grid{grid-template-columns:1fr;}}
+@media(max-width:560px){
+  .cred-numbers{grid-template-columns:1fr 1fr;}
+  .page-hero h1{font-size:2.8rem;}
+  .ph-right{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
 
+<!-- TOP BAR -->
 <div class="top-bar">
   <div class="tb-inner">
-    <span><i class="fas fa-map-marker-alt"></i> Serving All Major Exhibition Venues Across India</span>
-    <div class="tb-right"><span><i class="fas fa-envelope"></i> ies@stopindia.com</span><span><i class="fas fa-phone"></i> +91 9212133251</span></div>
+    <span><i class="fas fa-map-marker-alt"></i> On-site presence at all major exhibition venues across India</span>
+    <div class="tb-right">
+      <a href="mailto:ies@stopindia.com"><i class="fas fa-envelope"></i> ies@stopindia.com</a>
+      <a href="tel:+919212133251"><i class="fas fa-phone"></i> +91 9212133251</a>
+    </div>
   </div>
 </div>
 
-<header>
-  <div class="nav-wrap">
-    <a href="index.html" class="logo"><div class="logo-main">AB<span>STOP</span>India</div><div class="logo-sub">Inbound Exhibition Logistics</div></a>
-    <nav id="mainNav">
+<!-- HEADER -->
+<header id="mainHeader">
+  <div class="nav-container">
+    <div class="logo-area">
+      <a href="index.html">
+        <img src="https://stopindia.com/wp-content/uploads/2020/09/new.png" alt="AB STOP India Logo">
+      </a>
+    </div>
+    <nav class="main-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="support.html" class="btn-nav">Get Support</a></li>
+        <li><a href="about.html">About</a></li>
+        <!-- SERVICES DROPDOWN -->
+        <li>
+          <a href="services.html" class="active">Services <i class="fas fa-chevron-down chevron"></i></a>
+          <div class="mega-drop">
+            <div>
+              <div class="mega-col-title">Our Services</div>
+              <a href="#customs" class="mega-item"><div class="mi-icon"><i class="fas fa-file-shield"></i></div><div class="mi-text"><strong>Customs &amp; ATA Carnet</strong><span>Temporary import, re-export &amp; documentation</span></div></a>
+              <a href="#freight" class="mega-item"><div class="mi-icon"><i class="fas fa-plane-arrival"></i></div><div class="mi-text"><strong>Air, Sea &amp; Land Freight</strong><span>International cargo from any country to India</span></div></a>
+              <a href="#onsite" class="mega-item"><div class="mi-icon"><i class="fas fa-forklift"></i></div><div class="mi-text"><strong>On-Site Handling</strong><span>Forklifts, labour &amp; stand delivery at the venue</span></div></a>
+              <a href="#delivery" class="mega-item"><div class="mi-icon"><i class="fas fa-truck-moving"></i></div><div class="mi-text"><strong>Door-to-Stand Delivery</strong><span>Origin to your exact stand position</span></div></a>
+              <a href="#return" class="mega-item"><div class="mi-icon"><i class="fas fa-rotate-left"></i></div><div class="mi-text"><strong>Return &amp; Re-Export</strong><span>Packing, relabelling and return shipments</span></div></a>
+              <a href="#events" class="mega-item"><div class="mi-icon"><i class="fas fa-music"></i></div><div class="mi-text"><strong>Events, Concerts &amp; Sports</strong><span>Time-critical cargo for live events in India</span></div></a>
+            </div>
+            <div>
+              <div class="mega-col-title">Our Coverage — Major Venues</div>
+              <div class="venue-mini-list">
+                <a href="index.html#venues" class="venue-mini-item"><div class="vmi-dot"></div><div class="vmi-info"><strong>Bharat Mandapam &amp; Yashobhoomi</strong><span>New Delhi</span></div></a>
+                <a href="index.html#venues" class="venue-mini-item"><div class="vmi-dot"></div><div class="vmi-info"><strong>India Expo Mart</strong><span>Greater Noida</span></div></a>
+                <a href="index.html#venues" class="venue-mini-item"><div class="vmi-dot"></div><div class="vmi-info"><strong>Bombay Exhibition Centre &amp; JWCC</strong><span>Mumbai</span></div></a>
+                <a href="index.html#venues" class="venue-mini-item"><div class="vmi-dot"></div><div class="vmi-info"><strong>BIEC &amp; Yelahanka Air Force</strong><span>Bengaluru</span></div></a>
+                <a href="index.html#venues" class="venue-mini-item"><div class="vmi-dot"></div><div class="vmi-info"><strong>HITEX Exhibition Centre</strong><span>Hyderabad</span></div></a>
+                <a href="index.html#venues" class="venue-mini-item"><div class="vmi-dot"></div><div class="vmi-info"><strong>Mahatma Mandir</strong><span>Gandhinagar, Gujarat</span></div></a>
+                <a href="index.html#venues" class="venue-mini-item"><div class="vmi-dot"></div><div class="vmi-info"><strong>Chennai Trade Centre &amp; ACEC Pune</strong><span>Chennai · Pune</span></div></a>
+              </div>
+              <hr class="mega-divider" style="margin-top:12px;">
+              <a href="index.html#venues" style="display:flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold);padding:8px 10px;">View All Venues <i class="fas fa-arrow-right" style="font-size:.6rem;"></i></a>
+            </div>
+          </div>
+        </li>
+        <li><a href="support.html">Support</a></li>
       </ul>
     </nav>
-    <div class="hamburger" id="ham"><i class="fas fa-bars"></i></div>
+    <div class="hamburger"><i class="fas fa-bars"></i></div>
   </div>
 </header>
 
+<!-- PAGE HERO -->
 <section class="page-hero">
-  <div class="container">
-    <div class="page-hero-content">
-      <div class="ph-tag"><i class="fas fa-cogs"></i> Full-Range Cargo Services</div>
-      <h1>Our <em>Logistics</em><br>Services</h1>
-      <p>Every service your exhibition shipment needs — from the moment it leaves your country to the moment it arrives at your India stand.</p>
+  <div class="ph-bg">
+    <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop" alt="">
+  </div>
+  <div class="ph-content container">
+    <div>
+      <div class="ph-tag"><i class="fas fa-cogs"></i> Full-Range Exhibition Logistics</div>
+      <h1>Every Service<br>Your Shipment<br><em>Needs.</em></h1>
+      <p class="ph-desc">From the moment your cargo leaves your country to the moment it stands at your India exhibition — we manage every single step so you don't have to.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="support.html" class="btn-gold"><i class="fas fa-paper-plane"></i> Get a Quote</a>
+        <a href="#customs" style="display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:.8rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:13px 24px;border:1px solid rgba(255,255,255,.2);border-radius:var(--radius);transition:var(--trans);" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='rgba(255,255,255,.2)';this.style.color='rgba(255,255,255,.7)'"><i class="fas fa-arrow-down"></i> Explore Services</a>
+      </div>
+    </div>
+    <div class="ph-right">
+      <div class="ph-stat-card">
+        <div class="ph-stat-icon"><i class="fas fa-file-shield"></i></div>
+        <div><div class="ph-stat-num">25+</div><div class="ph-stat-label">Years Customs Expertise</div></div>
+      </div>
+      <div class="ph-stat-card">
+        <div class="ph-stat-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div><div class="ph-stat-num">18+</div><div class="ph-stat-label">Venues with On-Site Presence</div></div>
+      </div>
+      <div class="ph-stat-card">
+        <div class="ph-stat-icon"><i class="fas fa-globe"></i></div>
+        <div><div class="ph-stat-num">80+</div><div class="ph-stat-label">Countries We've Served</div></div>
+      </div>
+      <div class="ph-stat-card">
+        <div class="ph-stat-icon"><i class="fas fa-clock"></i></div>
+        <div><div class="ph-stat-num">100%</div><div class="ph-stat-label">On-Time Delivery Record</div></div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- BREADCRUMB -->
 <div class="breadcrumb">
-  <div class="bc-inner"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Services</span></div>
+  <div class="bc-inner container">
+    <a href="index.html">Home</a>
+    <i class="fas fa-chevron-right"></i>
+    <span>Services</span>
+  </div>
 </div>
 
 <!-- STICKY SERVICE NAV -->
 <div class="svc-nav">
   <div class="svc-nav-inner">
-    <a href="#customs" class="svc-pill active"><i class="fas fa-file-shield"></i> Customs & ATA Carnet</a>
+    <a href="#customs" class="svc-pill active"><i class="fas fa-file-shield"></i> Customs &amp; ATA Carnet</a>
     <a href="#freight" class="svc-pill"><i class="fas fa-plane"></i> International Freight</a>
     <a href="#onsite" class="svc-pill"><i class="fas fa-forklift"></i> On-Site Handling</a>
     <a href="#delivery" class="svc-pill"><i class="fas fa-truck"></i> Stand Delivery</a>
-    <a href="#return" class="svc-pill"><i class="fas fa-rotate-left"></i> Return & Re-Export</a>
-    <a href="#events" class="svc-pill"><i class="fas fa-music"></i> Events & Concerts</a>
+    <a href="#return" class="svc-pill"><i class="fas fa-rotate-left"></i> Return &amp; Re-Export</a>
+    <a href="#events" class="svc-pill"><i class="fas fa-music"></i> Events &amp; Concerts</a>
   </div>
 </div>
 
-<!-- SERVICE 1: CUSTOMS -->
+<!-- ══════════ SERVICE 1: CUSTOMS ══════════ -->
 <section class="svc-block" id="customs">
   <div class="container">
     <div class="svc-inner">
-      <div class="svc-img">
-        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1200&auto=format&fit=crop" alt="Customs Clearance India">
-        <div class="svc-badge"><i class="fas fa-star"></i> Priority Service</div>
+      <div class="svc-img-col">
+        <div class="svc-img-main">
+          <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1200&auto=format&fit=crop" alt="Customs Clearance India">
+          <div class="svc-img-badge"><i class="fas fa-star"></i> Priority Service</div>
+        </div>
+        <div class="svc-img-strip">
+          <div class="svc-img-thumb">
+            <img src="https://images.unsplash.com/photo-1609429019995-8c40f49535a5?q=80&w=600&auto=format&fit=crop" alt="Documents">
+          </div>
+          <div class="svc-img-thumb">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop" alt="Customs paperwork">
+          </div>
+        </div>
       </div>
       <div>
-        <div class="sec-label">Service 01</div>
-        <h2 class="svc-h">Customs Clearance<br><span>& ATA Carnet</span></h2>
-        <p class="svc-lead">Navigating Indian customs for exhibition cargo requires specialist knowledge. We handle every regime, every document, every deadline.</p>
-        <p class="svc-body">AB STOP India offers the following options of customs clearance for your India exhibition shipments. All shipments to AB STOP India confirm that you totally accept and agree with our conditions of service.</p>
+        <div class="svc-num">01</div>
+        <div class="sec-label">Customs &amp; Compliance</div>
+        <h2 class="svc-h">Customs Clearance<br><span>&amp; ATA Carnet</span></h2>
+        <p class="svc-lead">India's customs procedures are among the most complex for international exhibitors. Our specialists manage every regime, document, and deadline — compliantly and on time.</p>
+        <p class="svc-body">AB STOP India offers complete customs handling for your India exhibition shipments. All shipments confirm full acceptance of our conditions of service. We are ATA Carnet specialists, managing the entire temporary importation lifecycle from entry to re-export.</p>
         <div class="svc-bullets">
-          <div class="svc-bullet"><i class="fas fa-check-circle"></i><div><strong>Temporary Importation for Exhibits</strong> — Full ATA Carnet management with guaranteed re-export after the show. We monitor deadlines so you never face a customs penalty.</div></div>
-          <div class="svc-bullet"><i class="fas fa-check-circle"></i><div><strong>Final Importation for Giveaways</strong> — Catalogues, brochures, samples, and souvenirs imported permanently with correct HS codes and duty management.</div></div>
-          <div class="svc-bullet"><i class="fas fa-check-circle"></i><div><strong>Bond & Bank Guarantee Customs</strong> — Where ATA Carnet is not applicable, we manage cash bond or bank guarantee procedures with Indian customs authorities.</div></div>
-          <div class="svc-bullet"><i class="fas fa-check-circle"></i><div><strong>Re-Export Documentation</strong> — Complete paperwork for goods leaving India after the show, ensuring zero customs complications.</div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-id-card"></i></div><div><strong>ATA Carnet Management</strong><p>Full end-to-end ATA Carnet handling — endorsement on arrival, monitoring of validity, and guaranteed re-export before expiry.</p></div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-box-open"></i></div><div><strong>Final Importation for Giveaways</strong><p>Correct HS code classification and duty management for catalogues, brochures, samples, and promotional items retained in India.</p></div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-landmark"></i></div><div><strong>Bond &amp; Bank Guarantee Customs</strong><p>Where ATA Carnet is inapplicable, we manage cash bond or bank guarantee procedures with Indian customs authorities directly.</p></div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-plane-departure"></i></div><div><strong>Complete Re-Export Documentation</strong><p>All paperwork for goods leaving India after the show, ensuring zero complications at the exit port.</p></div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-clock"></i></div><div><strong>Deadline Management</strong><p>We track all customs validity periods and proactively alert you to critical deadlines before they become penalties.</p></div></div>
         </div>
-        <div class="svc-note"><i class="fas fa-info-circle"></i> Learn more about conditions of cooperation with AB STOP India. Any shipments to AB STOP India confirm full acceptance of our terms.</div>
-        <a href="support.html" class="btn-gold"><i class="fas fa-paper-plane"></i> Send an Enquiry</a>
+        <div class="svc-tags">
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> ATA Carnet</span>
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> Temporary Import</span>
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> Duty Management</span>
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> Re-Export</span>
+        </div>
+        <div class="svc-note"><i class="fas fa-info-circle"></i> All temporary import permits and ATA Carnets must reach our India office a minimum of 5 working days before the exhibition opens.</div>
+        <div class="btn-row">
+          <a href="support.html" class="btn-gold"><i class="fas fa-paper-plane"></i> Send an Enquiry</a>
+          <a href="support.html" class="btn-outline"><i class="fas fa-file-alt"></i> Request Checklist</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICE 2: FREIGHT -->
+<!-- ══════════ SERVICE 2: FREIGHT ══════════ -->
 <section class="svc-block" id="freight">
   <div class="container">
     <div class="svc-inner rev">
-      <div class="svc-img">
-        <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=1200&auto=format&fit=crop" alt="Air Sea Freight India">
+      <div class="svc-img-col">
+        <div class="svc-img-main">
+          <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=1200&auto=format&fit=crop" alt="Air Sea Freight India">
+          <div class="svc-img-badge"><i class="fas fa-globe"></i> Worldwide Origin</div>
+        </div>
+        <div class="svc-img-strip">
+          <div class="svc-img-thumb">
+            <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=600&auto=format&fit=crop" alt="Air cargo">
+          </div>
+          <div class="svc-img-thumb">
+            <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=600&auto=format&fit=crop" alt="Sea freight">
+          </div>
+        </div>
       </div>
       <div>
-        <div class="sec-label">Service 02</div>
-        <h2 class="svc-h">Air, Sea &<br><span>Land Freight</span></h2>
-        <p class="svc-lead">Your cargo moves internationally via the most efficient, time-optimised route — with full visibility throughout.</p>
-        <p class="svc-body">Whether your shipment is a single crate of product samples or a full 40ft container of exhibition machinery, we select the right mode and route based on your timeline and budget.</p>
+        <div class="svc-num">02</div>
+        <div class="sec-label">International Freight</div>
+        <h2 class="svc-h">Air, Sea &amp;<br><span>Land Freight</span></h2>
+        <p class="svc-lead">Your cargo moves via the most efficient, time-optimised route — with full visibility and proactive updates from collection to delivery.</p>
+        <p class="svc-body">Whether you're shipping a single crate of product samples from Germany or a full 40ft container of exhibition machinery from Japan, we select the right mode and routing based on your deadline and budget — and track it every step of the way.</p>
         <div class="svc-bullets">
-          <div class="svc-bullet"><i class="fas fa-plane"></i><div><strong>Exhibition Air Freight</strong> — Time-critical shipments by air to all major Indian airports: DEL, BOM, BLR, HYD, MAA, CCU.</div></div>
-          <div class="svc-bullet"><i class="fas fa-ship"></i><div><strong>Ocean / Sea Freight</strong> — FCL and LCL ocean shipments to Nhava Sheva (Mumbai), Mundra, Chennai, and Kolkata ports.</div></div>
-          <div class="svc-bullet"><i class="fas fa-truck"></i><div><strong>Road Freight (Overland)</strong> — Cross-border road freight via Nepal, Bangladesh, and land border routes for neighbouring countries.</div></div>
-          <div class="svc-bullet"><i class="fas fa-satellite-dish"></i><div><strong>Real-Time Tracking</strong> — End-to-end shipment visibility with proactive status updates from our team.</div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-plane"></i></div><div><strong>Exhibition Air Freight</strong><p>Time-critical shipments to all major Indian airports — DEL, BOM, BLR, HYD, MAA, CCU. Priority handling for exhibition deadlines.</p></div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-ship"></i></div><div><strong>Ocean / Sea Freight</strong><p>FCL and LCL ocean freight to Nhava Sheva (Mumbai), Mundra, Chennai, and Kolkata ports with optimised routing.</p></div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-truck"></i></div><div><strong>Road Freight (Overland)</strong><p>Cross-border road freight via Nepal, Bangladesh, and land border routes for neighbouring countries and South Asia.</p></div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-satellite-dish"></i></div><div><strong>Real-Time Tracking</strong><p>End-to-end shipment visibility with proactive status updates, milestone alerts and a dedicated point of contact.</p></div></div>
         </div>
-        <a href="support.html" class="btn-gold"><i class="fas fa-paper-plane"></i> Request a Quote</a>
+        <div class="svc-tags">
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> Air Freight</span>
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> FCL / LCL Ocean</span>
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> Cross-Border Road</span>
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> Live Tracking</span>
+        </div>
+        <div class="btn-row">
+          <a href="support.html" class="btn-gold"><i class="fas fa-calculator"></i> Request a Quote</a>
+          <a href="support.html" class="btn-outline"><i class="fas fa-route"></i> Discuss Routing</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICE 3: ON-SITE -->
+<!-- ══════════ SERVICE 3: ON-SITE ══════════ -->
 <section class="svc-block" id="onsite">
   <div class="container">
     <div class="svc-inner">
-      <div class="svc-img">
-        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=1200&auto=format&fit=crop" alt="On-Site Forklift">
+      <div class="svc-img-col">
+        <div class="svc-img-main">
+          <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=1200&auto=format&fit=crop" alt="On-Site Forklift India Exhibition">
+          <div class="svc-img-badge"><i class="fas fa-forklift"></i> On-Site Team</div>
+        </div>
+        <div class="svc-img-strip">
+          <div class="svc-img-thumb">
+            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=600&auto=format&fit=crop" alt="Exhibition stand">
+          </div>
+          <div class="svc-img-thumb">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop" alt="Warehouse">
+          </div>
+        </div>
       </div>
       <div>
-        <div class="sec-label">Service 03</div>
+        <div class="svc-num">03</div>
+        <div class="sec-label">Venue Operations</div>
         <h2 class="svc-h">On-Site<br><span>Handling</span></h2>
-        <p class="svc-lead">When your cargo demands quality on-site handling, our forklift trucks and professional support team are at your disposal.</p>
-        <p class="svc-body">Our crew is physically present at the venue with the right equipment. We are always on hand for every task from unloading to stand delivery to empty case management.</p>
+        <p class="svc-lead">Our crew is physically at the venue with the right equipment before the show begins — ready for everything from unloading to final stand placement.</p>
+        <p class="svc-body">When you need quality on-site handling, our forklift trucks and professional support team are at your disposal. We coordinate with venue operations, navigate the loading bays, and ensure your exhibit is in position — on time, every time.</p>
         <div class="svc-bullets">
-          <div class="svc-bullet"><i class="fas fa-truck-ramp-box"></i><div><strong>Unloading & Loading</strong> — Unloading exhibits from trucks, platforms, and containers; loading back after the show.</div></div>
-          <div class="svc-bullet"><i class="fas fa-map-marker-alt"></i><div><strong>Delivery to Exhibition Stand</strong> — Precise delivery to your booth location according to your directions and floor plan.</div></div>
-          <div class="svc-bullet"><i class="fas fa-box"></i><div><strong>Empty Case Storage & Delivery</strong> — Secure storage of empty packaging during the show; delivered back to your stand for re-packing.</div></div>
-          <div class="svc-bullet"><i class="fas fa-forklift"></i><div><strong>Special Forklift Support</strong> — Forklift support for mounting works, heavy machinery installation, and oversized exhibits.</div></div>
-          <div class="svc-bullet"><i class="fas fa-box-open"></i><div><strong>Unpacking & Packing</strong> — Professional unpacking on arrival and careful packing for return or onward movement.</div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-truck-ramp-box"></i></div><div><strong>Unloading &amp; Loading</strong><p>Unloading exhibits from trucks, platforms and containers at the venue. Loading back after the show closes.</p></div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-map-marker-alt"></i></div><div><strong>Delivery to Your Stand</strong><p>Precise delivery to your booth location according to your directions and the venue floor plan.</p></div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-archive"></i></div><div><strong>Empty Case Storage</strong><p>Secure storage of all empty packaging during the show; returned to your stand for re-packing after close.</p></div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-forklift"></i></div><div><strong>Heavy Machinery Support</strong><p>Forklift support for mounting, heavy machinery installation and oversized exhibits. Average capacity 3 tonnes per lift.</p></div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-box-open"></i></div><div><strong>Professional Packing &amp; Unpacking</strong><p>Careful unpacking on arrival; professional repacking at show close for return or onward movement.</p></div></div>
         </div>
-        <a href="support.html" class="btn-gold"><i class="fas fa-file-alt"></i> Submit an Order Form</a>
+        <div class="svc-tags">
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> Forklift Teams</span>
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> Stand Delivery</span>
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> Case Storage</span>
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> Heavy Lifts</span>
+        </div>
+        <div class="btn-row">
+          <a href="support.html" class="btn-gold"><i class="fas fa-file-alt"></i> Submit an Order Form</a>
+          <a href="support.html" class="btn-outline"><i class="fas fa-phone"></i> Speak to the Team</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICE 4: DELIVERY -->
+<!-- ══════════ SERVICE 4: DELIVERY ══════════ -->
 <section class="svc-block" id="delivery">
   <div class="container">
     <div class="svc-inner rev">
-      <div class="svc-img">
-        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop" alt="Stand Delivery India">
+      <div class="svc-img-col">
+        <div class="svc-img-main">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop" alt="Door-to-Stand Delivery India">
+          <div class="svc-img-badge"><i class="fas fa-route"></i> Origin to Stand</div>
+        </div>
+        <div class="svc-img-strip">
+          <div class="svc-img-thumb">
+            <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=600&auto=format&fit=crop" alt="Logistics chain">
+          </div>
+          <div class="svc-img-thumb">
+            <img src="https://images.unsplash.com/photo-1545987796-200677ee1011?q=80&w=600&auto=format&fit=crop" alt="Exhibition delivery">
+          </div>
+        </div>
       </div>
       <div>
-        <div class="sec-label">Service 04</div>
+        <div class="svc-num">04</div>
+        <div class="sec-label">Complete Solution</div>
         <h2 class="svc-h">Door-to-Stand<br><span>Delivery</span></h2>
-        <p class="svc-lead">A truly end-to-end service: we collect your cargo from your origin and deliver it directly to your exhibition stand in India.</p>
-        <p class="svc-body">You focus entirely on your exhibition and your customers. We handle the complete logistics chain from the moment your shipment leaves your facility to the moment it is ready at your stand — including all customs, documentation, freight, and on-site handling.</p>
+        <p class="svc-lead">A truly end-to-end service: your cargo leaves your premises and the next time you see it, it's at your exhibition stand in India — ready.</p>
+        <p class="svc-body">You focus entirely on your exhibition, your customers, and your team. We handle the complete logistics chain — collection, freight, customs, ground transport, and on-site handling — from a single point of contact with total transparency on costs and timelines.</p>
         <div class="svc-bullets">
-          <div class="svc-bullet"><i class="fas fa-check"></i><div><strong>Single Point of Contact</strong> — One account manager coordinates everything from collection to stand placement.</div></div>
-          <div class="svc-bullet"><i class="fas fa-check"></i><div><strong>Pre-Show Planning</strong> — We review venue deadlines, stand dimensions, and cargo requirements in advance.</div></div>
-          <div class="svc-bullet"><i class="fas fa-check"></i><div><strong>Zero Surprises</strong> — Transparent costs, clear timelines, and proactive communication throughout.</div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-user-tie"></i></div><div><strong>Single Account Manager</strong><p>One dedicated contact coordinates everything from origin collection to your stand position in India.</p></div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-calendar-check"></i></div><div><strong>Pre-Show Logistics Plan</strong><p>We review venue deadlines, stand dimensions, access restrictions and cargo requirements weeks in advance.</p></div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-shield-alt"></i></div><div><strong>Transparent Pricing</strong><p>Clear, all-inclusive quotation before any work begins. No surprise charges at the venue — ever.</p></div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-comments"></i></div><div><strong>Live Communication</strong><p>Regular updates at every milestone — departure, customs clearance, venue arrival, and stand delivery confirmation.</p></div></div>
         </div>
-        <a href="support.html" class="btn-gold"><i class="fas fa-paper-plane"></i> Plan Your Shipment</a>
+        <div class="svc-tags">
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> Single Contact</span>
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> Pre-Show Planning</span>
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> Fixed Pricing</span>
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> Live Updates</span>
+        </div>
+        <div class="btn-row">
+          <a href="support.html" class="btn-gold"><i class="fas fa-paper-plane"></i> Plan Your Shipment</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICE 5: RETURN -->
+<!-- ══════════ SERVICE 5: RETURN ══════════ -->
 <section class="svc-block" id="return">
   <div class="container">
     <div class="svc-inner">
-      <div class="svc-img">
-        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop" alt="Return Logistics">
+      <div class="svc-img-col">
+        <div class="svc-img-main">
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop" alt="Return Logistics after India Exhibition">
+          <div class="svc-img-badge"><i class="fas fa-undo"></i> Post-Show Service</div>
+        </div>
+        <div class="svc-img-strip">
+          <div class="svc-img-thumb">
+            <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?q=80&w=600&auto=format&fit=crop" alt="Repacking">
+          </div>
+          <div class="svc-img-thumb">
+            <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?q=80&w=600&auto=format&fit=crop" alt="Return freight">
+          </div>
+        </div>
       </div>
       <div>
-        <div class="sec-label">Service 05</div>
-        <h2 class="svc-h">Return &<br><span>Re-Export</span></h2>
-        <p class="svc-lead">The show ends, but the logistics doesn't stop. Our post-show services are as thorough as our pre-show preparation.</p>
+        <div class="svc-num">05</div>
+        <div class="sec-label">Post-Show Operations</div>
+        <h2 class="svc-h">Return &amp;<br><span>Re-Export</span></h2>
+        <p class="svc-lead">The show ends, but the logistics responsibility doesn't. Our post-show services are as thorough as our pre-show preparation.</p>
+        <p class="svc-body">The ATA Carnet clock keeps ticking after the exhibition closes. Our team handles repacking, relabelling, customs re-export filing and return freight from the venue floor — so your exhibits leave India on time and in perfect condition.</p>
         <div class="svc-bullets">
-          <div class="svc-bullet"><i class="fas fa-box"></i><div><strong>Repacking at the Venue</strong> — Professional repacking of exhibits in original or new cases after the show closes.</div></div>
-          <div class="svc-bullet"><i class="fas fa-tags"></i><div><strong>Re-Labelling & Documentation</strong> — All cartons re-labelled for return destination; export documents and ATA Carnet re-export filed.</div></div>
-          <div class="svc-bullet"><i class="fas fa-plane-departure"></i><div><strong>International Return Freight</strong> — Air, sea, or road return freight to your home country or next exhibition destination.</div></div>
-          <div class="svc-bullet"><i class="fas fa-forward"></i><div><strong>Onward Movement</strong> — Direct forwarding to your next trade show globally without returning to your warehouse.</div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-box"></i></div><div><strong>Professional Repacking</strong><p>Careful repacking of exhibits in original or new cases at the venue immediately after the show closes.</p></div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-tags"></i></div><div><strong>Re-Labelling &amp; Export Docs</strong><p>All cartons re-labelled for the return destination. ATA Carnet re-export and all exit documentation filed correctly.</p></div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-plane-departure"></i></div><div><strong>International Return Freight</strong><p>Air, sea or road return freight to your home country — or forward to your next exhibition worldwide.</p></div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-forward"></i></div><div><strong>Onward Movement</strong><p>Direct forwarding to your next trade show globally without returning to your home warehouse first.</p></div></div>
         </div>
-        <a href="support.html" class="btn-gold"><i class="fas fa-paper-plane"></i> Arrange Return Logistics</a>
+        <div class="svc-tags">
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> Repacking On-Site</span>
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> ATA Re-Export</span>
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> Return Air / Sea</span>
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> Next Show Forward</span>
+        </div>
+        <div class="btn-row">
+          <a href="support.html" class="btn-gold"><i class="fas fa-paper-plane"></i> Arrange Return Logistics</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICE 6: EVENTS -->
+<!-- ══════════ SERVICE 6: EVENTS ══════════ -->
 <section class="svc-block" id="events">
   <div class="container">
     <div class="svc-inner rev">
-      <div class="svc-img">
-        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop" alt="Events Concerts Sports">
+      <div class="svc-img-col">
+        <div class="svc-img-main">
+          <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop" alt="Events Concerts Sports India">
+          <div class="svc-img-badge"><i class="fas fa-bolt"></i> Time-Critical</div>
+        </div>
+        <div class="svc-img-strip">
+          <div class="svc-img-thumb">
+            <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=600&auto=format&fit=crop" alt="Concert">
+          </div>
+          <div class="svc-img-thumb">
+            <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=600&auto=format&fit=crop" alt="Sports">
+          </div>
+        </div>
       </div>
       <div>
-        <div class="sec-label">Service 06</div>
-        <h2 class="svc-h">Events, Concerts<br><span>& Sports</span></h2>
-        <p class="svc-lead">AB STOP India is a truly one-stop logistics solution for any time-critical consignment — well beyond trade exhibitions.</p>
-        <p class="svc-body">From international touring concerts to sports events, film productions, and theatre companies — we move any cargo that needs to arrive in India on an absolute deadline.</p>
+        <div class="svc-num">06</div>
+        <div class="sec-label">Beyond Exhibitions</div>
+        <h2 class="svc-h">Events, Concerts<br><span>&amp; Sports</span></h2>
+        <p class="svc-lead">AB STOP India is a one-stop logistics solution for any time-critical consignment in India — well beyond trade exhibitions.</p>
+        <p class="svc-body">From international touring concerts to major sports events, film productions, and global theatre companies — we move any cargo that must arrive in India by an absolute, non-negotiable deadline. No excuses. No delays.</p>
         <div class="svc-bullets">
-          <div class="svc-bullet"><i class="fas fa-music"></i><div><strong>Concerts & Live Events</strong> — Stage equipment, lighting, sound, artist personal effects and merch.</div></div>
-          <div class="svc-bullet"><i class="fas fa-masks-theater"></i><div><strong>Theatre & Performing Arts</strong> — Sets, costumes, props for touring international productions across India.</div></div>
-          <div class="svc-bullet"><i class="fas fa-trophy"></i><div><strong>Sports Events</strong> — Team equipment, athlete cargo, broadcasting equipment for international sports.</div></div>
-          <div class="svc-bullet"><i class="fas fa-film"></i><div><strong>Film & TV Production</strong> — Camera equipment, props, production cargo for international shoots in India.</div></div>
-          <div class="svc-bullet"><i class="fas fa-microphone-alt"></i><div><strong>Conferences & Summits</strong> — AV equipment, display materials, delegate packages for international conferences.</div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-music"></i></div><div><strong>Concerts &amp; Live Events</strong><p>Stage sets, lighting rigs, sound equipment, artist personal effects and merchandise for touring artists.</p></div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-masks-theater"></i></div><div><strong>Theatre &amp; Performing Arts</strong><p>Full sets, costumes, props and technical equipment for international touring productions across all Indian cities.</p></div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-trophy"></i></div><div><strong>Sports Events</strong><p>Team equipment, athlete personal cargo, broadcasting equipment and awards for international sporting events.</p></div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-film"></i></div><div><strong>Film &amp; TV Production</strong><p>Camera equipment, props, lighting and production support cargo for international shoots across India.</p></div></div>
+          <div class="svc-bullet"><div class="sb-icon"><i class="fas fa-microphone-alt"></i></div><div><strong>Conferences &amp; Summits</strong><p>AV equipment, display materials, VIP delegate packages and branded merchandise for international conferences.</p></div></div>
         </div>
-        <a href="support.html" class="btn-gold"><i class="fas fa-paper-plane"></i> Enquire About Your Event</a>
+        <div class="svc-tags">
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> Concerts</span>
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> Sports Events</span>
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> Film &amp; TV</span>
+          <span class="svc-tag-chip"><i class="fas fa-check"></i> Theatre</span>
+        </div>
+        <div class="btn-row">
+          <a href="support.html" class="btn-gold"><i class="fas fa-paper-plane"></i> Enquire About Your Event</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MUST KNOW -->
-<section class="mustknow-section">
+<!-- ══════════════════════════════════════════
+     CREDENTIALS SECTION
+     ══════════════════════════════════════════ -->
+<section class="cred-section">
   <div class="container">
-    <div class="mk-head">
-      <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;"><span style="width:20px;height:1px;background:var(--gold);display:inline-block;"></span>Important Information</div>
-      <h2 class="mk-head" style="font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:700;color:var(--white);text-transform:uppercase;margin-bottom:10px;">Must <span style="color:var(--gold)">Know</span></h2>
-      <p style="color:rgba(253,252,250,0.45);font-size:0.92rem;max-width:480px;margin:0 auto;line-height:1.85;">Essential information about our on-site handling operations.</p>
+    <div class="cred-intro">
+      <div class="sec-label center">Why Trust AB STOP India</div>
+      <h2 class="sec-h" style="color:var(--white);margin-bottom:12px;">Our Credentials &amp; <span>Track Record</span></h2>
+      <p class="sec-p" style="color:rgba(253,252,250,.45);font-size:.9rem;max-width:540px;margin:12px auto 0;line-height:1.9;">When you're shipping exhibits worth tens of thousands of euros to India, you need a partner you can trust completely. Here's why over 500 events and 80 countries have chosen AB STOP India.</p>
     </div>
-    <div class="mk-grid">
-      <div class="mk-card"><div class="mk-num">01</div><p>All goods must be in appropriate packing. AB STOP India is not responsible for damage caused to goods inside packing that has no external signs of damage.</p></div>
-      <div class="mk-card"><div class="mk-num">02</div><p>All risks of our operations are insured. However, handling of exhibits weighing 3 tonnes or more requires preliminary technical consultation with AB STOP India.</p></div>
-      <div class="mk-card"><div class="mk-num">03</div><p>Each forklift truck is equipped with 2-metre long forks with special holes & hooks — allowing lifting of cargo that cannot be taken with usual forks (ropes only).</p></div>
-      <div class="mk-card"><div class="mk-num">04</div><p>Average capacity of each forklift truck is 3 tonnes, with an average maximum lift height of 2 metres. Forklift operation is permitted for AB STOP India staff only.</p></div>
-      <div class="mk-card"><div class="mk-num">05</div><p>Payment invoice will be issued within one working day of receiving your order form. Please ensure payment before the operation begins on-site.</p></div>
-      <div class="mk-card"><div class="mk-num">06</div><p>All temporary import permits and ATA Carnets must reach our India office a minimum of 5 working days before the exhibition opening date.</p></div>
-      <div class="mk-card"><div class="mk-num">07</div><p>Re-export documentation must be filed within the validity period of the ATA Carnet or temporary import bond. Late re-export incurs customs penalties and we cannot be responsible for delays caused by exhibitor error.</p></div>
-      <div class="mk-card"><div class="mk-num">08</div><p>Emergency 24/7 support is available for time-critical shipment issues. Contact our duty manager at any hour for exhibition emergencies.</p></div>
+
+    <!-- Key numbers -->
+    <div class="cred-numbers">
+      <div class="cred-num-cell"><span class="cn-num">25+</span><span class="cn-label">Years in Exhibition Logistics</span></div>
+      <div class="cred-num-cell"><span class="cn-num">500+</span><span class="cn-label">Exhibitions &amp; Events Handled</span></div>
+      <div class="cred-num-cell"><span class="cn-num">80+</span><span class="cn-label">Countries of Origin Served</span></div>
+      <div class="cred-num-cell"><span class="cn-num">18+</span><span class="cn-label">Major Venues with On-Site Teams</span></div>
+    </div>
+
+    <!-- Trust pillars -->
+    <div class="cred-grid">
+      <div class="cred-card">
+        <div class="cc-icon"><i class="fas fa-medal"></i></div>
+        <h4>Official On-Site Partner at Major Venues</h4>
+        <p>We hold established operational partnerships at Bharat Mandapam, BIEC, BEC Mumbai, HITEX, Mahatma Mandir, and all major Indian exhibition centres. Our teams are venue-registered and cleared to operate on the exhibition floor.</p>
+      </div>
+      <div class="cred-card">
+        <div class="cc-icon"><i class="fas fa-file-contract"></i></div>
+        <h4>ATA Carnet &amp; Customs Specialists</h4>
+        <p>Our customs team has 25+ years of experience with Indian temporary importation regulations. We have processed hundreds of ATA Carnets without a single penalty — because we manage every deadline proactively, not reactively.</p>
+      </div>
+      <div class="cred-card">
+        <div class="cc-icon"><i class="fas fa-shield-alt"></i></div>
+        <h4>Fully Insured Operations</h4>
+        <p>All our on-site handling and freight operations are fully insured. For exhibits exceeding 3 tonnes, we conduct a preliminary technical consultation to ensure appropriate equipment is deployed safely.</p>
+      </div>
+      <div class="cred-card">
+        <div class="cc-icon"><i class="fas fa-handshake"></i></div>
+        <h4>Long-Term Client Relationships</h4>
+        <p>The majority of our business comes from returning clients. Companies from Germany, Japan, the UK, France, USA and South Korea have used AB STOP India for 5+ consecutive years — across multiple venues and exhibition types.</p>
+      </div>
+      <div class="cred-card">
+        <div class="cc-icon"><i class="fas fa-headset"></i></div>
+        <h4>24/7 Emergency Support</h4>
+        <p>Exhibition logistics doesn't stop at 5pm. Our duty manager is reachable around the clock for time-critical issues. Cargo emergencies get an immediate response, not a next-business-day callback.</p>
+      </div>
+      <div class="cred-card">
+        <div class="cc-icon"><i class="fas fa-users"></i></div>
+        <h4>Part of STOP India Group</h4>
+        <p>AB STOP India is backed by the STOP India Group — a trusted logistics operation with decades of experience in India. Our infrastructure, vendor network and regulatory knowledge span the entire country.</p>
+      </div>
+    </div>
+
+    <!-- Countries served -->
+    <div class="cred-countries">
+      <div class="cc-head">
+        <h4>Exhibitors We've Served From Around the World</h4>
+        <p>Companies from 80+ countries have trusted AB STOP India with their exhibition cargo</p>
+      </div>
+      <div class="country-flags">
+        <span class="cf-item"><span class="cf-flag">🇩🇪</span> Germany</span>
+        <span class="cf-item"><span class="cf-flag">🇯🇵</span> Japan</span>
+        <span class="cf-item"><span class="cf-flag">🇺🇸</span> USA</span>
+        <span class="cf-item"><span class="cf-flag">🇬🇧</span> United Kingdom</span>
+        <span class="cf-item"><span class="cf-flag">🇫🇷</span> France</span>
+        <span class="cf-item"><span class="cf-flag">🇮🇹</span> Italy</span>
+        <span class="cf-item"><span class="cf-flag">🇰🇷</span> South Korea</span>
+        <span class="cf-item"><span class="cf-flag">🇨🇳</span> China</span>
+        <span class="cf-item"><span class="cf-flag">🇨🇭</span> Switzerland</span>
+        <span class="cf-item"><span class="cf-flag">🇸🇪</span> Sweden</span>
+        <span class="cf-item"><span class="cf-flag">🇳🇱</span> Netherlands</span>
+        <span class="cf-item"><span class="cf-flag">🇦🇺</span> Australia</span>
+        <span class="cf-item"><span class="cf-flag">🇨🇦</span> Canada</span>
+        <span class="cf-item"><span class="cf-flag">🇧🇪</span> Belgium</span>
+        <span class="cf-item"><span class="cf-flag">🇦🇹</span> Austria</span>
+        <span class="cf-item"><span class="cf-flag">🇮🇱</span> Israel</span>
+        <span class="cf-item"><span class="cf-flag">🇸🇬</span> Singapore</span>
+        <span class="cf-item"><span class="cf-flag">🇿🇦</span> South Africa</span>
+        <span class="cf-item"><span class="cf-flag">🇧🇷</span> Brazil</span>
+        <span class="cf-item"><span class="cf-flag">+60</span> More Countries</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- EXHIBITIONS WE SERVICE -->
+<!-- ══════════ MUST KNOW ══════════ -->
+<section class="mustknow-section">
+  <div class="container">
+    <div class="mk-header">
+      <div class="sec-label center" style="color:var(--gold);">Before You Book</div>
+      <h2 class="sec-h" style="color:var(--white);">Essential Things to <span>Know</span></h2>
+      <p style="color:rgba(253,252,250,.4);font-size:.88rem;max-width:500px;margin:12px auto 0;line-height:1.9;">Key operational details about our on-site handling and customs procedures.</p>
+    </div>
+    <div class="mk-grid">
+      <div class="mk-card"><div class="mk-num">01</div><h5>Packaging Standards</h5><p>All goods must arrive in appropriate export packaging. We are not liable for internal damage where there are no external signs of damage to the casing.</p></div>
+      <div class="mk-card"><div class="mk-num">02</div><h5>Heavy Exhibit Protocol</h5><p>All operations are insured. However, exhibits weighing 3 tonnes or more require preliminary technical consultation before we can confirm handling.</p></div>
+      <div class="mk-card"><div class="mk-num">03</div><h5>Forklift Specification</h5><p>Each forklift has 2-metre forks with special attachment hooks — allowing lifting of cargo that cannot be lifted with standard forks or ropes alone.</p></div>
+      <div class="mk-card"><div class="mk-num">04</div><h5>Capacity &amp; Height</h5><p>Average capacity is 3 tonnes per lift with max lift height of 2 metres. Forklift operation is exclusively performed by AB STOP India trained staff.</p></div>
+      <div class="mk-card"><div class="mk-num">05</div><h5>Payment Schedule</h5><p>Invoice issued within one working day of receiving your order form. Payment must be confirmed before on-site operations commence.</p></div>
+      <div class="mk-card"><div class="mk-num">06</div><h5>ATA Carnet Deadline</h5><p>All temporary import permits and ATA Carnets must reach our India office a minimum of 5 working days before the exhibition opening date.</p></div>
+      <div class="mk-card"><div class="mk-num">07</div><h5>Re-Export Responsibility</h5><p>Re-export documentation must be filed within the ATA Carnet validity period. Penalties caused by exhibitor delays are not our responsibility.</p></div>
+      <div class="mk-card"><div class="mk-num">08</div><h5>24/7 Emergency Line</h5><p>Emergency support is available around the clock for time-critical shipment issues. Contact our duty manager directly at any hour for exhibition emergencies.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ EXHIBITIONS ══════════ -->
 <section class="exh-all">
   <div class="container">
     <div class="exh-head">
-      <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;justify-content:center;"><span style="width:20px;height:1px;background:var(--gold);display:inline-block;"></span>Coverage</div>
-      <h2>Major Exhibitions &<br><span>Venues We Service</span></h2>
-      <p>We have active on-site presence and established relationships at all major India venues.</p>
+      <div class="sec-label center">Coverage</div>
+      <h2>Major Exhibitions &amp;<br><span>Venues We Service</span></h2>
+      <p>Active on-site presence and established relationships at every major Indian venue. We've been there before your show even opens.</p>
     </div>
     <div class="exh-grid">
-      <div class="exh-row"><div class="exh-icon"><i class="fas fa-car"></i></div><div class="exh-body"><div class="city">New Delhi / Greater Noida</div><div class="name">Auto Expo</div><div class="venue">Bharat Mandapam & India Expo Mart</div></div></div>
+      <div class="exh-row"><div class="exh-icon"><i class="fas fa-car"></i></div><div class="exh-body"><div class="city">New Delhi / Greater Noida</div><div class="name">Auto Expo</div><div class="venue">Bharat Mandapam &amp; India Expo Mart</div></div></div>
       <div class="exh-row"><div class="exh-icon"><i class="fas fa-plane"></i></div><div class="exh-body"><div class="city">Bengaluru</div><div class="name">Aero India</div><div class="venue">Yelahanka Air Force Station</div></div></div>
-      <div class="exh-row"><div class="exh-icon"><i class="fas fa-industry"></i></div><div class="exh-body"><div class="city">Gandhinagar</div><div class="name">Plastindia & Vibrant Gujarat</div><div class="venue">Mahatma Mandir Convention Centre</div></div></div>
-      <div class="exh-row"><div class="exh-icon"><i class="fas fa-shirt"></i></div><div class="exh-body"><div class="city">Mumbai</div><div class="name">India ITME & RTEXA</div><div class="venue">Bombay Exhibition Centre, Goregaon</div></div></div>
-      <div class="exh-row"><div class="exh-icon"><i class="fas fa-cogs"></i></div><div class="exh-body"><div class="city">Bengaluru</div><div class="name">IMTEX & Tooltech</div><div class="venue">BIEC — Bangalore International Exhibition Centre</div></div></div>
-      <div class="exh-row"><div class="exh-icon"><i class="fas fa-microchip"></i></div><div class="exh-body"><div class="city">New Delhi</div><div class="name">Convergence India & Electronica</div><div class="venue">Bharat Mandapam, Pragati Maidan</div></div></div>
-      <div class="exh-row"><div class="exh-icon"><i class="fas fa-capsules"></i></div><div class="exh-body"><div class="city">Hyderabad</div><div class="name">CPhI & P-MEC India</div><div class="venue">HITEX Exhibition Centre</div></div></div>
-      <div class="exh-row"><div class="exh-icon"><i class="fas fa-utensils"></i></div><div class="exh-body"><div class="city">New Delhi / Mumbai</div><div class="name">World Food India & AAHAR</div><div class="venue">Bharat Mandapam & Pragati Maidan</div></div></div>
-      <div class="exh-row"><div class="exh-icon"><i class="fas fa-gem"></i></div><div class="exh-body"><div class="city">New Delhi / Jaipur</div><div class="name">IIJS & India International Jewellery Show</div><div class="venue">Bharat Mandapam / JECC Sitapura</div></div></div>
-      <div class="exh-row"><div class="exh-icon"><i class="fas fa-hard-hat"></i></div><div class="exh-body"><div class="city">Bengaluru / Mumbai</div><div class="name">Excon & bauma CONEXPO India</div><div class="venue">BIEC / Bombay Exhibition Centre</div></div></div>
+      <div class="exh-row"><div class="exh-icon"><i class="fas fa-industry"></i></div><div class="exh-body"><div class="city">Gandhinagar</div><div class="name">Plastindia &amp; Vibrant Gujarat</div><div class="venue">Mahatma Mandir Convention Centre</div></div></div>
+      <div class="exh-row"><div class="exh-icon"><i class="fas fa-shirt"></i></div><div class="exh-body"><div class="city">Mumbai</div><div class="name">India ITME &amp; RTEXA</div><div class="venue">Bombay Exhibition Centre, Goregaon</div></div></div>
+      <div class="exh-row"><div class="exh-icon"><i class="fas fa-cogs"></i></div><div class="exh-body"><div class="city">Bengaluru</div><div class="name">IMTEX &amp; Tooltech</div><div class="venue">BIEC — Bengaluru International Exhibition Centre</div></div></div>
+      <div class="exh-row"><div class="exh-icon"><i class="fas fa-microchip"></i></div><div class="exh-body"><div class="city">New Delhi</div><div class="name">Convergence India &amp; Electronica</div><div class="venue">Bharat Mandapam, Pragati Maidan</div></div></div>
+      <div class="exh-row"><div class="exh-icon"><i class="fas fa-capsules"></i></div><div class="exh-body"><div class="city">Hyderabad</div><div class="name">CPhI &amp; P-MEC India</div><div class="venue">HITEX Exhibition Centre</div></div></div>
+      <div class="exh-row"><div class="exh-icon"><i class="fas fa-utensils"></i></div><div class="exh-body"><div class="city">New Delhi / Mumbai</div><div class="name">World Food India &amp; AAHAR</div><div class="venue">Bharat Mandapam &amp; Pragati Maidan</div></div></div>
+      <div class="exh-row"><div class="exh-icon"><i class="fas fa-gem"></i></div><div class="exh-body"><div class="city">New Delhi / Jaipur</div><div class="name">IIJS &amp; India International Jewellery Show</div><div class="venue">Bharat Mandapam / JECC Sitapura</div></div></div>
+      <div class="exh-row"><div class="exh-icon"><i class="fas fa-hard-hat"></i></div><div class="exh-body"><div class="city">Bengaluru / Mumbai</div><div class="name">Excon &amp; bauma CONEXPO India</div><div class="venue">BIEC / Bombay Exhibition Centre</div></div></div>
       <div class="exh-row"><div class="exh-icon"><i class="fas fa-leaf"></i></div><div class="exh-body"><div class="city">Mumbai</div><div class="name">Chemtech World Expo</div><div class="venue">Bombay Exhibition Centre</div></div></div>
-      <div class="exh-row"><div class="exh-icon"><i class="fas fa-microscope"></i></div><div class="exh-body"><div class="city">Mumbai / Bengaluru</div><div class="name">MEDICA India & Medical Fair India</div><div class="venue">BEC / BIEC</div></div></div>
+      <div class="exh-row"><div class="exh-icon"><i class="fas fa-microscope"></i></div><div class="exh-body"><div class="city">Mumbai / Bengaluru</div><div class="name">MEDICA India &amp; Medical Fair India</div><div class="venue">BEC Mumbai / BIEC Bengaluru</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- SECTORS -->
+<!-- ══════════ SECTORS ══════════ -->
 <section class="sectors-all">
   <div class="container">
-    <div style="text-align:center;margin-bottom:16px;">
-      <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;"><span style="width:20px;height:1px;background:var(--gold);display:inline-block;"></span>Industry Sectors</div>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:700;color:var(--ink);text-transform:uppercase;margin-bottom:12px;">Sectors We <span style="color:var(--gold)">Specialise</span> In</h2>
-      <p style="color:var(--muted);font-size:0.92rem;max-width:560px;margin:0 auto;line-height:1.9;">From technology to textiles, automotive to fine arts — we know every industry's exhibition requirements.</p>
+    <div class="sec-head">
+      <div class="sec-label center">Industry Sectors</div>
+      <h2>Sectors We <span>Specialise</span> In</h2>
+      <p>From automotive machinery to fine arts — we understand every industry's exhibition requirements and handle each with appropriate expertise.</p>
     </div>
     <div class="sec-grid">
-      <div class="sector-card"><div class="sector-card-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600&auto=format&fit=crop" alt="Automotive"></div><div class="sector-card-body"><h4>Automotive & Machinery</h4><p>Heavy vehicles, machinery, auto components and large format exhibits requiring crane and forklift support.</p><span class="sector-tag"><i class="fas fa-arrow-right"></i> Auto Expo, IMTEX, Excon</span></div></div>
-      <div class="sector-card"><div class="sector-card-img"><img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=600&auto=format&fit=crop" alt="Electronics"></div><div class="sector-card-body"><h4>Electronics & Technology</h4><p>High-value electronics, IT hardware, telecom equipment with secure, climate-appropriate handling.</p><span class="sector-tag"><i class="fas fa-arrow-right"></i> Aero India, Convergence India</span></div></div>
-      <div class="sector-card"><div class="sector-card-img"><img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=600&auto=format&fit=crop" alt="Textile"></div><div class="sector-card-body"><h4>Textile & Apparel</h4><p>Fabrics, garments, home textiles, furnishings and soft goods with wrinkle-free, careful handling.</p><span class="sector-tag"><i class="fas fa-arrow-right"></i> ITME, Heimtextil India</span></div></div>
-      <div class="sector-card"><div class="sector-card-img"><img src="https://images.unsplash.com/photo-1576671081837-49000212a370?q=80&w=600&auto=format&fit=crop" alt="Medical"></div><div class="sector-card-body"><h4>Medical & Healthcare</h4><p>Medical devices, diagnostic equipment, pharmaceutical samples with fully compliant import procedures.</p><span class="sector-tag"><i class="fas fa-arrow-right"></i> CPhI India, Medical Fair</span></div></div>
-      <div class="sector-card"><div class="sector-card-img"><img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=600&auto=format&fit=crop" alt="Sports"></div><div class="sector-card-body"><h4>Sports & Fitness</h4><p>Sports equipment, fitness gear, team accessories and large-scale sporting displays for events across India.</p><span class="sector-tag"><i class="fas fa-arrow-right"></i> Sports events, ISPO India</span></div></div>
-      <div class="sector-card"><div class="sector-card-img"><img src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?q=80&w=600&auto=format&fit=crop" alt="Fine Arts"></div><div class="sector-card-body"><h4>Fine Arts & Luxury</h4><p>Paintings, sculptures, high-value artworks, jewellery displays with museum-grade handling and crating.</p><span class="sector-tag"><i class="fas fa-arrow-right"></i> India Art Fair, IIJS</span></div></div>
+      <div class="sector-card"><div class="sc-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600&auto=format&fit=crop" alt="Automotive"></div><div class="sc-body"><h4>Automotive &amp; Machinery</h4><p>Heavy vehicles, machinery, auto components and oversized exhibits requiring specialist crane and forklift coordination at the venue.</p><span class="sc-tag"><i class="fas fa-arrow-right"></i> Auto Expo, IMTEX, Excon</span></div></div>
+      <div class="sector-card"><div class="sc-img"><img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=600&auto=format&fit=crop" alt="Electronics"></div><div class="sc-body"><h4>Electronics &amp; Technology</h4><p>High-value electronics, IT hardware and telecom equipment with secure, ESD-safe, climate-appropriate handling throughout transit and on-site.</p><span class="sc-tag"><i class="fas fa-arrow-right"></i> Aero India, Convergence India</span></div></div>
+      <div class="sector-card"><div class="sc-img"><img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=600&auto=format&fit=crop" alt="Textile"></div><div class="sc-body"><h4>Textile &amp; Apparel</h4><p>Fabrics, garments, home textiles and soft goods handled with wrinkle-prevention protocols and climate-controlled storage where required.</p><span class="sc-tag"><i class="fas fa-arrow-right"></i> ITME, Heimtextil India</span></div></div>
+      <div class="sector-card"><div class="sc-img"><img src="https://images.unsplash.com/photo-1576671081837-49000212a370?q=80&w=600&auto=format&fit=crop" alt="Medical"></div><div class="sc-body"><h4>Medical &amp; Healthcare</h4><p>Medical devices, diagnostic equipment and pharmaceutical samples with fully compliant import procedures and appropriate handling documentation.</p><span class="sc-tag"><i class="fas fa-arrow-right"></i> CPhI India, Medical Fair</span></div></div>
+      <div class="sector-card"><div class="sc-img"><img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=600&auto=format&fit=crop" alt="Sports"></div><div class="sc-body"><h4>Sports &amp; Fitness</h4><p>Sports equipment, fitness gear, team accessories and large-scale sporting displays for major events and exhibitions across India.</p><span class="sc-tag"><i class="fas fa-arrow-right"></i> Sports Events, ISPO India</span></div></div>
+      <div class="sector-card"><div class="sc-img"><img src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?q=80&w=600&auto=format&fit=crop" alt="Fine Arts"></div><div class="sc-body"><h4>Fine Arts &amp; Luxury</h4><p>Paintings, sculptures, high-value artworks and jewellery displays with museum-grade handling, custom crating and white-glove delivery.</p><span class="sc-tag"><i class="fas fa-arrow-right"></i> India Art Fair, IIJS</span></div></div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-band">
-  <div class="container">
-    <h2>Ready to Ship to India?</h2>
-    <p>Fill in our support form and our team will respond within 2 business hours with a professional, cost-effective solution for your shipment.</p>
+  <div class="cta-inner container">
+    <h2>Ready to Ship Your Exhibits <em>to India?</em></h2>
+    <p>Fill in our support form and our team will respond within 2 business hours with a professional, cost-effective solution — tailored to your exhibition.</p>
     <div class="cta-btns">
       <a href="support.html" class="btn-gold"><i class="fas fa-paper-plane"></i> Get a Quote</a>
       <a href="tel:+919212133251" class="btn-ghost-light"><i class="fas fa-phone"></i> Call: +91 9212133251</a>
@@ -438,32 +1079,99 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="foot-grid">
       <div class="foot-brand">
-        <div class="logo"><div class="logo-main">AB<span style="color:var(--gold)">STOP</span>India</div><div class="logo-sub" style="color:var(--teal-light)">Inbound Exhibition Logistics</div></div>
-        <p>Your one-stop logistics partner for exhibitions, conferences, concerts, sports events, and all time-critical cargo in India.</p>
+        <div class="foot-brand-logo">AB<span>STOP</span>India</div>
+        <div class="foot-brand-sub">Inbound Exhibition Logistics</div>
+        <p>Your trusted one-stop logistics partner for exhibitions, conferences, concerts, sports events and all time-critical cargo in India. Customs to stand delivery — we do it all.</p>
+        <a href="https://www.stopindia.com" target="_blank" rel="noopener" class="foot-parent">
+          <div>
+            <span class="fp-label">Part of</span>
+            <span class="fp-link"><i class="fas fa-globe"></i> stopindia.com <i class="fas fa-external-link-alt"></i></span>
+          </div>
+        </a>
       </div>
-      <div class="foot-col"><h5>Navigation</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="support.html">Get Support</a></li></ul></div>
-      <div class="foot-col"><h5>Services</h5><ul><li><a href="#customs">Customs & ATA Carnet</a></li><li><a href="#freight">International Freight</a></li><li><a href="#onsite">On-Site Handling</a></li><li><a href="#return">Return & Re-Export</a></li></ul></div>
-      <div class="foot-col"><h5>Contact</h5><ul class="foot-contact"><li><i class="fas fa-envelope"></i><span>ies@stopindia.com</span></li><li><i class="fas fa-phone"></i><span>+91 9212133251</span></li><li><i class="fas fa-map-marker-alt"></i><span>Gurgaon, Haryana, India</span></li></ul></div>
+      <div class="foot-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="sectors.html">Sectors</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="carrer.html">Career</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Our Services</h5>
+        <ul>
+          <li><a href="#customs">Customs &amp; ATA Carnet</a></li>
+          <li><a href="#freight">International Freight</a></li>
+          <li><a href="#onsite">On-Site Handling</a></li>
+          <li><a href="#delivery">Stand Delivery</a></li>
+          <li><a href="#return">Return &amp; Re-Export</a></li>
+          <li><a href="#events">Events &amp; Concerts</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <ul class="foot-contact">
+          <li><i class="fas fa-envelope"></i><span><a href="mailto:ies@stopindia.com" style="color:inherit;">ies@stopindia.com</a></span></li>
+          <li><i class="fas fa-phone"></i><span><a href="tel:+919212133251" style="color:inherit;">+91 9212133251</a></span></li>
+          <li><i class="fas fa-map-marker-alt"></i><span>Gurgaon, Haryana, India</span></li>
+          <li><i class="fas fa-clock"></i><span>Mon–Sat: 9 AM – 6 PM IST<br>Emergency: 24 / 7</span></li>
+        </ul>
+      </div>
     </div>
-    <div class="foot-bottom"><span>&copy; 2025 AB STOP India. All Rights Reserved.</span><span><a href="mailto:ies@stopindia.com">ies@stopindia.com</a></span></div>
+    <div class="foot-bottom">
+      <span>&copy; 2025 AB STOP India. All Rights Reserved.</span>
+      <span>Inbound Exhibition Logistics for International Exhibitors &nbsp;|&nbsp; <a href="https://www.stopindia.com" target="_blank">stopindia.com</a> &nbsp;|&nbsp; <a href="mailto:ies@stopindia.com">ies@stopindia.com</a></span>
+    </div>
   </div>
 </footer>
 
+<!-- SCRIPTS -->
 <script>
-const ham = document.getElementById('ham');
-const nav = document.getElementById('mainNav');
-ham.addEventListener('click', () => nav.classList.toggle('open'));
-// Active pill on scroll
+// Header scroll
+const header = document.getElementById('mainHeader');
+window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 40));
+
+// Hamburger
+const hamburger = document.querySelector('.hamburger');
+const navMenu   = document.querySelector('.main-nav');
+hamburger.addEventListener('click', () => navMenu.classList.toggle('active'));
+document.querySelectorAll('.main-nav>ul>li>a').forEach(l =>
+  l.addEventListener('click', () => { if(window.innerWidth < 768) navMenu.classList.remove('active'); })
+);
+
+// Sticky pill active on scroll
 const pillLinks = document.querySelectorAll('.svc-pill');
-const sections = ['customs','freight','onsite','delivery','return','events'].map(id => document.getElementById(id));
+const sections  = ['customs','freight','onsite','delivery','return','events'].map(id => document.getElementById(id));
 window.addEventListener('scroll', () => {
   let cur = '';
-  sections.forEach(s => { if (s && window.scrollY >= s.offsetTop - 180) cur = s.id; });
-  pillLinks.forEach(p => { p.classList.toggle('active', p.getAttribute('href') === '#' + cur); });
+  sections.forEach(s => { if(s && window.scrollY >= s.offsetTop - 180) cur = s.id; });
+  pillLinks.forEach(p => p.classList.toggle('active', p.getAttribute('href') === '#' + cur));
+});
+
+// Scroll reveal
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.07 });
+
+document.querySelectorAll('.svc-bullet, .cred-card, .exh-row, .sector-card, .mk-card, .ph-stat-card').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(18px)';
+  el.style.transition = 'opacity .5s ease, transform .5s ease, box-shadow .35s ease, border-color .35s ease, background .35s ease';
+  ro.observe(el);
 });
 </script>
 </body>

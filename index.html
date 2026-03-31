@@ -5,99 +5,127 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AB STOP India | Send Exhibits to India — Inbound Exhibition Logistics</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Barlow+Condensed:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Barlow+Condensed:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Bebas+Neue&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
+/* ══════════════════════════════════════════
+   COLOR SYSTEM — Cohesive & Intentional
+   Primary:  Deep Ink Navy  #0B1628
+   Accent 1: True Amber     #C98B1A → #F0B429
+   Accent 2: India Saffron  #D9621E (CTA / urgency)
+   Base:     Warm Ivory     #FAF7F2
+   Muted:    Slate          #5A6478
+══════════════════════════════════════════ */
 :root {
-  --ink: #0A0F1E;
-  --ink-mid: #1a2340;
-  --navy: #0D2135;
-  --navy-mid: #183650;
-  --gold: #C9993A;
-  --gold-light: #E8B84B;
-  --gold-pale: #FBF3E0;
-  --crimson: #B22234;
-  --crimson-dark: #8B1A27;
-  --teal: #1A7A8A;
-  --teal-light: #22A3B7;
-  --cyan: #00C2CB;
-  --cyan-dark: #007a82;
-  --white: #FDFCFA;
-  --off: #F5F2EC;
-  --muted: #6B7280;
-  --border: rgba(201,153,58,0.2);
-  --shadow: 0 8px 40px rgba(10,15,30,0.13);
-  --shadow-gold: 0 8px 32px rgba(201,153,58,0.3);
-  --shadow-card: 0 20px 60px rgba(10,15,30,0.12);
-  --radius: 4px;
-  --radius-lg: 12px;
-  --trans: all 0.35s cubic-bezier(0.4,0,0.2,1);
-  --ease: cubic-bezier(0.25,0.46,0.45,0.94);
+  /* ── Darks */
+  --ink:        #0B1628;
+  --ink-mid:    #172138;
+  --navy:       #0D2040;
+  --navy-mid:   #1A3155;
+
+  /* ── Amber / Gold  — ONE true gold accent */
+  --amber:      #ea1212;
+  --amber-mid:  #eb2f2f;
+  --amber-light:#f13434;
+  --amber-pale: #FEF6E4;
+  --amber-border:rgba(201,139,26,0.28);
+  --amber-glow: 0 8px 32px rgba(201,139,26,0.28);
+
+  /* ── Saffron — India's colour, used for primary CTAs only */
+  --saffron:    #d92e1e;
+  --saffron-dk: #b83214;
+  --saffron-glow: 0 8px 32px rgba(217,98,30,0.32);
+
+  /* ── Teal — kept as a very quiet tertiary, used sparingly */
+  --teal:       #187A88;
+  --teal-light: #1FA0B2;
+
+  /* ── Lights & Neutrals */
+  --white:      #FDFCFA;
+  --off:        #FAF7F2;
+  --surface:    #F4F0E8;
+  --muted:      #5A6478;
+  --border:     rgba(10,16,40,0.09);
+
+  /* ── Shadows */
+  --shadow:     0 8px 40px rgba(11,22,40,0.12);
+  --shadow-amber:0 8px 32px rgba(201,139,26,0.26);
+  --shadow-card:0 20px 60px rgba(11,22,40,0.14);
+
+  /* ── Radius & transitions */
+  --radius:     4px;
+  --radius-lg:  14px;
+  --trans:      all 0.35s cubic-bezier(0.4,0,0.2,1);
+  --ease:       cubic-bezier(0.25,0.46,0.45,0.94);
 }
 
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;font-weight:300;color:var(--ink);background:var(--white);overflow-x:hidden;font-size:15px;line-height:1.7;}
+body{font-family:'DM Sans',sans-serif;font-weight:400;color:var(--ink);background:var(--white);overflow-x:hidden;font-size:15px;line-height:1.7;}
 a{text-decoration:none;color:inherit;transition:var(--trans);}
 ul{list-style:none;}
 img{max-width:100%;height:auto;display:block;}
-
 ::-webkit-scrollbar{width:5px;}
 ::-webkit-scrollbar-track{background:var(--off);}
-::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
+::-webkit-scrollbar-thumb{background:var(--amber);border-radius:2px;}
 
-/* ── TOP BAR ── */
-.top-bar{background:var(--ink);color:rgba(255,255,255,0.55);padding:9px 0;font-size:0.76rem;letter-spacing:0.3px;}
-.tb-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
-.top-bar a{color:var(--gold-light);transition:var(--trans);}
+/* ══════════════════════════════════════════
+   TOP BAR
+══════════════════════════════════════════ */
+.top-bar{
+  background:var(--ink);
+  color:rgba(255, 255, 255, 0.968);
+  padding:9px 0;font-size:0.76rem;letter-spacing:0.3px;
+  border-bottom:1px solid rgba(201,139,26,0.18);
+}
+.tb-inner{max-width:1074px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.top-bar a{color:var(--white);transition:var(--trans);}
 .top-bar a:hover{color:var(--white);}
 .tb-right{display:flex;gap:22px;align-items:center;}
-.top-bar i{color:var(--gold);margin-right:5px;}
+.top-bar i{color:var(--amber);margin-right:5px;}
 
-/* ── HEADER ── */
+/* ══════════════════════════════════════════
+   HEADER
+══════════════════════════════════════════ */
 header{
   background:var(--white);
-  box-shadow:0 2px 24px rgba(13,33,53,.07);
+  box-shadow:0 2px 24px rgba(11,22,40,0.06);
   position:sticky;top:0;z-index:1000;
   transition:var(--trans);
+  border-bottom:1px solid var(--border);
 }
-header.scrolled{box-shadow:0 4px 32px rgba(13,33,53,.13);}
+header.scrolled{box-shadow:0 4px 32px rgba(11,22,40,0.12);border-bottom-color:var(--amber-border);}
 .nav-container{
   display:flex;justify-content:space-between;align-items:center;
-  height:88px;max-width:1200px;margin:0 auto;padding:0 24px;
+  height:84px;max-width:1200px;margin:0 auto;padding:0 24px;
   flex-direction:row-reverse;
 }
-.logo-area img{height:88px;width:auto;object-fit:contain;margin-right:-20px;}
+.logo-area img{height:80px;width:auto;object-fit:contain;margin-right:-20px;}
 .main-nav ul{display:flex;gap:6px;align-items:center;}
 .main-nav>ul>li{position:relative;}
-
-/* Nav link base */
 .main-nav>ul>li>a{
-  font-weight:600;font-size:.8rem;text-transform:uppercase;
-  color:var(--navy);position:relative;letter-spacing:.7px;
+  font-weight:700;font-size:.82rem;text-transform:uppercase;
+  color:var(--navy);position:relative;letter-spacing:.9px;
   padding:6px 12px;border-radius:var(--radius);
   display:flex;align-items:center;gap:5px;
 }
 .main-nav>ul>li>a::after{
   content:'';position:absolute;width:0;height:2px;
-  background:linear-gradient(90deg,var(--gold),var(--gold-light));
+  background:linear-gradient(90deg,var(--amber),var(--amber-light));
   bottom:0;left:12px;transition:width .3s var(--ease);
 }
-.main-nav>ul>li>a:hover{color:var(--gold);}
+.main-nav>ul>li>a:hover{color:var(--amber);}
 .main-nav>ul>li>a:hover::after,.main-nav>ul>li>a.active::after{width:calc(100% - 24px);}
 .main-nav>ul>li>a .chevron{font-size:.55rem;transition:transform .3s ease;opacity:.6;}
 .main-nav>ul>li:hover>a .chevron{transform:rotate(180deg);}
 
-/* ── MEGA DROPDOWN ── */
+/* ── MEGA DROPDOWN */
 .mega-drop{
   position:absolute;top:calc(100% + 10px);left:50%;
   transform:translateX(-50%) translateY(8px);
-  width:680px;
-  background:var(--white);
-  border:1px solid rgba(10,15,30,.07);
-  border-radius:var(--radius-lg);
-  box-shadow:var(--shadow-card);
-  padding:28px;
+  width:680px;background:var(--white);
+  border:1px solid var(--border);border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-card);padding:28px;
   opacity:0;visibility:hidden;pointer-events:none;
   transition:opacity .3s ease,transform .3s ease,visibility .3s;
   display:grid;grid-template-columns:1fr 1fr;gap:24px;
@@ -108,441 +136,517 @@ header.scrolled{box-shadow:0 4px 32px rgba(13,33,53,.13);}
 }
 .mega-col-title{
   font-size:.65rem;font-weight:700;letter-spacing:2.5px;
-  text-transform:uppercase;color:var(--gold);
-  margin-bottom:14px;padding-bottom:8px;
-  border-bottom:1px solid var(--border);
+  text-transform:uppercase;color:var(--amber);
+  margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--amber-border);
 }
-.mega-item{
-  display:flex;align-items:flex-start;gap:12px;
-  padding:9px 10px;border-radius:8px;
-  transition:var(--trans);cursor:pointer;
-}
+.mega-item{display:flex;align-items:flex-start;gap:12px;padding:9px 10px;border-radius:8px;transition:var(--trans);cursor:pointer;}
 .mega-item:hover{background:var(--off);}
-.mega-item:hover .mi-icon{background:var(--gold);color:var(--ink);}
+.mega-item:hover .mi-icon{background:var(--amber);color:var(--white);}
 .mi-icon{
   width:36px;height:36px;border-radius:8px;flex-shrink:0;
-  background:rgba(201,153,58,.1);border:1px solid rgba(201,153,58,.2);
+  background:var(--amber-pale);border:1px solid var(--amber-border);
   display:flex;align-items:center;justify-content:center;
-  font-size:.85rem;color:var(--gold);transition:var(--trans);
+  font-size:.85rem;color:var(--amber);transition:var(--trans);
 }
-.mi-text strong{display:block;font-size:.82rem;font-weight:600;color:var(--ink);margin-bottom:2px;}
-.mi-text span{font-size:.72rem;color:var(--muted);font-weight:300;}
-.mega-divider{border:none;border-top:1px solid rgba(10,15,30,.06);margin:6px 0;}
-
-/* Venue mini list in dropdown */
+.mi-text strong{display:block;font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:2px;}
+.mi-text span{font-size:.72rem;color:var(--muted);}
+.mega-divider{border:none;border-top:1px solid var(--border);margin:6px 0;}
 .venue-mini-list{display:flex;flex-direction:column;gap:2px;}
-.venue-mini-item{
-  display:flex;align-items:center;gap:9px;padding:7px 10px;
-  border-radius:7px;transition:var(--trans);
-}
+.venue-mini-item{display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:7px;transition:var(--trans);}
 .venue-mini-item:hover{background:var(--off);}
-.vmi-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);flex-shrink:0;}
-.vmi-info strong{display:block;font-size:.78rem;font-weight:600;color:var(--ink);}
+.vmi-dot{width:7px;height:7px;border-radius:50%;background:var(--amber);flex-shrink:0;}
+.vmi-info strong{display:block;font-size:.78rem;font-weight:700;color:var(--ink);}
 .vmi-info span{font-size:.68rem;color:var(--muted);}
-
 .hamburger{display:none;cursor:pointer;font-size:1.4rem;color:var(--navy);}
 
-/* ── HERO ── */
-.hero{min-height:94vh;background:var(--ink);position:relative;display:flex;align-items:center;overflow:hidden;}
+/* ══════════════════════════════════════════
+   HERO
+══════════════════════════════════════════ */
+.hero{
+  min-height:94vh;background:var(--ink);
+  position:relative;display:flex;align-items:center;overflow:hidden;
+}
 .hero-bg{position:absolute;inset:0;z-index:0;}
 .hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.6s ease;}
 .hero-slide.active{opacity:1;}
-.hero-slide::after{content:'';position:absolute;inset:0;background:linear-gradient(115deg,rgba(10,15,30,0.92) 0%,rgba(10,15,30,0.6) 55%,rgba(10,15,30,0.2) 100%);}
+/* Deeper, warmer overlay — no more cold blue-black */
+.hero-slide::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(
+    115deg,
+    rgba(11,22,40,0.96) 0%,
+    rgba(11,22,40,0.72) 55%,
+    rgba(11,22,40,0.28) 100%
+  );
+}
 .hs1{background-image:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop');}
 .hs2{background-image:url('https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=2070&auto=format&fit=crop');}
 .hs3{background-image:url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop');}
 .hs4{background-image:url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070&auto=format&fit=crop');}
-
 .hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 28px;width:100%;}
+
 .hero-tag{
   display:inline-flex;align-items:center;gap:10px;
-  background:rgba(201,153,58,0.12);border:1px solid rgba(201,153,58,0.35);
-  color:var(--gold-light);font-size:0.7rem;font-weight:700;letter-spacing:3px;
-  text-transform:uppercase;padding:7px 20px;border-radius:50px;margin-bottom:30px;
+  background:rgba(201,139,26,0.13);
+  border:1px solid rgba(201,139,26,0.38);
+  color:white;font-size:0.72rem;font-weight:800;letter-spacing:3.5px;
+  text-transform:uppercase;padding:8px 22px;border-radius:50px;margin-bottom:28px;
 }
-.hero-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite;}
+.hero-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.4;transform:scale(0.75);}}
 
 .hero h1{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(2.8rem,5.5vw,5.2rem);
+  font-family:'Montserrat',sans-serif;
+  font-size:clamp(3.4rem,6vw,6.8rem);
   font-weight:900;color:var(--white);
-  line-height:1.05;margin-bottom:12px;letter-spacing:-1px;
+  line-height:1.0;margin-bottom:14px;letter-spacing:-2px;
+  text-transform:uppercase;
 }
-.hero h1 em{color:var(--gold-light);font-style:italic;}
+.hero h1 em{
+  color:var(--amber-light);font-style:normal;display:block;
+  background:linear-gradient(90deg,var(--amber),var(--amber-light),#f8c84a);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
 .hero-subtitle{
-  font-size:1.1rem;color:rgba(253,252,250,0.55);
-  max-width:560px;line-height:1.75;margin-bottom:18px;
-  font-weight:300;font-style:italic;
-  font-family:'Cormorant Garamond',serif;font-size:1.3rem;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.45rem;font-style:italic;font-weight:400;
+  color:rgba(253,252,250,0.72);
+  max-width:560px;line-height:1.65;margin-bottom:14px;
 }
 .hero-sub{
-  font-size:0.92rem;color:rgba(253,252,250,0.55);
-  max-width:480px;line-height:1.9;margin-bottom:44px;font-weight:300;
+  font-size:0.95rem;color:rgba(253,252,250,0.48);
+  max-width:520px;line-height:1.9;margin-bottom:44px;font-weight:300;
 }
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
 
-/* ── BUTTONS — with hover lift + glow ── */
-.btn-gold{
+/* ══════════════════════════════════════════
+   BUTTONS
+   Primary CTA  = Saffron (action / urgency)
+   Secondary    = Amber outline (explore)
+   Ghost-light  = white border for dark bgs
+══════════════════════════════════════════ */
+.btn-primary{
   display:inline-flex;align-items:center;gap:9px;
-  background:var(--gold);color:var(--ink);
-  font-weight:700;font-size:0.8rem;letter-spacing:1.5px;text-transform:uppercase;
-  padding:14px 32px;border-radius:var(--radius);border:2px solid var(--gold);
-  transition:all .3s var(--ease);position:relative;overflow:hidden;
+  background:var(--saffron);color:var(--white);
+  font-weight:800;font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;
+  padding:15px 34px;border-radius:var(--radius);
+  border:2px solid var(--saffron);
+  transition:all .3s var(--ease);
+  box-shadow:0 4px 24px rgba(217,98,30,0.28);
 }
-.btn-gold::before{
-  content:'';position:absolute;inset:0;
-  background:rgba(255,255,255,0);
-  transition:background .3s ease;
+.btn-primary:hover{
+  background:var(--saffron-dk);border-color:var(--saffron-dk);
+  box-shadow:0 12px 40px rgba(217,98,30,0.38);transform:translateY(-3px);
 }
-.btn-gold:hover{
-  background:transparent;color:var(--gold);
-  box-shadow:0 12px 40px rgba(201,153,58,0.35);
-  transform:translateY(-2px);
+.btn-amber{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--amber);color:var(--white);
+  font-weight:800;font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;
+  padding:15px 34px;border-radius:var(--radius);border:2px solid var(--amber);
+  transition:all .3s var(--ease);
+}
+.btn-amber:hover{
+  background:var(--amber-mid);border-color:var(--amber-mid);
+  box-shadow:var(--shadow-amber);transform:translateY(-3px);
+}
+.btn-amber-outline{
+  display:inline-flex;align-items:center;gap:9px;
+  background:transparent;color:var(--amber-light);
+  font-weight:700;font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;
+  padding:15px 28px;border-radius:var(--radius);
+  border:1.5px solid rgba(201,139,26,0.5);transition:all .3s var(--ease);
+}
+.btn-amber-outline:hover{
+  border-color:var(--amber);color:var(--amber);
+  background:rgba(201,139,26,0.1);transform:translateY(-3px);
 }
 .btn-ghost-light{
   display:inline-flex;align-items:center;gap:9px;
   background:transparent;color:rgba(253,252,250,0.75);
-  font-weight:500;font-size:0.8rem;letter-spacing:1.5px;text-transform:uppercase;
-  padding:14px 28px;border-radius:var(--radius);
-  border:1px solid rgba(255,255,255,0.2);transition:all .3s var(--ease);
+  font-weight:700;font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;
+  padding:15px 28px;border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,0.22);transition:all .3s var(--ease);
 }
-.btn-ghost-light:hover{
-  border-color:var(--gold);color:var(--gold);
-  background:rgba(201,153,58,0.08);
-  transform:translateY(-2px);
-}
+.btn-ghost-light:hover{border-color:var(--amber);color:var(--amber-light);background:rgba(201,139,26,0.09);transform:translateY(-3px);}
 
-/* ── HERO STRIP ── */
-.hero-strip{background:var(--gold);padding:0;}
+/* ══════════════════════════════════════════
+   HERO STRIP  — amber instead of garish red
+══════════════════════════════════════════ */
+.hero-strip{background:var(--amber);border-top:3px solid var(--amber-light);}
 .hero-strip-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);}
 .strip-item{
-  padding:18px 16px;border-right:1px solid rgba(10,15,30,.12);
-  text-align:center;transition:var(--trans);cursor:default;
-  position:relative;overflow:hidden;
+  padding:20px 16px;border-right:1px solid rgba(11,22,40,0.14);
+  text-align:center;transition:var(--trans);cursor:default;position:relative;overflow:hidden;
 }
-.strip-item::before{
-  content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);
-  width:0;height:3px;background:var(--ink);transition:width .3s ease;
-}
+.strip-item::before{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:3px;background:var(--ink);transition:width .3s ease;}
 .strip-item:hover::before{width:60%;}
 .strip-item:last-child{border-right:none;}
-.strip-item:hover{background:var(--gold-light);}
-.strip-item i{font-size:1.25rem;color:var(--ink);margin-bottom:6px;display:block;transition:transform .3s ease;}
+.strip-item:hover{background:var(--amber-mid);}
+.strip-item i{font-size:1.35rem;color:var(--ink);margin-bottom:6px;display:block;transition:transform .3s ease;}
 .strip-item:hover i{transform:translateY(-3px);}
-.strip-item h5{font-size:0.7rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--ink);line-height:1.4;}
+.strip-item h5{font-size:0.72rem;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--ink);line-height:1.4;}
 
-/* ── UTIL ── */
+/* ══════════════════════════════════════════
+   UTILITIES
+══════════════════════════════════════════ */
 .container{max-width:1200px;margin:0 auto;padding:0 28px;}
 section.pad{padding:100px 0;}
-.sec-label{display:inline-flex;align-items:center;gap:8px;font-size:0.66rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
-.sec-label::before{content:'';width:20px;height:1px;background:var(--gold);}
-.sec-h{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:700;color:var(--ink);line-height:1.15;letter-spacing:-0.5px;}
-.sec-h span{color:var(--gold);}
-.sec-center{text-align:center;margin-bottom:60px;}
-.sec-center .sec-label{justify-content:center;}
-.sec-center .sec-h::after{content:'';display:block;width:44px;height:2px;background:var(--gold);margin:14px auto 0;}
-.sec-p{color:var(--muted);font-size:0.9rem;max-width:560px;margin:14px auto 0;line-height:1.9;font-weight:300;}
 
-/* ── ABOUT ── */
+.sec-label{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:0.72rem;font-weight:800;letter-spacing:4px;text-transform:uppercase;
+  color:var(--amber);margin-bottom:16px;font-family:'Montserrat',sans-serif;
+}
+.sec-label::before{content:'';width:28px;height:2px;background:linear-gradient(90deg,var(--amber),var(--amber-light));}
+
+.sec-h{
+  font-family:'Montserrat',sans-serif;
+  font-size:clamp(2.4rem,4vw,3.6rem);
+  font-weight:900;color:var(--ink);
+  line-height:1.05;letter-spacing:-1.5px;text-transform:uppercase;
+}
+.sec-h span{
+  background:linear-gradient(135deg,var(--amber) 0%,var(--amber-light) 50%,#dba31c 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.sec-center{text-align:center;margin-bottom:64px;}
+.sec-center .sec-label{justify-content:center;}
+.sec-center .sec-label::before{display:none;}
+.sec-center .sec-label::after{content:'';width:28px;height:2px;background:linear-gradient(90deg,var(--amber),var(--amber-light));}
+.sec-center .sec-h{display:inline-block;}
+.sec-center .sec-h::after{
+  content:'';display:block;width:56px;height:3px;
+  background:linear-gradient(90deg,var(--amber),var(--amber-light));
+  margin:16px auto 0;border-radius:2px;
+}
+.sec-p{color:var(--muted);font-size:0.95rem;max-width:560px;margin:16px auto 0;line-height:1.9;font-weight:400;}
+
+/* ══════════════════════════════════════════
+   IMAGE MOSAIC
+══════════════════════════════════════════ */
+.img-mosaic{padding:0;overflow:hidden;}
+.mosaic-row{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;height:260px;}
+.mosaic-cell{overflow:hidden;position:relative;}
+.mosaic-cell img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease,filter .5s ease;filter:saturate(0.85);}
+.mosaic-cell:hover img{transform:scale(1.07);filter:saturate(1.15);}
+.mosaic-cell::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,40,0.35),transparent 60%);}
+
+/* ══════════════════════════════════════════
+   ABOUT
+══════════════════════════════════════════ */
 .about-section{background:var(--off);padding:100px 0;}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
 .about-img{position:relative;}
-.about-img img{
-  width:100%;height:500px;object-fit:cover;
-  border-radius:var(--radius-lg);box-shadow:var(--shadow);
-  transition:transform .6s ease,box-shadow .6s ease;
+.about-img img{width:100%;height:520px;object-fit:cover;border-radius:var(--radius-lg);box-shadow:var(--shadow);}
+.about-img-accent{
+  position:absolute;bottom:-20px;right:-20px;
+  width:160px;height:160px;border-radius:var(--radius-lg);
+  overflow:hidden;border:4px solid var(--white);box-shadow:var(--shadow-card);
 }
-.about-img:hover img{transform:scale(1.02);box-shadow:var(--shadow-card);}
+.about-img-accent img{width:100%;height:100%;object-fit:cover;}
+/* Amber badge — replaces old red-tinted gold */
 .about-badge{
-  position:absolute;bottom:-24px;left:-24px;
-  background:var(--gold);color:var(--ink);
-  padding:22px 28px;border-radius:var(--radius);
-  box-shadow:var(--shadow-gold);transition:var(--trans);
+  position:absolute;top:24px;left:-24px;
+  background:linear-gradient(135deg,var(--amber),var(--amber-light));
+  color:var(--white);
+  padding:20px 24px;border-radius:var(--radius);box-shadow:var(--shadow-amber);
 }
-.about-badge:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(201,153,58,0.4);}
-.about-badge .num{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:900;line-height:1;}
-.about-badge .lbl{font-size:0.62rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;}
-.about-intro{font-size:1.05rem;color:var(--ink-mid);font-weight:400;margin-bottom:16px;line-height:1.8;}
-.about-body{color:var(--muted);font-size:0.9rem;line-height:1.9;margin-bottom:24px;font-weight:300;}
+.about-badge .num{font-family:'Montserrat',sans-serif;font-size:2.6rem;font-weight:900;line-height:1;}
+.about-badge .lbl{font-size:0.62rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-top:3px;opacity:.85;}
+.about-intro{font-family:'Montserrat',sans-serif;font-size:1.15rem;color:var(--ink);font-weight:700;margin-bottom:14px;line-height:1.6;letter-spacing:-.3px;}
+.about-body{color:var(--muted);font-size:0.92rem;line-height:1.9;margin-bottom:24px;}
 .about-pills{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 32px;}
 .pill{
-  background:var(--white);border:1px solid var(--border);
-  color:var(--ink-mid);font-size:0.74rem;font-weight:600;
-  letter-spacing:0.5px;padding:7px 16px;border-radius:50px;
-  display:inline-flex;align-items:center;gap:7px;
-  transition:all .3s ease;
+  background:var(--white);border:1.5px solid var(--amber-border);
+  color:var(--ink-mid);font-size:0.76rem;font-weight:700;
+  letter-spacing:0.5px;padding:8px 18px;border-radius:50px;
+  display:inline-flex;align-items:center;gap:7px;transition:all .3s ease;
 }
-.pill:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,153,58,0.25);}
-.pill i{color:var(--gold);transition:color .3s ease;}
-.pill:hover i{color:var(--ink);}
+.pill:hover{background:var(--amber);border-color:var(--amber);color:var(--white);transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,139,26,0.22);}
+.pill i{color:var(--amber);transition:color .3s ease;font-size:.75rem;}
+.pill:hover i{color:var(--white);}
 
-/* ── WHY US ── */
+/* ══════════════════════════════════════════
+   WHY US
+══════════════════════════════════════════ */
 .why-section{background:var(--ink);padding:100px 0;}
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:60px;}
-.why-card{
-  background:rgba(255,255,255,0.02);
-  border:1px solid rgba(201,153,58,0.08);
-  padding:44px 36px;transition:all .4s var(--ease);
-  position:relative;overflow:hidden;
-}
-.why-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;
-  height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-light));
-  transform:scaleX(0);transform-origin:left;
-  transition:transform .4s ease;
-}
+.why-card{position:relative;overflow:hidden;min-height:360px;transition:all .4s var(--ease);cursor:default;}
+.why-card-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .6s ease;}
+.why-card-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,40,0.96) 0%,rgba(11,22,40,0.65) 60%,rgba(11,22,40,0.3) 100%);transition:background .4s ease;}
+.why-card:hover .why-card-bg{transform:scale(1.07);}
+.why-card:hover .why-card-bg::after{background:linear-gradient(to top,rgba(11,22,40,0.99) 0%,rgba(11,22,40,0.78) 50%,rgba(11,22,40,0.42) 100%);}
+.why-card-content{position:relative;z-index:2;padding:36px 32px;display:flex;flex-direction:column;justify-content:flex-end;height:100%;min-height:360px;}
+.why-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--amber),var(--amber-light));transform:scaleX(0);transform-origin:left;transition:transform .4s ease;z-index:3;}
 .why-card:hover::before{transform:scaleX(1);}
-.why-card:hover{
-  background:rgba(201,153,58,0.05);
-  border-color:rgba(201,153,58,0.3);
-  transform:translateY(-6px);
-  box-shadow:0 20px 50px rgba(0,0,0,0.3);
-}
 .why-card .icon{
   width:52px;height:52px;border-radius:var(--radius);
-  background:rgba(201,153,58,0.08);border:1px solid rgba(201,153,58,0.18);
+  background:rgba(201,139,26,0.14);border:1.5px solid rgba(201,139,26,0.38);
   display:flex;align-items:center;justify-content:center;
-  font-size:1.3rem;color:var(--gold);margin-bottom:22px;
-  transition:all .3s ease;
+  font-size:1.3rem;color:var(--amber-light);margin-bottom:18px;transition:all .3s ease;
 }
-.why-card:hover .icon{background:var(--gold);color:var(--ink);border-color:var(--gold);transform:scale(1.1);}
-.why-card h4{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--white);margin-bottom:12px;}
-.why-card p{color:rgba(253,252,250,0.45);font-size:0.87rem;line-height:1.88;font-weight:300;}
+.why-card:hover .icon{background:var(--amber);color:var(--white);border-color:var(--amber);}
+.why-card h4{font-family:'Montserrat',sans-serif;font-size:1.35rem;font-weight:800;color:var(--white);margin-bottom:10px;letter-spacing:-.5px;text-transform:uppercase;}
+.why-card p{color:rgba(253,252,250,0.58);font-size:0.88rem;line-height:1.8;}
 
-/* ── SERVICES ── */
+/* ══════════════════════════════════════════
+   SERVICES
+══════════════════════════════════════════ */
 .services-preview{background:var(--white);padding:100px 0;}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.svc-card{
-  border:1px solid rgba(10,15,30,.07);
-  border-radius:var(--radius-lg);overflow:hidden;
-  transition:all .4s var(--ease);cursor:pointer;background:var(--white);
-  position:relative;
-}
-.svc-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 24px 60px rgba(10,15,30,.14);
-  border-color:var(--gold);
-}
-.svc-card-img{height:195px;overflow:hidden;position:relative;}
+.svc-card{border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:all .4s var(--ease);cursor:pointer;background:var(--white);}
+.svc-card:hover{transform:translateY(-10px);box-shadow:0 28px 70px rgba(11,22,40,0.14);border-color:var(--amber);}
+.svc-card-img{height:210px;overflow:hidden;position:relative;}
 .svc-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease,filter .5s ease;}
-.svc-card-img::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(10,15,30,0.5),transparent);
-  opacity:0;transition:opacity .4s ease;
-}
-.svc-card:hover .svc-card-img img{transform:scale(1.08);filter:brightness(0.85);}
+.svc-card-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,40,0.5),transparent);opacity:0;transition:opacity .4s ease;}
+.svc-card:hover .svc-card-img img{transform:scale(1.09);filter:brightness(0.82);}
 .svc-card:hover .svc-card-img::after{opacity:1;}
 .svc-card-img .svc-tag{
   position:absolute;top:14px;left:14px;z-index:2;
-  background:var(--gold);color:var(--ink);
-  font-size:0.62rem;font-weight:700;letter-spacing:1.5px;
+  background:var(--saffron);color:var(--white);
+  font-size:0.62rem;font-weight:800;letter-spacing:1.5px;
   text-transform:uppercase;padding:5px 12px;border-radius:2px;
+  font-family:'Montserrat',sans-serif;
 }
-.svc-card-body{padding:22px 24px 26px;}
-.svc-card-body h4{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:8px;}
-.svc-card-body p{font-size:0.84rem;color:var(--muted);line-height:1.75;font-weight:300;}
-.svc-link{
-  display:inline-flex;align-items:center;gap:6px;margin-top:14px;
-  font-size:0.72rem;font-weight:700;letter-spacing:1px;
-  text-transform:uppercase;color:var(--gold);
-}
+.svc-card-body{padding:24px 26px 28px;}
+.svc-card-body h4{font-family:'Montserrat',sans-serif;font-size:1.1rem;font-weight:800;color:var(--ink);margin-bottom:8px;letter-spacing:-.3px;text-transform:uppercase;}
+.svc-card-body p{font-size:0.86rem;color:var(--muted);line-height:1.75;}
+.svc-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:0.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--amber);}
 .svc-link i{font-size:0.62rem;transition:transform .3s ease;}
 .svc-card:hover .svc-link i{transform:translateX(5px);}
 
-/* ── EXHIBITIONS ── */
+/* ══════════════════════════════════════════
+   EXHIBITIONS
+══════════════════════════════════════════ */
 .exh-section{background:var(--off);padding:100px 0;}
 .exh-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
-.exh-card{
-  background:var(--white);border:1px solid rgba(10,15,30,.07);
-  border-radius:var(--radius-lg);overflow:hidden;transition:all .4s var(--ease);
-}
-.exh-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-card);border-color:var(--teal);}
-.exh-card-img{height:140px;overflow:hidden;}
-.exh-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease,filter .5s ease;filter:saturate(0.75);}
-.exh-card:hover .exh-card-img img{transform:scale(1.08);filter:saturate(1.1);}
-.exh-card-body{padding:16px 18px 20px;}
-.exh-city{font-size:0.62rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:4px;}
-.exh-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:5px;line-height:1.25;}
-.exh-desc{font-size:0.77rem;color:var(--muted);line-height:1.65;font-weight:300;}
-
-/* ── STATS ── */
-.stats-section{background:linear-gradient(135deg,var(--crimson-dark),var(--crimson));padding:80px 0;}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.1);}
-.stat-cell{
-  background:transparent;padding:50px 30px;text-align:center;
-  transition:var(--trans);position:relative;overflow:hidden;
-}
-.stat-cell::after{
-  content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);
-  width:0;height:2px;background:rgba(255,255,255,0.4);
-  transition:width .4s ease;
-}
-.stat-cell:hover::after{width:60%;}
-.stat-cell:hover{background:rgba(255,255,255,0.06);}
-.stat-cell .num{font-family:'Playfair Display',serif;font-size:3.8rem;font-weight:900;color:var(--white);line-height:1;display:block;margin-bottom:8px;}
-.stat-cell .lbl{font-size:0.7rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.5);}
+.exh-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:all .4s var(--ease);}
+.exh-card:hover{transform:translateY(-7px);box-shadow:var(--shadow-card);border-color:var(--amber);}
+.exh-card-img{height:160px;overflow:hidden;position:relative;}
+.exh-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease,filter .5s ease;filter:saturate(0.8);}
+.exh-card:hover .exh-card-img img{transform:scale(1.09);filter:saturate(1.15);}
+.exh-card-body{padding:18px 18px 22px;}
+.exh-city{font-size:0.63rem;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--teal);margin-bottom:5px;font-family:'Montserrat',sans-serif;}
+.exh-name{font-family:'Montserrat',sans-serif;font-size:1.0rem;font-weight:800;color:var(--ink);margin-bottom:5px;line-height:1.2;text-transform:uppercase;letter-spacing:-.3px;}
+.exh-desc{font-size:0.79rem;color:var(--muted);line-height:1.65;}
 
 /* ══════════════════════════════════════════
-   VENUES SECTION — REDESIGNED, CRISP & SHORT
-   ══════════════════════════════════════════ */
-.venues-section{background:var(--ink);padding:100px 0;}
-.venues-intro-grid{
-  display:grid;grid-template-columns:1fr 1.6fr;gap:60px;
-  align-items:center;margin-bottom:60px;
+   STATS  — now navy/amber, not crimson red
+══════════════════════════════════════════ */
+.stats-section{position:relative;padding:90px 0;overflow:hidden;}
+.stats-bg{
+  position:absolute;inset:0;
+  background-image:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop');
+  background-size:cover;background-position:center;
+  filter:brightness(0.18) saturate(0.3);
 }
-.venues-intro-text .sec-h{color:var(--white);margin-bottom:16px;}
-.venues-intro-text .sec-label{color:var(--gold);}
-.venues-intro-desc{color:rgba(253,252,250,.5);font-size:.9rem;line-height:1.85;margin-bottom:24px;}
+/* Deep navy overlay — no more jarring red */
+.stats-bg::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(11,22,40,0.92),rgba(13,32,64,0.95));
+}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.07);position:relative;z-index:1;}
+.stat-cell{background:transparent;padding:56px 30px;text-align:center;transition:var(--trans);position:relative;}
+.stat-cell::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:2px;background:linear-gradient(90deg,var(--amber),var(--amber-light));transition:width .4s ease;}
+.stat-cell:hover::after{width:60%;}
+.stat-cell:hover{background:rgba(201,139,26,0.07);}
+.stat-cell .num{font-family:'Montserrat',sans-serif;font-size:4.5rem;font-weight:900;color:var(--white);line-height:1;display:block;margin-bottom:10px;letter-spacing:-2px;}
+/* Gold tint on the number */
+.stat-cell .num{
+  background:linear-gradient(135deg,var(--white) 40%,var(--amber-light) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.stat-cell .lbl{font-size:0.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.45);font-family:'Montserrat',sans-serif;}
+
+/* ══════════════════════════════════════════
+   VENUES
+══════════════════════════════════════════ */
+.venues-section{background:var(--ink);padding:100px 0;}
+.venues-intro-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:60px;align-items:center;margin-bottom:60px;}
+.venues-intro-text .sec-h{color:var(--white);}
+.venues-intro-desc{color:rgba(253,252,250,.52);font-size:.92rem;line-height:1.85;margin-bottom:24px;}
 .venues-intro-note{
   display:inline-flex;align-items:center;gap:9px;
-  background:rgba(201,153,58,.1);border:1px solid rgba(201,153,58,.25);
-  color:var(--gold-light);font-size:.72rem;font-weight:600;
-  letter-spacing:1.5px;text-transform:uppercase;
-  padding:9px 18px;border-radius:50px;
+  background:rgba(201,139,26,.11);border:1px solid rgba(201,139,26,.3);
+  color:var(--amber-light);font-size:.72rem;font-weight:800;
+  letter-spacing:2px;text-transform:uppercase;
+  padding:10px 20px;border-radius:50px;font-family:'Montserrat',sans-serif;
 }
-.venues-intro-note i{font-size:.7rem;}
-
-/* City tabs */
 .venues-tabs{display:flex;flex-wrap:wrap;gap:8px;}
 .vt-btn{
-  font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
-  padding:7px 16px;border-radius:50px;
-  border:1px solid rgba(255,255,255,.1);
-  color:rgba(253,252,250,.45);background:transparent;cursor:pointer;
-  transition:var(--trans);
+  font-size:.7rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;
+  padding:8px 18px;border-radius:50px;
+  border:1.5px solid rgba(255,255,255,.12);
+  color:rgba(253,252,250,.48);background:transparent;cursor:pointer;
+  transition:var(--trans);font-family:'Montserrat',sans-serif;
 }
-.vt-btn:hover,.vt-btn.active{background:var(--gold);border-color:var(--gold);color:var(--ink);}
-
-/* Compact venue grid */
-.venues-compact-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
-}
+.vt-btn:hover,.vt-btn.active{background:var(--amber);border-color:var(--amber);color:var(--white);}
+.venues-compact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
 .vc-card{
-  background:rgba(255,255,255,.03);
-  border:1px solid rgba(255,255,255,.06);
-  border-radius:10px;padding:20px;
-  transition:all .35s var(--ease);
-  display:none;
-  position:relative;overflow:hidden;
+  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);
+  border-radius:10px;padding:22px;transition:all .35s var(--ease);
+  display:none;position:relative;overflow:hidden;
 }
-.vc-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;
-  height:2px;background:linear-gradient(90deg,var(--gold),transparent);
-  transform:scaleX(0);transform-origin:left;
-  transition:transform .3s ease;
-}
+.vc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--amber),transparent);transform:scaleX(0);transform-origin:left;transition:transform .3s ease;}
 .vc-card:hover::before{transform:scaleX(1);}
 .vc-card.visible{display:block;animation:fadeUp .35s ease both;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
-.vc-card:hover{
-  background:rgba(201,153,58,.06);
-  border-color:rgba(201,153,58,.25);
-  transform:translateY(-4px);
-  box-shadow:0 16px 40px rgba(0,0,0,.25);
-}
-.vc-city{
-  font-size:.6rem;font-weight:700;letter-spacing:2px;
-  text-transform:uppercase;color:var(--gold);margin-bottom:6px;
-}
-.vc-name{
-  font-family:'Playfair Display',serif;font-size:.95rem;
-  font-weight:700;color:var(--white);line-height:1.3;margin-bottom:4px;
-}
-.vc-abbr{font-size:.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:8px;}
-.vc-size{
-  display:inline-flex;align-items:center;gap:5px;
-  font-size:.68rem;color:rgba(255,255,255,.3);
-}
-.vc-size i{color:var(--gold);font-size:.6rem;}
+.vc-card:hover{background:rgba(201,139,26,.07);border-color:rgba(201,139,26,.3);transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.28);}
+.vc-city{font-size:.62rem;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--amber);margin-bottom:7px;font-family:'Montserrat',sans-serif;}
+.vc-name{font-family:'Montserrat',sans-serif;font-size:.92rem;font-weight:700;color:var(--white);line-height:1.3;margin-bottom:5px;}
+.vc-abbr{font-size:.68rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.32);margin-bottom:10px;}
+.vc-size{display:inline-flex;align-items:center;gap:5px;font-size:.68rem;color:rgba(255,255,255,.3);}
+.vc-size i{color:var(--amber);font-size:.6rem;}
+.venues-show-more{text-align:center;margin-top:40px;}
 
-.venues-show-more{text-align:center;margin-top:36px;}
+/* ══════════════════════════════════════════
+   PHOTO GALLERY
+══════════════════════════════════════════ */
+.gallery-strip{padding:80px 0;background:var(--white);}
+.gallery-strip .sec-center{margin-bottom:40px;}
+.gallery-row{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.5fr 1fr;gap:12px;align-items:center;}
+.gallery-item{border-radius:10px;overflow:hidden;position:relative;cursor:pointer;}
+.gallery-item:nth-child(2){margin-top:30px;}
+.gallery-item:nth-child(4){margin-top:-30px;}
+.gallery-item img{width:100%;object-fit:cover;transition:transform .6s ease,filter .4s ease;filter:saturate(0.85);}
+.gallery-item img.tall{height:280px;}
+.gallery-item img.short{height:200px;}
+.gallery-item:hover img{transform:scale(1.06);filter:saturate(1.2);}
+.gallery-item::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,40,0.55) 0%,transparent 60%);opacity:0;transition:opacity .4s ease;}
+.gallery-item:hover::after{opacity:1;}
+.gallery-label{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:14px 16px;color:var(--white);
+  font-size:.68rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;
+  font-family:'Montserrat',sans-serif;
+  transform:translateY(4px);opacity:0;transition:all .35s ease;z-index:2;
+}
+.gallery-item:hover .gallery-label{opacity:1;transform:translateY(0);}
 
-/* ── TESTIMONIALS ── */
+/* ══════════════════════════════════════════
+   TESTIMONIALS
+══════════════════════════════════════════ */
 .testi-section{background:var(--off);padding:100px 0;}
-.testi-wrap{max-width:780px;margin:0 auto;}
+.testi-wrap{max-width:800px;margin:0 auto;}
 .testi-card{
   display:none;background:var(--white);
-  border:1px solid var(--border);border-radius:var(--radius-lg);
-  padding:52px 48px;text-align:center;
+  border:1px solid var(--amber-border);border-radius:var(--radius-lg);
+  padding:54px 52px;text-align:center;
   box-shadow:var(--shadow);transition:var(--trans);
 }
 .testi-card.active{display:block;animation:fadeUp .5s ease both;}
 .testi-card:hover{box-shadow:var(--shadow-card);}
-.testi-q{font-size:2.2rem;color:var(--gold);opacity:.25;margin-bottom:18px;}
-.testi-stars{color:var(--gold);font-size:.85rem;margin-bottom:18px;letter-spacing:2px;}
-.testi-text{
-  font-family:'Playfair Display',serif;font-size:1.2rem;font-style:italic;
-  color:var(--ink-mid);line-height:1.88;margin-bottom:28px;font-weight:400;
-}
-.testi-name{font-weight:700;font-size:.88rem;text-transform:uppercase;letter-spacing:1px;color:var(--ink);}
-.testi-role{font-size:.78rem;color:var(--teal);margin-top:3px;}
-.testi-flag{font-size:.73rem;color:var(--muted);margin-top:2px;}
+/* Quote mark in amber */
+.testi-q{font-size:2.8rem;color:var(--amber);opacity:.22;margin-bottom:16px;}
+.testi-stars{color:var(--amber);font-size:.9rem;margin-bottom:18px;letter-spacing:3px;}
+.testi-text{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:var(--ink-mid);line-height:1.85;margin-bottom:28px;font-weight:500;}
+.testi-name{font-family:'Montserrat',sans-serif;font-weight:800;font-size:.88rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--ink);}
+.testi-role{font-size:.8rem;color:var(--teal);margin-top:4px;font-weight:600;}
+.testi-flag{font-size:.73rem;color:var(--muted);margin-top:3px;}
 .testi-dots{display:flex;justify-content:center;gap:10px;margin-top:32px;}
-.testi-dot{width:8px;height:8px;border-radius:50%;background:rgba(10,15,30,.12);cursor:pointer;transition:var(--trans);}
-.testi-dot.active{background:var(--gold);transform:scale(1.4);}
-.testi-dot:hover{background:var(--gold);opacity:.7;}
+.testi-dot{width:8px;height:8px;border-radius:50%;background:rgba(11,22,40,.12);cursor:pointer;transition:var(--trans);}
+.testi-dot.active{background:var(--amber);transform:scale(1.4);}
+.testi-dot:hover{background:var(--amber);opacity:.7;}
 
-/* ── CTA ── */
-.cta-band{background:var(--ink);padding:90px 0;}
-.cta-band-inner{display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;}
-.cta-band h2{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:var(--white);line-height:1.15;}
-.cta-band h2 em{color:var(--gold);font-style:italic;}
-.cta-band p{color:rgba(253,252,250,.45);font-size:.92rem;margin-top:14px;max-width:480px;line-height:1.85;}
-.cta-band-btns{display:flex;flex-direction:column;gap:12px;min-width:220px;}
-.btn-crim{
-  display:inline-flex;align-items:center;justify-content:center;gap:9px;
-  background:var(--crimson);color:var(--white);font-weight:700;
-  font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;
-  padding:15px 34px;border-radius:var(--radius);border:2px solid var(--crimson);
-  transition:all .3s var(--ease);
+/* ══════════════════════════════════════════
+   CTA BAND  — deep ink bg, saffron + amber buttons
+══════════════════════════════════════════ */
+.cta-band{background:var(--ink);padding:100px 0;position:relative;overflow:hidden;}
+.cta-band-bg{
+  position:absolute;inset:0;
+  background-image:url('https://images.unsplash.com/photo-1554774853-719586f82d77?q=80&w=2070&auto=format&fit=crop');
+  background-size:cover;background-position:center;opacity:0.06;
 }
-.btn-crim:hover{
-  background:transparent;color:var(--crimson);
-  box-shadow:0 12px 36px rgba(178,34,52,.3);
-  transform:translateY(-2px);
+/* Subtle amber gradient glow on the right side */
+.cta-band::before{
+  content:'';position:absolute;right:-200px;top:50%;transform:translateY(-50%);
+  width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,139,26,0.12) 0%,transparent 70%);
+  pointer-events:none;
 }
+.cta-band-inner{display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;position:relative;z-index:1;}
+.cta-band h2{font-family:'Montserrat',sans-serif;font-size:clamp(2.2rem,4vw,3.5rem);font-weight:900;color:var(--white);line-height:1.05;text-transform:uppercase;letter-spacing:-1.5px;}
+.cta-band h2 em{
+  font-style:normal;display:block;
+  background:linear-gradient(90deg,var(--amber),var(--amber-light));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}hero-services {
+            position: relative;
+            background: var(--white);
+            border-top: 4px solid var(--red);
+            padding: 0;
+            box-shadow: 0 4px 24px rgba(24,54,80,.1);
+        }
+        .hero-services-grid {
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .hero-service-item {
+            text-align: center;
+            padding: 22px 16px;
+            border-right: 1px solid rgba(24,54,80,.07);
+            transition: var(--transition);
+            cursor: default;
+        }
+        .hero-service-item:last-child { border-right:none; }
+        .hero-service-item:hover { background: var(--cyan-light); }
+        .hero-service-item img {
+            max-width: 48px;
+            height: 48px;
+            object-fit: contain;
+            margin: 0 auto 10px;
+            display: block;
+        }
+        .hero-service-item h4 {
+            font-size: .78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .6px;
+            color: var(--navy);
+            line-height: 1.4;
+        }
 
-/* ── FOOTER ── */
-footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,250,.5);padding-top:80px;}
+.cta-band p{color:rgba(253,252,250,.48);font-size:.95rem;margin-top:16px;max-width:480px;line-height:1.85;}
+.cta-band-btns{display:flex;flex-direction:column;gap:12px;min-width:230px;}
+
+/* ══════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════ */
+footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,250,.48);padding-top:80px;}
 .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:50px;margin-bottom:60px;}
-.foot-brand p{font-size:.86rem;line-height:1.85;margin-top:16px;font-weight:300;}
-.foot-brand-logo{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;color:var(--white);letter-spacing:1px;}
-.foot-brand-logo span{color:var(--gold);}
-.foot-brand-sub{font-size:.6rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--teal-light);margin-top:2px;}
-.foot-parent{
-  margin-top:18px;padding:14px 16px;
-  background:rgba(255,255,255,.03);
-  border:1px solid rgba(255,255,255,.07);
-  border-radius:8px;display:inline-flex;align-items:center;gap:10px;
-  transition:var(--trans);
-}
-.foot-parent:hover{border-color:rgba(201,153,58,.3);background:rgba(201,153,58,.05);}
-.fp-label{font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3);display:block;margin-bottom:2px;}
-.fp-link{font-size:.82rem;font-weight:600;color:var(--gold-light);display:flex;align-items:center;gap:6px;}
+.foot-brand p{font-size:.87rem;line-height:1.85;margin-top:16px;}
+.foot-brand-logo{font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:900;color:var(--white);letter-spacing:2px;text-transform:uppercase;}
+.foot-brand-logo span{color:var(--amber-light);}
+.foot-brand-sub{font-size:.6rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--teal-light);margin-top:3px;font-family:'Montserrat',sans-serif;}
+.foot-parent{margin-top:18px;padding:14px 16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:8px;display:inline-flex;align-items:center;gap:10px;transition:var(--trans);}
+.foot-parent:hover{border-color:rgba(201,139,26,.3);background:rgba(201,139,26,.05);}
+.fp-label{font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.28);display:block;margin-bottom:2px;}
+.fp-link{font-size:.82rem;font-weight:600;color:var(--amber-light);display:flex;align-items:center;gap:6px;}
 .fp-link i{font-size:.65rem;opacity:.6;}
-.foot-col h5{font-size:.8rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;padding-bottom:8px;border-bottom:1px solid rgba(201,153,58,.2);}
+.foot-col h5{font-size:.75rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--amber);margin-bottom:20px;padding-bottom:8px;border-bottom:1px solid rgba(201,139,26,.2);font-family:'Montserrat',sans-serif;}
 .foot-col ul li{margin-bottom:9px;}
-.foot-col ul li a{font-size:.84rem;font-weight:300;color:rgba(253,252,250,.45);transition:var(--trans);}
-.foot-col ul li a:hover{color:var(--gold);padding-left:5px;}
-.foot-contact li{display:flex;gap:10px;margin-bottom:12px;font-size:.84rem;font-weight:300;align-items:flex-start;}
-.foot-contact i{color:var(--gold);margin-top:3px;flex-shrink:0;}
-.foot-bottom{
-  border-top:1px solid rgba(255,255,255,.06);
-  padding:22px 0;display:flex;justify-content:space-between;
-  align-items:center;font-size:.76rem;flex-wrap:wrap;gap:10px;
-}
-.foot-bottom a{color:var(--gold);font-weight:500;}
-.foot-bottom a:hover{color:var(--gold-light);}
+.foot-col ul li a{font-size:.86rem;color:rgba(253,252,250,.42);transition:var(--trans);}
+.foot-col ul li a:hover{color:var(--amber-light);padding-left:5px;}
+.foot-contact li{display:flex;gap:10px;margin-bottom:12px;font-size:.86rem;align-items:flex-start;}
+.foot-contact i{color:var(--amber);margin-top:3px;flex-shrink:0;}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.06);padding:22px 0;display:flex;justify-content:space-between;align-items:center;font-size:.76rem;flex-wrap:wrap;gap:10px;}
+.foot-bottom a{color:var(--amber-light);font-weight:600;}
+.foot-bottom a:hover{color:var(--amber);}
 
-/* ── RESPONSIVE ── */
+/* ══════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════ */
 @media(max-width:1100px){
   .exh-grid{grid-template-columns:repeat(3,1fr);}
   .venues-compact-grid{grid-template-columns:repeat(3,1fr);}
+  .gallery-row{grid-template-columns:1fr 1fr 1fr;}
+  .gallery-item:nth-child(4),.gallery-item:nth-child(5){display:none;}
 }
 @media(max-width:992px){
   .about-grid{grid-template-columns:1fr;gap:40px;}
-  .about-img{order:-1;}
   .why-grid{grid-template-columns:1fr 1fr;}
   .services-grid{grid-template-columns:1fr 1fr;}
   .venues-intro-grid{grid-template-columns:1fr;gap:32px;}
@@ -552,10 +656,11 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
   .foot-grid{grid-template-columns:1fr 1fr;gap:36px;}
   .stats-grid{grid-template-columns:repeat(2,1fr);}
   .mega-drop{width:480px;}
+  .mosaic-row{grid-template-columns:1fr 1fr;}
 }
 @media(max-width:768px){
   .hamburger{display:block;}
-  .main-nav{position:absolute;top:88px;left:-100%;width:100%;background:var(--white);padding:20px;box-shadow:0 5px 20px rgba(13,33,53,.1);transition:.4s;}
+  .main-nav{position:absolute;top:84px;left:-100%;width:100%;background:var(--white);padding:20px;box-shadow:0 5px 20px rgba(11,22,40,.1);transition:.4s;}
   .main-nav.active{left:0;}
   .main-nav ul{flex-direction:column;text-align:center;gap:4px;}
   .mega-drop{display:none;}
@@ -567,14 +672,22 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
   .testi-card{padding:34px 26px;}
   .top-bar .tb-right{display:none;}
   .nav-container{flex-direction:row;justify-content:space-between;}
+  .gallery-row{grid-template-columns:1fr 1fr;}
+  .gallery-item:nth-child(3),.gallery-item:nth-child(4),.gallery-item:nth-child(5){display:none;}
+  .mosaic-row{height:auto;grid-template-columns:1fr 1fr;}
+  .about-img-accent{display:none;}
 }
 @media(max-width:560px){
   .exh-grid{grid-template-columns:1fr;}
   .stats-grid{grid-template-columns:1fr;}
-  .hero h1{font-size:2.5rem;}
-  .about-badge{left:12px;bottom:-12px;}
+  .hero h1{font-size:2.8rem;}
+  .about-badge{left:12px;top:12px;}
   .hero-strip-grid{grid-template-columns:repeat(2,1fr);}
   .venues-compact-grid{grid-template-columns:1fr;}
+   .hero-services-grid { grid-template-columns: repeat(3,1fr); }
+}
+.tb-right{
+  color: white;
 }
 </style>
 </head>
@@ -583,10 +696,10 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
 <!-- TOP BAR -->
 <div class="top-bar">
   <div class="tb-inner">
-    <span><i class="fas fa-map-marker-alt"></i> On-site presence at all major exhibition venues across India</span>
+    <span><i class="fas fa-map-marker-alt"></i>Serving All Major Exhibition Venues Across India</span>
     <div class="tb-right">
-      <a href="mailto:ies@stopindia.com"><i class="fas fa-envelope"></i> ies@stopindia.com</a>
-      <a href="tel:+919212133251"><i class="fas fa-phone"></i> +91 9212133251</a>
+      <a href="mailto:ies@stopindia.com"><i class="fas fa-envelope"></i> Info@abstopindia.com</a>
+      <a href="tel:+919212133251"><i class="fas fa-phone"></i> +91 9873097939</a>
     </div>
   </div>
 </div>
@@ -599,18 +712,13 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
         <img src="https://stopindia.com/wp-content/uploads/2020/09/new.png" alt="AB STOP India Logo">
       </a>
     </div>
-
     <nav class="main-nav">
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
-
-        <!-- SERVICES DROPDOWN -->
         <li>
           <a href="services.html">Services <i class="fas fa-chevron-down chevron"></i></a>
           <div class="mega-drop">
-
-            <!-- Col 1: Our Services -->
             <div>
               <div class="mega-col-title">Our Services</div>
               <a href="services.html#customs" class="mega-item">
@@ -638,53 +746,27 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
                 <div class="mi-text"><strong>Events, Concerts &amp; Sports</strong><span>Time-critical cargo for live events in India</span></div>
               </a>
             </div>
-
-            <!-- Col 2: Our Coverage -->
             <div>
               <div class="mega-col-title">Our Coverage — Major Venues</div>
               <div class="venue-mini-list">
-                <a href="#venues" class="venue-mini-item">
-                  <div class="vmi-dot"></div>
-                  <div class="vmi-info"><strong>Bharat Mandapam &amp; Yashobhoomi</strong><span>New Delhi</span></div>
-                </a>
-                <a href="#venues" class="venue-mini-item">
-                  <div class="vmi-dot"></div>
-                  <div class="vmi-info"><strong>India Expo Mart</strong><span>Greater Noida</span></div>
-                </a>
-                <a href="#venues" class="venue-mini-item">
-                  <div class="vmi-dot"></div>
-                  <div class="vmi-info"><strong>Bombay Exhibition Centre &amp; JWCC</strong><span>Mumbai</span></div>
-                </a>
-                <a href="#venues" class="venue-mini-item">
-                  <div class="vmi-dot"></div>
-                  <div class="vmi-info"><strong>BIEC &amp; Yelahanka Air Force</strong><span>Bengaluru</span></div>
-                </a>
-                <a href="#venues" class="venue-mini-item">
-                  <div class="vmi-dot"></div>
-                  <div class="vmi-info"><strong>HITEX Exhibition Centre</strong><span>Hyderabad</span></div>
-                </a>
-                <a href="#venues" class="venue-mini-item">
-                  <div class="vmi-dot"></div>
-                  <div class="vmi-info"><strong>Mahatma Mandir</strong><span>Gandhinagar, Gujarat</span></div>
-                </a>
-                <a href="#venues" class="venue-mini-item">
-                  <div class="vmi-dot"></div>
-                  <div class="vmi-info"><strong>Chennai Trade Centre &amp; ACEC Pune</strong><span>Chennai · Pune</span></div>
-                </a>
+                <a href="#venues" class="venue-mini-item"><div class="vmi-dot"></div><div class="vmi-info"><strong>Bharat Mandapam &amp; Yashobhoomi</strong><span>New Delhi</span></div></a>
+                <a href="#venues" class="venue-mini-item"><div class="vmi-dot"></div><div class="vmi-info"><strong>India Expo Mart</strong><span>Greater Noida</span></div></a>
+                <a href="#venues" class="venue-mini-item"><div class="vmi-dot"></div><div class="vmi-info"><strong>Bombay Exhibition Centre &amp; JWCC</strong><span>Mumbai</span></div></a>
+                <a href="#venues" class="venue-mini-item"><div class="vmi-dot"></div><div class="vmi-info"><strong>BIEC &amp; Yelahanka Air Force</strong><span>Bengaluru</span></div></a>
+                <a href="#venues" class="venue-mini-item"><div class="vmi-dot"></div><div class="vmi-info"><strong>HITEX Exhibition Centre</strong><span>Hyderabad</span></div></a>
+                <a href="#venues" class="venue-mini-item"><div class="vmi-dot"></div><div class="vmi-info"><strong>Mahatma Mandir</strong><span>Gandhinagar, Gujarat</span></div></a>
+                <a href="#venues" class="venue-mini-item"><div class="vmi-dot"></div><div class="vmi-info"><strong>Chennai Trade Centre &amp; ACEC Pune</strong><span>Chennai · Pune</span></div></a>
               </div>
               <hr class="mega-divider" style="margin-top:12px;">
-              <a href="#venues" style="display:flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold);padding:8px 10px;">
+              <a href="#venues" style="display:flex;align-items:center;gap:6px;font-size:.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--amber);padding:8px 10px;font-family:'Montserrat',sans-serif;">
                 View All Venues <i class="fas fa-arrow-right" style="font-size:.6rem;"></i>
               </a>
             </div>
-
           </div>
         </li>
-
         <li><a href="support.html">Support</a></li>
       </ul>
     </nav>
-
     <div class="hamburger"><i class="fas fa-bars"></i></div>
   </div>
 </header>
@@ -701,22 +783,48 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
     <div class="hero-tag"><span class="dot"></span> Inbound Exhibition Logistics · India</div>
     <h1>Send Exhibits<br>to <em>India.</em></h1>
     <p class="hero-subtitle">When you need to send exhibits for a show to India,<br>we will do our best to help with everything.</p>
-    <p class="hero-sub">Customs clearance, freight, on-site handling, door-to-stand delivery — one partner. Zero complications. Every major venue in India covered.</p>
+    <p class="hero-sub">Customs clearance · Freight · On-site handling · Door-to-stand delivery. One partner. Every major venue in India covered.</p>
     <div class="hero-btns">
-      <a href="support.html" class="btn-gold"><i class="fas fa-paper-plane"></i> Send an Enquiry</a>
+      <a href="support.html" class="btn-primary"><i class="fas fa-paper-plane"></i> Send an Enquiry</a>
       <a href="services.html" class="btn-ghost-light"><i class="fas fa-list-ul"></i> Our Services</a>
     </div>
   </div>
 </section>
 
 <!-- STRIP -->
-<div class="hero-strip">
-  <div class="hero-strip-grid">
-    <div class="strip-item"><i class="fas fa-file-shield"></i><h5>Customs &amp; ATA Carnet</h5></div>
-    <div class="strip-item"><i class="fas fa-plane-arrival"></i><h5>Air &amp; Sea Freight</h5></div>
-    <div class="strip-item"><i class="fas fa-truck-moving"></i><h5>Door-to-Stand Delivery</h5></div>
-    <div class="strip-item"><i class="fas fa-forklift"></i><h5>On-Site Handling</h5></div>
-    <div class="strip-item"><i class="fas fa-rotate-left"></i><h5>Return &amp; Re-Export</h5></div>
+ <div class="hero-services">
+        <div class="hero-services-grid">
+            <div class="hero-service-item">
+                <img src="ChatGPT Image Mar 14, 2026, 06_28_44 PM.png" alt="Air Freight">
+                <h4>Exhibition<br>Air Freight</h4>
+            </div>
+            <div class="hero-service-item">
+                <img src="ChatGPT Image Mar 14, 2026, 06_21_55 PM.png" alt="Ocean Freight">
+                <h4>Exhibition<br>Ocean Freight</h4>
+            </div>
+            <div class="hero-service-item">
+                <img src="ChatGPT Image Mar 14, 2026, 06_03_51 PM.png" alt="Road Freight">
+                <h4>Exhibition<br>Road Freight</h4>
+            </div>
+            <div class="hero-service-item">
+                <img src="ChatGPT Image Mar 14, 2026, 06_21_46 PM.png" alt="Customs Clearance">
+                <h4>Exhibition<br>Customs Clearance</h4>
+            </div>
+            <div class="hero-service-item">
+                <img src="ChatGPT Image Mar 23, 2026, 06_37_20 PM.png" alt="Stand Delivery">
+                <h4>Exhibition<br>Stand Delivery</h4>
+            </div>
+        </div>
+    </div>
+
+
+<!-- IMAGE MOSAIC -->
+<div class="img-mosaic">
+  <div class="mosaic-row">
+    <div class="mosaic-cell"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=900&auto=format&fit=crop" alt="Exhibition hall"></div>
+    <div class="mosaic-cell"><img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=600&auto=format&fit=crop" alt="Cargo"></div>
+    <div class="mosaic-cell"><img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=600&auto=format&fit=crop" alt="Airshow"></div>
+    <div class="mosaic-cell"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop" alt="Logistics"></div>
   </div>
 </div>
 
@@ -730,12 +838,15 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
           <div class="num">25+</div>
           <div class="lbl">Years of Excellence</div>
         </div>
+        <div class="about-img-accent">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=400&auto=format&fit=crop" alt="On-site team">
+        </div>
       </div>
       <div class="about-text">
         <div class="sec-label">Who We Are</div>
-        <h2 class="sec-h">One Partner for<br>Every Exhibition<br><span>in India</span></h2>
+        <h2 class="sec-h">One Partner<br>for Every<br>Exhibition in <span>India</span></h2>
         <p class="about-intro">AB STOP India handles the entire journey — from your warehouse anywhere in the world to your stand at any exhibition hall in India.</p>
-        <p class="about-body">Navigating Indian customs, temporary importation rules, and on-site venue logistics can be complex for overseas exhibitors. We remove every obstacle. Whether it's ATA Carnet management, last-mile stand delivery, or heavy equipment handling, our team is at the venue before you arrive.</p>
+        <p class="about-body">Navigating Indian customs, temporary importation rules, and on-site venue logistics is complex for overseas exhibitors. We remove every obstacle — ATA Carnet management, last-mile stand delivery, heavy equipment handling. Our team is at the venue before you arrive.</p>
         <div class="about-pills">
           <span class="pill"><i class="fas fa-check"></i> ATA Carnet Specialists</span>
           <span class="pill"><i class="fas fa-check"></i> Temporary Import &amp; Re-Export</span>
@@ -743,7 +854,7 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
           <span class="pill"><i class="fas fa-check"></i> All India Coverage</span>
           <span class="pill"><i class="fas fa-check"></i> 80+ Countries Served</span>
         </div>
-        <a href="about.html" class="btn-gold"><i class="fas fa-info-circle"></i> About Us</a>
+        <a href="about.html" class="btn-amber"><i class="fas fa-info-circle"></i> About Us</a>
       </div>
     </div>
   </div>
@@ -753,25 +864,33 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
 <section class="why-section">
   <div class="container">
     <div class="sec-center">
-      <div class="sec-label" style="color:var(--gold);justify-content:center;">Why Choose Us</div>
-      <h2 class="sec-h" style="color:var(--white);">Three Reasons Overseas<br>Exhibitors <span>Trust Us</span></h2>
-      <p class="sec-p" style="color:rgba(253,252,250,0.45);">Managing your India exhibition from abroad is easy when you have the right partner on the ground.</p>
+      <div class="sec-label" style="justify-content:center;">Why Choose Us</div>
+      <h2 class="sec-h" style="color:var(--white);">Three Reasons Exhibitors <span>Trust Us</span></h2>
     </div>
     <div class="why-grid">
       <div class="why-card">
-        <div class="icon"><i class="fas fa-file-contract"></i></div>
-        <h4>Customs Done Right</h4>
-        <p>India's customs procedures are complex for overseas shippers. We manage every document, deadline, and declaration — temporary importation, ATA Carnet, re-export — fully compliant and on schedule.</p>
+        <div class="why-card-bg" style="background-image:url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=900&auto=format&fit=crop');"></div>
+        <div class="why-card-content">
+          <div class="icon"><i class="fas fa-file-contract"></i></div>
+          <h4>Customs Done Right</h4>
+          <p>We manage every document, deadline and declaration — temporary importation, ATA Carnet, re-export — fully compliant, on schedule.</p>
+        </div>
       </div>
       <div class="why-card">
-        <div class="icon"><i class="fas fa-headset"></i></div>
-        <h4>Our Team Is at the Venue</h4>
-        <p>We're not a desk operation. Our staff is physically present at the exhibition with forklifts, equipment, and project managers. Any on-site issue is resolved before it reaches you.</p>
+        <div class="why-card-bg" style="background-image:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=900&auto=format&fit=crop');"></div>
+        <div class="why-card-content">
+          <div class="icon"><i class="fas fa-headset"></i></div>
+          <h4>At the Venue</h4>
+          <p>Our staff is physically present at the exhibition with forklifts, equipment and project managers. Any on-site issue resolved instantly.</p>
+        </div>
       </div>
       <div class="why-card">
-        <div class="icon"><i class="fas fa-clock"></i></div>
-        <h4>Delivered Before the Show Opens</h4>
-        <p>Missed deadlines at exhibitions aren't recoverable. We operate to exhibition schedules, not standard freight timelines. Your stand is ready when the doors open — every time.</p>
+        <div class="why-card-bg" style="background-image:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=900&auto=format&fit=crop');"></div>
+        <div class="why-card-content">
+          <div class="icon"><i class="fas fa-clock"></i></div>
+          <h4>On Time. Every Time.</h4>
+          <p>We operate to exhibition schedules, not standard freight timelines. Your stand is ready when the doors open — every single time.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -782,7 +901,7 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
   <div class="container">
     <div class="sec-center">
       <div class="sec-label">What We Do</div>
-      <h2 class="sec-h">Every Service<br><span>Your Shipment Needs</span></h2>
+      <h2 class="sec-h">Every Service<br><span>You Need</span></h2>
       <p class="sec-p">From origin to stand — and back again. Everything managed under one roof.</p>
     </div>
     <div class="services-grid">
@@ -818,7 +937,7 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
           </div>
           <div class="svc-card-body">
             <h4>On-Site Handling</h4>
-            <p>Forklift trucks, professional labour, unloading, delivery to your stand, empty case storage and repacking — all at the venue.</p>
+            <p>Forklift trucks, professional labour, unloading to your stand, empty case storage and repacking — all at the venue.</p>
             <span class="svc-link">Learn More <i class="fas fa-arrow-right"></i></span>
           </div>
         </div>
@@ -830,7 +949,7 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
           </div>
           <div class="svc-card-body">
             <h4>Door-to-Stand Delivery</h4>
-            <p>We collect from your premises, manage international transit, clear customs and deliver directly to your exhibition stand in India.</p>
+            <p>We collect from your premises, manage international transit, clear customs and deliver to your stand in India.</p>
             <span class="svc-link">Learn More <i class="fas fa-arrow-right"></i></span>
           </div>
         </div>
@@ -842,7 +961,7 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
           </div>
           <div class="svc-card-body">
             <h4>Return &amp; Re-Export</h4>
-            <p>After the show we repack, re-label and handle return shipments home or forward movement to your next destination worldwide.</p>
+            <p>After the show we repack, re-label and handle return shipments home or forward to your next worldwide destination.</p>
             <span class="svc-link">Learn More <i class="fas fa-arrow-right"></i></span>
           </div>
         </div>
@@ -854,24 +973,24 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
           </div>
           <div class="svc-card-body">
             <h4>Events, Concerts &amp; Sports</h4>
-            <p>Time-critical cargo for live events, concerts, film productions and sports events anywhere in India — any deadline, any scale.</p>
+            <p>Time-critical cargo for live events, concerts, film productions and sports events anywhere in India.</p>
             <span class="svc-link">Learn More <i class="fas fa-arrow-right"></i></span>
           </div>
         </div>
       </a>
     </div>
-    <div style="text-align:center;margin-top:50px;">
-      <a href="services.html" class="btn-gold">View All Services <i class="fas fa-arrow-right"></i></a>
+    <div style="text-align:center;margin-top:52px;">
+      <a href="services.html" class="btn-amber">View All Services <i class="fas fa-arrow-right"></i></a>
     </div>
   </div>
 </section>
 
-<!-- EXHIBITIONS WE SERVICE -->
+<!-- EXHIBITIONS -->
 <section class="exh-section">
   <div class="container">
     <div class="sec-center">
       <div class="sec-label">Sectors &amp; Shows</div>
-      <h2 class="sec-h">Major Exhibitions<br><span>We Handle in India</span></h2>
+      <h2 class="sec-h">Major Exhibitions<br><span>We Handle</span></h2>
       <p class="sec-p">We know every venue, every customs deadline and every regulation. Wherever your show is, we've been there before.</p>
     </div>
     <div class="exh-grid">
@@ -893,7 +1012,7 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
       </div>
       <div class="exh-card">
         <div class="exh-card-img"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600&auto=format&fit=crop" alt="IMTEX"></div>
-        <div class="exh-card-body"><div class="exh-city">Bengaluru</div><div class="exh-name">IMTEX</div><div class="exh-desc">International machine tool &amp; metalworking exhibition at BIEC Bengaluru.</div></div>
+        <div class="exh-card-body"><div class="exh-city">Bengaluru</div><div class="exh-name">IMTEX</div><div class="exh-desc">International machine tool &amp; metalworking exhibition at BIEC.</div></div>
       </div>
       <div class="exh-card">
         <div class="exh-card-img"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600&auto=format&fit=crop" alt="Convergence India"></div>
@@ -905,7 +1024,7 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
       </div>
       <div class="exh-card">
         <div class="exh-card-img"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600&auto=format&fit=crop" alt="World Food India"></div>
-        <div class="exh-card-body"><div class="exh-city">Mumbai</div><div class="exh-name">World Food India</div><div class="exh-desc">India's flagship food processing investment summit and international exhibition.</div></div>
+        <div class="exh-card-body"><div class="exh-city">Mumbai</div><div class="exh-name">World Food India</div><div class="exh-desc">India's flagship food processing investment summit and exhibition.</div></div>
       </div>
     </div>
   </div>
@@ -913,6 +1032,7 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
 
 <!-- STATS -->
 <section class="stats-section">
+  <div class="stats-bg"></div>
   <div class="container">
     <div class="stats-grid">
       <div class="stat-cell"><span class="num" data-target="25">0</span><span class="lbl">Years Experience</span></div>
@@ -923,18 +1043,46 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
   </div>
 </section>
 
-<!-- ══════════════════════════════════
-     VENUES — CONDENSED & CRISP
-     ══════════════════════════════════ -->
+<!-- PHOTO GALLERY STRIP -->
+<section class="gallery-strip">
+  <div class="container">
+    <div class="sec-center">
+      <div class="sec-label">Our Work</div>
+      <h2 class="sec-h">India's Biggest<br><span>Stages, Covered</span></h2>
+    </div>
+    <div class="gallery-row">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=900&auto=format&fit=crop" alt="Exhibition Hall" class="tall">
+        <div class="gallery-label">Exhibition Halls</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1554774853-719586f82d77?q=80&w=600&auto=format&fit=crop" alt="Air Cargo" class="short">
+        <div class="gallery-label">Air Freight</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=600&auto=format&fit=crop" alt="Cargo Handling" class="short">
+        <div class="gallery-label">Cargo Handling</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=900&auto=format&fit=crop" alt="Airshow" class="tall">
+        <div class="gallery-label">Aero India</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=600&auto=format&fit=crop" alt="Events" class="short">
+        <div class="gallery-label">Events &amp; Concerts</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VENUES -->
 <section class="venues-section" id="venues">
   <div class="container">
-
-    <!-- Intro split -->
     <div class="venues-intro-grid">
       <div class="venues-intro-text">
         <div class="sec-label">Our Coverage</div>
         <h2 class="sec-h">Every Major<br>Venue in <span>India</span></h2>
-        <p class="venues-intro-desc">We have established on-site presence and official partnerships at India's premier exhibition and convention centres. Wherever your show is, our team is already there.</p>
+        <p class="venues-intro-desc">Established on-site presence and official partnerships at India's premier exhibition centres. Wherever your show is, our team is already there.</p>
         <span class="venues-intro-note"><i class="fas fa-check-circle"></i> 18+ venues · All major cities</span>
       </div>
       <div>
@@ -952,148 +1100,28 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
         </div>
       </div>
     </div>
-
     <div class="venues-compact-grid" id="venuesGrid">
-
-      <!-- DELHI -->
-      <div class="vc-card visible" data-city="delhi">
-        <div class="vc-city">New Delhi</div>
-        <div class="vc-name">Bharat Mandapam Convention Centre</div>
-        <div class="vc-abbr">ITPO · Pragati Maidan</div>
-        <div class="vc-size"><i class="fas fa-expand"></i> 1,23,000 sq m</div>
-      </div>
-
-      <div class="vc-card visible" data-city="delhi">
-        <div class="vc-city">New Delhi</div>
-        <div class="vc-name">India International Convention &amp; Expo Centre</div>
-        <div class="vc-abbr">Yashobhoomi · Dwarka</div>
-        <div class="vc-size"><i class="fas fa-expand"></i> 1,12,000 sq m</div>
-      </div>
-
-      <!-- GREATER NOIDA -->
-      <div class="vc-card visible" data-city="noida">
-        <div class="vc-city">Greater Noida</div>
-        <div class="vc-name">India Expo Mart</div>
-        <div class="vc-abbr">IEM · Uttar Pradesh</div>
-        <div class="vc-size"><i class="fas fa-expand"></i> 65,000 sq m</div>
-      </div>
-
-      <!-- MUMBAI -->
-      <div class="vc-card visible" data-city="mumbai">
-        <div class="vc-city">Mumbai</div>
-        <div class="vc-name">Bombay Exhibition Centre</div>
-        <div class="vc-abbr">BEC · Goregaon</div>
-        <div class="vc-size"><i class="fas fa-expand"></i> 45,000 sq m</div>
-      </div>
-
-      <div class="vc-card visible" data-city="mumbai">
-        <div class="vc-city">Mumbai</div>
-        <div class="vc-name">Jio World Convention Centre</div>
-        <div class="vc-abbr">JWCC · BKC</div>
-        <div class="vc-size"><i class="fas fa-expand"></i> 50,000 sq m</div>
-      </div>
-
-      <div class="vc-card visible" data-city="mumbai">
-        <div class="vc-city">Mumbai</div>
-        <div class="vc-name">MMRDA Exhibition Grounds</div>
-        <div class="vc-abbr">BKC, Bandra Kurla</div>
-        <div class="vc-size"><i class="fas fa-expand"></i> Open Grounds</div>
-      </div>
-
-      <!-- BENGALURU -->
-      <div class="vc-card visible" data-city="bengaluru">
-        <div class="vc-city">Bengaluru</div>
-        <div class="vc-name">Bengaluru International Exhibition Centre</div>
-        <div class="vc-abbr">BIEC · Tumkur Road</div>
-        <div class="vc-size"><i class="fas fa-expand"></i> 50,000 sq m</div>
-      </div>
-
-      <div class="vc-card visible" data-city="bengaluru">
-        <div class="vc-city">Bengaluru</div>
-        <div class="vc-name">Yelahanka Air Force Station</div>
-        <div class="vc-abbr">Aero India · Biennial</div>
-        <div class="vc-size"><i class="fas fa-expand"></i> Open Airfield</div>
-      </div>
-
-      <!-- HYDERABAD -->
-      <div class="vc-card visible" data-city="hyderabad">
-        <div class="vc-city">Hyderabad</div>
-        <div class="vc-name">HITEX Exhibition Centre</div>
-        <div class="vc-abbr">HITEX · Madhapur</div>
-        <div class="vc-size"><i class="fas fa-expand"></i> 30,000 sq m</div>
-      </div>
-
-      <div class="vc-card visible" data-city="hyderabad">
-        <div class="vc-city">Hyderabad</div>
-        <div class="vc-name">Hyderabad International Convention Centre</div>
-        <div class="vc-abbr">HICC · HITEC City</div>
-        <div class="vc-size"><i class="fas fa-expand"></i> 6,500 sq m</div>
-      </div>
-
-      <!-- GANDHINAGAR -->
-      <div class="vc-card visible" data-city="gandhinagar">
-        <div class="vc-city">Gandhinagar</div>
-        <div class="vc-name">Mahatma Mandir Convention &amp; Exhibition Centre</div>
-        <div class="vc-abbr">MGICEC · Gujarat</div>
-        <div class="vc-size"><i class="fas fa-expand"></i> 33,000 sq m</div>
-      </div>
-
-      <div class="vc-card visible" data-city="gandhinagar">
-        <div class="vc-city">Gandhinagar</div>
-        <div class="vc-name">Helipad Exhibition Grounds</div>
-        <div class="vc-abbr">Adjacent to Mahatma Mandir</div>
-        <div class="vc-size"><i class="fas fa-expand"></i> Open Grounds</div>
-      </div>
-
-      <!-- CHENNAI -->
-      <div class="vc-card visible" data-city="chennai">
-        <div class="vc-city">Chennai</div>
-        <div class="vc-name">Chennai Trade Centre</div>
-        <div class="vc-abbr">CTC · Nandanam</div>
-        <div class="vc-size"><i class="fas fa-expand"></i> 25,000 sq m</div>
-      </div>
-
-      <div class="vc-card visible" data-city="chennai">
-        <div class="vc-city">Chennai</div>
-        <div class="vc-name">ITPO Trade Fair Complex</div>
-        <div class="vc-abbr">ITPO South · Nandanam</div>
-        <div class="vc-size"><i class="fas fa-expand"></i> 16,000 sq m</div>
-      </div>
-
-      <!-- KOLKATA -->
-      <div class="vc-card visible" data-city="kolkata">
-        <div class="vc-city">Kolkata</div>
-        <div class="vc-name">Biswa Bangla Convention Centre</div>
-        <div class="vc-abbr">BICC · New Town</div>
-        <div class="vc-size"><i class="fas fa-expand"></i> 30,000 sq m</div>
-      </div>
-
-      <div class="vc-card visible" data-city="kolkata">
-        <div class="vc-city">Kolkata</div>
-        <div class="vc-name">Milan Mela Grounds (ITPO)</div>
-        <div class="vc-abbr">ITPO East · E.M. Bypass</div>
-        <div class="vc-size"><i class="fas fa-expand"></i> 20,000 sq m</div>
-      </div>
-
-      <!-- PUNE -->
-      <div class="vc-card visible" data-city="pune">
-        <div class="vc-city">Pune</div>
-        <div class="vc-name">Auto Cluster Exhibition Centre</div>
-        <div class="vc-abbr">ACEC · Chinchwad</div>
-        <div class="vc-size"><i class="fas fa-expand"></i> 40,000 sq m</div>
-      </div>
-
-      <div class="vc-card visible" data-city="pune">
-        <div class="vc-city">Navi Mumbai</div>
-        <div class="vc-name">CIDCO Exhibition Centre</div>
-        <div class="vc-abbr">CIDCO · Navi Mumbai</div>
-        <div class="vc-size"><i class="fas fa-expand"></i> 35,000 sq m</div>
-      </div>
-
+      <div class="vc-card visible" data-city="delhi"><div class="vc-city">New Delhi</div><div class="vc-name">Bharat Mandapam Convention Centre</div><div class="vc-abbr">ITPO · Pragati Maidan</div><div class="vc-size"><i class="fas fa-expand"></i> 1,23,000 sq m</div></div>
+      <div class="vc-card visible" data-city="delhi"><div class="vc-city">New Delhi</div><div class="vc-name">India International Convention &amp; Expo Centre</div><div class="vc-abbr">Yashobhoomi · Dwarka</div><div class="vc-size"><i class="fas fa-expand"></i> 1,12,000 sq m</div></div>
+      <div class="vc-card visible" data-city="noida"><div class="vc-city">Greater Noida</div><div class="vc-name">India Expo Mart</div><div class="vc-abbr">IEM · Uttar Pradesh</div><div class="vc-size"><i class="fas fa-expand"></i> 65,000 sq m</div></div>
+      <div class="vc-card visible" data-city="mumbai"><div class="vc-city">Mumbai</div><div class="vc-name">Bombay Exhibition Centre</div><div class="vc-abbr">BEC · Goregaon</div><div class="vc-size"><i class="fas fa-expand"></i> 45,000 sq m</div></div>
+      <div class="vc-card visible" data-city="mumbai"><div class="vc-city">Mumbai</div><div class="vc-name">Jio World Convention Centre</div><div class="vc-abbr">JWCC · BKC</div><div class="vc-size"><i class="fas fa-expand"></i> 50,000 sq m</div></div>
+      <div class="vc-card visible" data-city="mumbai"><div class="vc-city">Mumbai</div><div class="vc-name">MMRDA Exhibition Grounds</div><div class="vc-abbr">BKC, Bandra Kurla</div><div class="vc-size"><i class="fas fa-expand"></i> Open Grounds</div></div>
+      <div class="vc-card visible" data-city="bengaluru"><div class="vc-city">Bengaluru</div><div class="vc-name">Bengaluru International Exhibition Centre</div><div class="vc-abbr">BIEC · Tumkur Road</div><div class="vc-size"><i class="fas fa-expand"></i> 50,000 sq m</div></div>
+      <div class="vc-card visible" data-city="bengaluru"><div class="vc-city">Bengaluru</div><div class="vc-name">Yelahanka Air Force Station</div><div class="vc-abbr">Aero India · Biennial</div><div class="vc-size"><i class="fas fa-expand"></i> Open Airfield</div></div>
+      <div class="vc-card visible" data-city="hyderabad"><div class="vc-city">Hyderabad</div><div class="vc-name">HITEX Exhibition Centre</div><div class="vc-abbr">HITEX · Madhapur</div><div class="vc-size"><i class="fas fa-expand"></i> 30,000 sq m</div></div>
+      <div class="vc-card visible" data-city="hyderabad"><div class="vc-city">Hyderabad</div><div class="vc-name">Hyderabad International Convention Centre</div><div class="vc-abbr">HICC · HITEC City</div><div class="vc-size"><i class="fas fa-expand"></i> 6,500 sq m</div></div>
+      <div class="vc-card visible" data-city="gandhinagar"><div class="vc-city">Gandhinagar</div><div class="vc-name">Mahatma Mandir Convention &amp; Exhibition Centre</div><div class="vc-abbr">MGICEC · Gujarat</div><div class="vc-size"><i class="fas fa-expand"></i> 33,000 sq m</div></div>
+      <div class="vc-card visible" data-city="gandhinagar"><div class="vc-city">Gandhinagar</div><div class="vc-name">Helipad Exhibition Grounds</div><div class="vc-abbr">Adjacent to Mahatma Mandir</div><div class="vc-size"><i class="fas fa-expand"></i> Open Grounds</div></div>
+      <div class="vc-card visible" data-city="chennai"><div class="vc-city">Chennai</div><div class="vc-name">Chennai Trade Centre</div><div class="vc-abbr">CTC · Nandanam</div><div class="vc-size"><i class="fas fa-expand"></i> 25,000 sq m</div></div>
+      <div class="vc-card visible" data-city="chennai"><div class="vc-city">Chennai</div><div class="vc-name">ITPO Trade Fair Complex</div><div class="vc-abbr">ITPO South · Nandanam</div><div class="vc-size"><i class="fas fa-expand"></i> 16,000 sq m</div></div>
+      <div class="vc-card visible" data-city="kolkata"><div class="vc-city">Kolkata</div><div class="vc-name">Biswa Bangla Convention Centre</div><div class="vc-abbr">BICC · New Town</div><div class="vc-size"><i class="fas fa-expand"></i> 30,000 sq m</div></div>
+      <div class="vc-card visible" data-city="kolkata"><div class="vc-city">Kolkata</div><div class="vc-name">Milan Mela Grounds (ITPO)</div><div class="vc-abbr">ITPO East · E.M. Bypass</div><div class="vc-size"><i class="fas fa-expand"></i> 20,000 sq m</div></div>
+      <div class="vc-card visible" data-city="pune"><div class="vc-city">Pune</div><div class="vc-name">Auto Cluster Exhibition Centre</div><div class="vc-abbr">ACEC · Chinchwad</div><div class="vc-size"><i class="fas fa-expand"></i> 40,000 sq m</div></div>
+      <div class="vc-card visible" data-city="pune"><div class="vc-city">Navi Mumbai</div><div class="vc-name">CIDCO Exhibition Centre</div><div class="vc-abbr">CIDCO · Navi Mumbai</div><div class="vc-size"><i class="fas fa-expand"></i> 35,000 sq m</div></div>
     </div>
-
     <div class="venues-show-more">
-      <a href="support.html" class="btn-gold"><i class="fas fa-paper-plane"></i> Enquire About Your Venue</a>
+      <a href="support.html" class="btn-primary"><i class="fas fa-paper-plane"></i> Enquire About Your Venue</a>
     </div>
   </div>
 </section>
@@ -1125,7 +1153,7 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
       <div class="testi-card">
         <div class="testi-q"><i class="fas fa-quote-left"></i></div>
         <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p class="testi-text">"Heavy machinery for IMTEX — we were worried about forklift capacity and timing. AB STOP India's team handled 4+ tonne equipment with zero complications. Highly recommended."</p>
+        <p class="testi-text">"Heavy machinery for IMTEX — AB STOP India's team handled 4+ tonne equipment with zero complications. Highly recommended for any serious exhibitor."</p>
         <div class="testi-name">Hiroshi Tanaka</div>
         <div class="testi-role">Logistics Head, Yamazaki Mazak</div>
         <div class="testi-flag">🇯🇵 Japan → IMTEX, Bengaluru</div>
@@ -1133,7 +1161,7 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
       <div class="testi-card">
         <div class="testi-q"><i class="fas fa-quote-left"></i></div>
         <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p class="testi-text">"Once you use their service, you become a regular customer. We've worked with AB STOP India for six consecutive years across three different venues in India."</p>
+        <p class="testi-text">"Once you use their service, you become a regular customer. We've worked with AB STOP India for six consecutive years across three different venues."</p>
         <div class="testi-name">Amelia Brooks</div>
         <div class="testi-role">Global Events Lead, Siemens UK</div>
         <div class="testi-flag">🇬🇧 United Kingdom → Multiple India Shows</div>
@@ -1150,15 +1178,16 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
 
 <!-- CTA BAND -->
 <section class="cta-band">
+  <div class="cta-band-bg"></div>
   <div class="container">
     <div class="cta-band-inner">
       <div>
-        <h2>Exhibiting in<br><em>India?</em> We're Ready.</h2>
-        <p>Tell us your exhibition, your cargo details and your deadline — and we handle everything from there. Professional, cost-effective and guaranteed on time.</p>
+        <h2>Exhibiting in<br><em>India? We're Ready.</em></h2>
+        <p>Tell us your exhibition, cargo details and deadline — we handle everything from there. Professional, cost-effective and guaranteed on time.</p>
       </div>
       <div class="cta-band-btns">
-        <a href="support.html" class="btn-crim"><i class="fas fa-paper-plane"></i> Send an Enquiry</a>
-        <a href="tel:+919212133251" class="btn-gold"><i class="fas fa-phone"></i> Call Us Now</a>
+        <a href="support.html" class="btn-primary"><i class="fas fa-paper-plane"></i> Send an Enquiry</a>
+        <a href="tel:+919212133251" class="btn-amber-outline"><i class="fas fa-phone"></i> Call Us Now</a>
       </div>
     </div>
   </div>
@@ -1168,12 +1197,10 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
 <footer>
   <div class="container">
     <div class="foot-grid">
-
-      <!-- Brand + parent company -->
       <div class="foot-brand">
         <div class="foot-brand-logo">AB<span>STOP</span>India</div>
         <div class="foot-brand-sub">Inbound Exhibition Logistics</div>
-        <p>Your trusted one-stop logistics partner for exhibitions, conferences, concerts, sports events and all time-critical cargo in India. Customs to stand delivery — we do it all.</p>
+        <p>Your trusted logistics partner for exhibitions, conferences, concerts, sports events and all time-critical cargo in India. Customs to stand delivery — we do it all.</p>
         <a href="https://www.stopindia.com" target="_blank" rel="noopener" class="foot-parent">
           <div>
             <span class="fp-label">Part of</span>
@@ -1181,7 +1208,6 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
           </div>
         </a>
       </div>
-
       <div class="foot-col">
         <h5>Quick Links</h5>
         <ul>
@@ -1194,7 +1220,6 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
           <li><a href="carrer.html">Career</a></li>
         </ul>
       </div>
-
       <div class="foot-col">
         <h5>Our Services</h5>
         <ul>
@@ -1206,7 +1231,6 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
           <li><a href="services.html#events">Events &amp; Concerts</a></li>
         </ul>
       </div>
-
       <div class="foot-col">
         <h5>Contact</h5>
         <ul class="foot-contact">
@@ -1216,35 +1240,28 @@ footer{background:linear-gradient(180deg,#060A14,var(--ink));color:rgba(253,252,
           <li><i class="fas fa-clock"></i><span>Mon–Sat: 9 AM – 6 PM IST<br>Emergency: 24 / 7</span></li>
         </ul>
       </div>
-
     </div>
-
     <div class="foot-bottom">
       <span>&copy; 2025 AB STOP India. All Rights Reserved.</span>
-      <span>Inbound Exhibition Logistics for International Exhibitors &nbsp;|&nbsp; <a href="https://www.stopindia.com" target="_blank">stopindia.com</a> &nbsp;|&nbsp; <a href="mailto:ies@stopindia.com">ies@stopindia.com</a></span>
+      <span>Inbound Exhibition Logistics &nbsp;|&nbsp; <a href="https://www.stopindia.com" target="_blank">stopindia.com</a> &nbsp;|&nbsp; <a href="mailto:ies@stopindia.com">ies@stopindia.com</a></span>
     </div>
   </div>
 </footer>
 
-<!-- ═══════════════════════ SCRIPTS ═══════════════════════ -->
 <script>
-// ── Header scroll effect
+// Header scroll
 const header = document.getElementById('mainHeader');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 40);
-});
+window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 40));
 
-// ── Hamburger
+// Hamburger
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.main-nav');
 hamburger.addEventListener('click', () => navMenu.classList.toggle('active'));
 document.querySelectorAll('.main-nav>ul>li>a').forEach(l =>
-  l.addEventListener('click', (e) => {
-    if (window.innerWidth < 768) navMenu.classList.remove('active');
-  })
+  l.addEventListener('click', () => { if (window.innerWidth < 768) navMenu.classList.remove('active'); })
 );
 
-// ── Hero slideshow
+// Hero slideshow
 const slides = document.querySelectorAll('.hero-slide');
 let ci = 0;
 setInterval(() => {
@@ -1253,7 +1270,7 @@ setInterval(() => {
   slides[ci].classList.add('active');
 }, 5500);
 
-// ── Venue filter tabs
+// Venue filter tabs
 const vtBtns = document.querySelectorAll('.vt-btn');
 const vcCards = document.querySelectorAll('.vc-card');
 vtBtns.forEach(btn => {
@@ -1269,7 +1286,7 @@ vtBtns.forEach(btn => {
   });
 });
 
-// ── Testimonials
+// Testimonials
 const testiCards = document.querySelectorAll('.testi-card');
 const testiDots  = document.querySelectorAll('.testi-dot');
 let ct = 0, ti;
@@ -1279,12 +1296,10 @@ function showT(i) {
   ct = i;
 }
 function startT() { ti = setInterval(() => showT((ct + 1) % testiCards.length), 6000); }
-testiDots.forEach(d => d.addEventListener('click', () => {
-  clearInterval(ti); showT(+d.dataset.i); startT();
-}));
+testiDots.forEach(d => d.addEventListener('click', () => { clearInterval(ti); showT(+d.dataset.i); startT(); }));
 startT();
 
-// ── Animated counters
+// Animated counters
 const counters = document.querySelectorAll('.num[data-target]');
 let counted = false;
 const runCounters = () => {
@@ -1304,20 +1319,18 @@ const runCounters = () => {
   });
 };
 const statSec = document.querySelector('.stats-section');
-new IntersectionObserver(([e]) => { if (e.isIntersecting) runCounters(); }, {threshold: 0.4}).observe(statSec);
+new IntersectionObserver(([e]) => { if (e.isIntersecting) runCounters(); }, {threshold: 0.3}).observe(statSec);
 
-// ── Scroll reveal
+// Scroll reveal
 const revealObs = new IntersectionObserver(entries => {
   entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.style.opacity = '1';
-      e.target.style.transform = 'translateY(0)';
-    }
+    if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }
   });
 }, { threshold: 0.08 });
-
-document.querySelectorAll('.why-card, .svc-card, .exh-card, .vc-card').forEach(el => {
-  el.style.transition = 'opacity .5s ease, transform .5s ease, box-shadow .4s ease, border-color .4s ease';
+document.querySelectorAll('.why-card, .svc-card, .exh-card, .vc-card, .gallery-item').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(18px)';
+  el.style.transition = 'opacity .55s ease, transform .55s ease, box-shadow .4s ease, border-color .4s ease';
   revealObs.observe(el);
 });
 </script>
